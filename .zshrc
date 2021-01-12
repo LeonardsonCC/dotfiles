@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/adminmagento/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,4 +107,4 @@ export DEV='/var/www/html'
 alias vim nvim
 
 tmux
-alias config='/usr/bin/git --git-dir=/home/adminmagento/.cfg/ --work-tree=/home/adminmagento'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
