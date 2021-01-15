@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm -e /bin/bash -l -c "/bin/zsh"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -175,7 +175,6 @@ for_window [title="Picture-in-Picture"] sticky enable
 bindsym --release Print exec "gnome-screenshot -i"
 bindsym --release Shift+Print exec "gnome-screenshot -a"
 
-exec --no-startup-id feh --bg-fill ~/Imagens/wallpaper.jpeg
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -187,3 +186,6 @@ smart_gaps on
 smart_borders on
 for_window [class=".*"] border pixel 0
 
+exec_always --no-startup-id picom
+
+exec_always --no-startup-id feh --bg-fill ~/Wallpapers/01.jpeg

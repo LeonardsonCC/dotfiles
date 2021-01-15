@@ -1,38 +1,47 @@
-!--------------------xdefauls
-URxvt.font: xft:Monospace:pixelsize=14
-urxvt*termName: rxvt
-urxvt*scrollBar: false
-urxvt*matcher.button: 1
-urxvt.transparent: false
-urxvt.boldFont:
-Xft*dpi: 96
-Xft*antialias: true
-Xft*hinting: true
-Xft*hintstyle: hintfull
-URxvt*cursorUnderline:  false
-Xft*rgba: rgb
-URxvt*geometry: 85x20
-*internalBorder: 23
-URxvt*fading: 0
-URxvt*tintColor: #ffffff
-URxvt*shading: 0
-URxvt*inheritPixmap: False
-URxvt.color0: #3B444F
-URxvt.color8: #4A585A
-URxvt.color1: #CD546C
-URxvt.color9: #CD546C
-URxvt.color2: #A5AF86
-URxvt.color10: #BDC79E
-URxvt.color3: #CD7860
-URxvt.color11: #E88773
-URxvt.color4: #7A9388
-URxvt.color12: #94B1A3
-URxvt.color5: #75434C
-URxvt.color13: #BB6C73
-URxvt.color6: #767D75
-URxvt.color14: #9DA69E
-URxvt.color7: #C2C2A8
-URxvt.color15: #DBDAC1
-URxvt.background: #292929
-URxvt.foreground: #a3a6ab
+! Fonts
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+
+! XTerm
+xterm*faceName:           Monospace:style=Regular:size=11
+xterm*dynamicColors:      true
+xterm*utf8:               2
+xterm*saveLines:          512
+xterm*scrollKey:          true
+xterm*scrollTtyOutput:    false
+xterm*scrollBar:          false
+xterm*toolBar:            false
+xterm*borderWidth:        0
+xterm*cursorColor:        #259c48
+
+!colors
+
+*foreground: #fbfbfb
+*background: #1e1e1e
+
+!black
+*color0: #2c2c2c
+*color8: #343434
+!redc
+*color1: #d34052
+*color9: #f24c4e
+!green
+*color2: #245327
+*color10: #259c48
+!yellow
+*color3: #ffcb3f
+*color11: #ffd54d
+!blue
+*color4: #213a8a
+*color12: #28529e
+!magenta
+*color5: #72477d
+*color13: #934e8d
+!cyan
+*color6: #3a766c
+*color14: #3ab18b
+!white
+*color7: #f6f6f6
+*color15: #f8f8f8
 
