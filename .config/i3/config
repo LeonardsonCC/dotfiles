@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -182,4 +182,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 focus_follows_mouse no
 
 bindsym $mod+Shift+l exec "i3lock-fancy"
+gaps inner 10
+smart_gaps on
+smart_borders on
+for_window [class=".*"] border pixel 0
 
