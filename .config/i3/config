@@ -189,3 +189,4 @@ for_window [class=".*"] border pixel 0
 exec_always --no-startup-id compton
 
 exec_always --no-startup-id feh --bg-fill ~/Wallpapers/01.jpeg
+exec_always --no-startup-id xrdb -load ~/.Xdefaults
