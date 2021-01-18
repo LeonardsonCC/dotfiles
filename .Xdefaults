@@ -15,6 +15,11 @@ xterm*toolBar:            false
 xterm*borderWidth:        0
 xterm*cursorColor:        #259c48
 
+XTerm.vt100.translations: #override \n\
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+
 !colors
 
 *foreground: #fbfbfb

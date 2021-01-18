@@ -28,12 +28,12 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 4.0
+radius = 0.0
 fixed-center = false
 
 background = ${colors.background}
@@ -55,7 +55,7 @@ font-0 = fixed:pixelsize=9;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=8;1
 
-modules-left = bspwm i3 
+modules-left = bspwm i3
 modules-center = spotify previous playpause  next
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery date powermenu
 
