@@ -9,6 +9,7 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug '9mm/vim-closer'
+Plug 'ap/vim-css-color'
 
 Plug 'gruvbox-community/gruvbox'
 
