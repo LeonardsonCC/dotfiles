@@ -4,7 +4,7 @@ Xft.antialias:  true
 Xft.rgba:       rgb
 
 ! XTerm
-xterm*faceName:           Monospace:style=Regular:size=11
+xterm*faceName:           DejaVu Sans Mono for Powerline:size=12
 xterm*dynamicColors:      true
 xterm*utf8:               2
 xterm*saveLines:          512
