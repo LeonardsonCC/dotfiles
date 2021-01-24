@@ -10,6 +10,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug '9mm/vim-closer'
 Plug 'ap/vim-css-color'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'gruvbox-community/gruvbox'
 
