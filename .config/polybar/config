@@ -1002,15 +1002,6 @@ label =  %output:0:150:%
 
 ################################################################################
 
-[module/xmonad]
-type = custom/script
-exec = xmonad-log
-tail = true
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-
-################################################################################
-
 [module/uptime]
 ;https://github.com/jaagr/polybar/wiki/User-contributed-modules#uptime
 type = custom/script
