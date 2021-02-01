@@ -93,8 +93,8 @@ border-size = 0
 ;border-bottom-size = 25
 border-color = #000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 0
+padding-right = 0
 
 module-margin-left = 0
 module-margin-right = 0
@@ -114,7 +114,7 @@ separator =
 
 ;dim-value = 1.0
 
-tray-position = right
+tray-position = center
 tray-detached = false
 tray-maxsize = 20
 tray-background = ${colors.background}
