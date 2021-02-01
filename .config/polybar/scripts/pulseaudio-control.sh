@@ -244,7 +244,7 @@ function nextSink() {
         else
             notify="notify-send"
         fi
-        $notify "PulseAudio" "Changed output to $SINK_NICKNAME" --icon=audio-headphones-symolic &
+        $notify "PulseAudio" "Changed output to $SINK_NICKNAME" --icon=audio-headphones-symbolic &
     fi
 }
 
@@ -449,7 +449,7 @@ while [[ "$1" = --* ]]; do
             SINK_NICKNAMES["${val//:*/}"]="${val//*:}"
             ;;
         --format)
-     FORMAT="$val"
+	    FORMAT="$val"
             ;;
         *)
             echo "Unrecognised option: $arg" >&2
@@ -494,4 +494,3 @@ case "$1" in
         exit 1
         ;;
 esac
-b
