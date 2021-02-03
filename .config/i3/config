@@ -191,4 +191,4 @@ exec_always --no-startup-id compton
 exec_always --no-startup-id feh --bg-fill ~/Wallpapers/gruvbox/01.png
 exec_always --no-startup-id xrdb -load ~/.Xdefaults
 exec_always --no-startup-id $HOME/.config/conky/conky-start.sh
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id $HOME/.config/dunst/dunst-start.sh
