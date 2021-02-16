@@ -55,3 +55,6 @@ augroup MY_VIM
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
+set termguicolors
+set t_Co=256

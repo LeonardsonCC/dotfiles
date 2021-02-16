@@ -31,3 +31,6 @@ set updatetime=50
 set shortmess+=c
 
 set colorcolumn=80
+
+set termguicolors
+set t_Co=256
