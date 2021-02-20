@@ -250,7 +250,7 @@ label-urgent-background = ${self.label-focused-background}
 label-urgent-foreground = #db104e
 label-urgent-padding = 2
 
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.volume-max}
 format-background = ${colors.background}
 
 ################################################################################
