@@ -7,7 +7,7 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 XTerm*renderFont: true
-URxvt.font:      xft:Ubuntu Mono derivative Powerline:style=Regular
+URxvt.font:      xft:Ubuntu Mono derivative Powerline:style=Regular,xft:UbuntuMono Nerd Font Mono:style=Regular
 URxvt.scrollBar: false
 URxvt*dynamicColors: on
 

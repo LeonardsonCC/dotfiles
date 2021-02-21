@@ -103,6 +103,7 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
+export BROWSER=/bin/firefox-developer-edition
 export PATH=$PATH:$HOME/bin_scripts
 alias vim="nvim"
 alias g="git"
