@@ -78,7 +78,8 @@ output * bg ~/Wallpapers/SWAY.jpg fill
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+0 exec swaynag -t error -m 'Deseja desligar o computador?' -b 'Sim, desligue-o' 'poweroff'
+    bindsym $mod+0 exec swaynag -t warning -m 'Deseja sair da sua conta?' -b 'Sim' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -116,7 +117,6 @@ output * bg ~/Wallpapers/SWAY.jpg fill
     bindsym $mod+7 workspace 7
     bindsym $mod+8 workspace 8
     bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace 1
     bindsym $mod+Shift+2 move container to workspace 2
@@ -127,7 +127,6 @@ output * bg ~/Wallpapers/SWAY.jpg fill
     bindsym $mod+Shift+7 move container to workspace 7
     bindsym $mod+Shift+8 move container to workspace 8
     bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -206,10 +205,26 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
+# capture all screens to clipboard
+bindsym Shift+Print exec grim - | wl-copy
+# capture the specified screen area to clipboard
+bindsym Print exec grim -g "$(slurp)" - | wl-copy
+# capture the focused monitor to clipboard
+bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 
 # Autostart apps
 exec_always ~/.config/waybar/waybar.sh
+exec opera
+exec spotify
+exec discord
+exec $term
+# To the workspaces correctly
+assign [class="^Opera$"] workspace 1
+assign [class="^Terminator$"] workspace 2
+assign [class="^Spotify$"] workspace 8
+assign [class="^Discord$"] workspace 9
 
 input * xkb_layout br
 
 include /etc/sway/config.d/*
+bindsym --release $mod+Shift+l exec "swaylock -i ~/Wallpapers/SWAY.jpg"
