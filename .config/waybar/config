@@ -25,7 +25,7 @@
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -34,16 +34,18 @@
         "tooltip": false
     },
     "network": {
-        "format": "{icon}",
+        "format": "{essid} {icon}",
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["", "" ,""],
+            "wifi": [""],
             "ethernet": [""],
-            "disconnected": [""]
+            "disconnected": ["Not Connected "]
         },
-        "on-click": "terminator",
-    "tooltip": false
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected"
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -77,9 +79,9 @@
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["", ""],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1"
+        "format-icons": ["", ""],
+        "on-scroll-down": "light -U 1",
+        "on-scroll-up": "light -A 1"
     },
     "custom/weather": {
         "format": "{}",
