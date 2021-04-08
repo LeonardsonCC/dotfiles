@@ -214,15 +214,16 @@ bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] |
 
 # Autostart apps
 exec_always ~/.config/waybar/waybar.sh
-exec opera
+exec brave
 exec spotify
 exec discord
 exec $term
 # To the workspaces correctly
-assign [class="^Opera$"] workspace 1
-assign [class="^Terminator$"] workspace 2
-assign [class="^Spotify$"] workspace 8
-assign [class="^Discord$"] workspace 9
+assign [app_id="brave"] workspace 1
+assign [app_id="terminator"] workspace 2
+assign [app_id="spotify"] workspace 8
+assign [app_id="discord"] workspace 9
+
 
 input * xkb_layout br
 
