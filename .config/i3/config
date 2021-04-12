@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Sans 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -36,7 +36,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 # start window menu
 bindsym $mod+Tab exec rofi -show window
 # start file browser
@@ -166,9 +166,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec $HOME/bin_scripts/brightness +20 # increase screen brightness
@@ -192,7 +192,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 focus_follows_mouse no
 
-bindsym $mod+Shift+l exec "i3lock-fancy"
+bindsym $mod+Shift+l exec "i3lock -c 000000"
 gaps inner 10
 smart_gaps on
 smart_borders on
@@ -200,7 +200,7 @@ for_window [class=".*"] border pixel 1
 
 exec_always --no-startup-id compton
 
-exec_always --no-startup-id feh --bg-fill ~/Wallpapers/03.jpg
+exec_always --no-startup-id feh --bg-fill ~/Wallpapers/SWAY.jpg
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # exec_always --no-startup-id $HOME/.config/conky/conky-start.sh
 exec_always --no-startup-id $HOME/.config/dunst/dunst-start.sh
