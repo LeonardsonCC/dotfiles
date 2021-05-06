@@ -1,9 +1,21 @@
 [global_config]
   title_transmit_bg_color = "#d30102"
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
-  title_use_system_font = False
   title_font = FiraCode Nerd Font Mono Medium 11
+  title_transmit_bg_color = "#d30102"
+  title_use_system_font = False
 [keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      command = tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME
+      parent = window0
+      profile = Gruvbox Dark
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
 [profiles]
   [[default]]
     background_color = "#1e1e1e"
@@ -11,52 +23,53 @@
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#e6d4a3"
     scrollbar_position = hidden
-    palette = "#161819:#f73028:#aab01e:#f7b125:#719586:#c77089:#7db669:#faefbb:#7f7061:#be0f17:#868715:#cc881a:#377375:#a04b73:#578e57:#e6d4a3"
-    use_system_font = False
-  [[WildCherry]]
-    background_color = "#1f1726"
-    cursor_color = "#dd00ff"
-    font = UbuntuMono Nerd Font Mono 13
-    foreground_color = "#dafaff"
-    show_titlebar = False
     scrollbar_position = hidden
-    palette = "#000507:#d94085:#2ab250:#ffd16f:#883cdc:#ececec:#c1b8b7:#fff8de:#009cc9:#da6bac:#f4dca5:#eac066:#308cba:#ae636b:#ff919d:#e4838d"
+    show_titlebar = False
     use_system_font = False
   [[AdventureTime]]
     background_color = "#1f1d45"
     cursor_color = "#efbf38"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#f8dcc0"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#050404:#bd0013:#4ab118:#e7741e:#0f4ac6:#665993:#70a598:#f8dcc0:#4e7cbf:#fc5f5a:#9eff6e:#efc11a:#1997c6:#9b5953:#c8faf4:#f6f5fb"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Argonaut]]
     background_color = "#0e1019"
     cursor_color = "#ff0018"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#fffaf4"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[AtelierSulphurpool]]
     background_color = "#202746"
     cursor_color = "#979db4"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#979db4"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#202746:#c94922:#ac9739:#c08b30:#3d8fd1:#6679cc:#22a2c9:#979db4:#6b7394:#c76b29:#293256:#5e6687:#898ea4:#dfe2f1:#9c637a:#f5f7ff"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Batman]]
     background_color = "#1b1d1e"
     cursor_color = "#fcef0c"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#6f6f6f"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#1b1d1e:#e6dc44:#c8be46:#f4fd22:#737174:#747271:#62605f:#c6c5bf:#505354:#fff78e:#fff27d:#feed6c:#919495:#9a9a9d:#a3a3a6:#dadbd6"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Gruvbox Dark]]
+    background_color = "#1e1e1e"
+    cursor_color = "#bbbbbb"
+    font = UbuntuMono Nerd Font Mono 13
+    foreground_color = "#e6d4a3"
+    palette = "#161819:#f73028:#aab01e:#f7b125:#719586:#c77089:#7db669:#faefbb:#7f7061:#be0f17:#868715:#cc881a:#377375:#a04b73:#578e57:#e6d4a3"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Material-Ocean]]
     background_color = "#0f111a"
@@ -64,9 +77,9 @@
     cursor_color_fg = False
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#8f93a2"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Material-Palenight]]
     background_color = "#292d3e"
@@ -74,18 +87,18 @@
     cursor_color_fg = False
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#a6accd"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Miu]]
     background_color = "#0d1926"
     cursor_color = "#d7dee4"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#d9e6f2"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#000000:#b87a7a:#7ab87a:#b8b87a:#7a7ab8:#b87ab8:#7ab8b8:#d9d9d9:#262626:#dbbdbd:#bddbbd:#dbdbbd:#bdbddb:#dbbddb:#bddbdb:#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Night Owl]]
     background_color = "#011627"
@@ -93,22 +106,22 @@
     cursor_color_fg = False
     font = Ubuntu Mono derivative Powerline 13
     foreground_color = "#d6deeb"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#2e3436:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#d3d7cf:#555753:#ef5350:#80cbc4:#ffeb95:#82aaff:#c792ea:#addb67:#eeeeec"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
   [[Nord]]
     background_color = "#2E3440"
     cursor_color = "#D8DEE9"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#D8DEE9"
-    show_titlebar = False
-    scrollbar_position = hidden
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
-  [[Gruvbox Dark]]
-    background_color = "#1e1e1e"
-    cursor_color = "#bbbbbb"
+  [[WildCherry]]
+    background_color = "#1f1726"
+    cursor_color = "#dd00ff"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#e6d4a3"
     scrollbar_position = hidden
@@ -116,15 +129,8 @@
     login_shell = True
     use_custom_command = True
     custom_command = /bin/zsh
+    foreground_color = "#dafaff"
+    palette = "#000507:#d94085:#2ab250:#ffd16f:#883cdc:#ececec:#c1b8b7:#fff8de:#009cc9:#da6bac:#f4dca5:#eac066:#308cba:#ae636b:#ff919d:#e4838d"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
-[layouts]
-  [[default]]
-    [[[child1]]]
-      parent = window0
-      type = Terminal
-      profile = Gruvbox Dark
-      command = tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME
-    [[[window0]]]
-      parent = ""
-      type = Window
-[plugins]

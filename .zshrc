@@ -107,7 +107,6 @@ export BROWSER=/bin/firefox-developer-edition
 export PATH=$PATH:$HOME/bin_scripts
 alias vim="nvim"
 alias g="git"
-source $HOME/.env
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
