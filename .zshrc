@@ -107,7 +107,6 @@ export BROWSER=/bin/firefox-developer-edition
 export PATH=$PATH:$HOME/bin_scripts
 alias vim="nvim"
 alias g="git"
-source $HOME/.env
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
@@ -137,3 +136,6 @@ zinit light-mode for \
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light denysdovhan/spaceship-prompt
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
