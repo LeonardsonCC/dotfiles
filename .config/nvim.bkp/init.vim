@@ -3,6 +3,7 @@ set exrc " Wont open project .nvimrc without this here
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sbdchd/neoformat'
 
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
@@ -19,6 +20,12 @@ Plug 'charliesbot/night-owl.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"Dart/Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 call plug#end()
 
@@ -59,3 +66,5 @@ augroup END
 
 set termguicolors
 set t_Co=256
+
+autocmd BufWritePre *.js Neoformat prettier
