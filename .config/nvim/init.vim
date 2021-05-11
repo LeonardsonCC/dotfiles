@@ -20,9 +20,9 @@ Plug 'townk/vim-autoclose'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'folke/which-key.nvim'
+Plug 'glepnir/dashboard-nvim'
 
 " Colorschemes
-Plug 'arcticicestudio/nord-vim'
 Plug 'chriskempson/base16-vim'
 
 call plug#end()
