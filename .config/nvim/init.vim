@@ -1,7 +1,7 @@
 " PLUGINS
 call plug#begin('~/.config/nvim/plugged')
 
-" Autocomplete
+" Autocomplete - https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 Plug 'neovim/nvim-lspconfig'
 
 " Neovim Tree sitter
@@ -19,6 +19,7 @@ Plug 'preservim/nerdtree'
 Plug 'townk/vim-autoclose'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
+Plug 'folke/which-key.nvim'
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'

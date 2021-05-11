@@ -10,3 +10,6 @@ require'lspconfig'.tsserver.setup{}
 
 -- VueJS
 require'lspconfig'.vuels.setup{}
+
+-- VIM
+require'lspconfig'.vimls.setup{}
