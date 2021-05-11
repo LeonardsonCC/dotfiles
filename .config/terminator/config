@@ -18,6 +18,7 @@
 [profiles]
   [[default]]
     background_color = "#1e1e1e"
+    background_darkness = 0.6
     cursor_color = "#bbbbbb"
     font = UbuntuMono Nerd Font Mono 13
     foreground_color = "#e6d4a3"
