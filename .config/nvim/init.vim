@@ -22,8 +22,8 @@ Plug 'mbbill/undotree'
 Plug 'folke/which-key.nvim'
 
 " Colorschemes
-Plug 'gruvbox-community/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
