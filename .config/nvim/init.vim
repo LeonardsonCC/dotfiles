@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Autocomplete - https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 
 " Neovim Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -21,6 +22,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'folke/which-key.nvim'
 Plug 'glepnir/dashboard-nvim'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'kyazdani42/nvim-web-devicons'
 
 " Colorschemes
 Plug 'chriskempson/base16-vim'
@@ -30,3 +34,4 @@ call plug#end()
 " LUA REQUIRE
 lua require("lsp")
 lua require("telescope_config")
+lua require("galaxyline_config")

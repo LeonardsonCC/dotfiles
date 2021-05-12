@@ -18,6 +18,7 @@ nnoremap <Leader>Y gg"+yG
 
 " LSP
 nnoremap K :lua vim.lsp.buf.hover()<CR>
+nnoremap <Leader>lh :lua vim.lsp.buf.hover()<CR>
 nnoremap <Leader>lf :lua vim.lsp.buf.formatting()<CR>
 vnoremap <Leader>lf :lua vim.lsp.buf.range_formatting()<CR>
 nnoremap <Leader>l] :lua vim.lsp.diagnostic.goto_next()<CR>
@@ -35,8 +36,7 @@ nnoremap <Leader>fc :NERDTreeFind<CR>
 
 " Telescope
 nnoremap <Leader>tg :lua require('telescope.builtin').live_grep()<CR>
-nnoremap <Leader>tff :lua require('telescope.builtin').find_files()<CR>
-nnoremap <Leader>tf :lua require('telescope.builtin').file_browser()<CR>
+nnoremap <Leader>tf :lua require('telescope.builtin').find_files()<CR>
 nnoremap <Leader>tb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <Leader>tc :lua require('telescope.builtin').colorscheme()<CR>
 nnoremap <Leader>tod :lua require('telescope.builtin').oldfiles()<CR>
@@ -51,4 +51,12 @@ vnoremap < <gv
 vnoremap > >gv
 
 " FuGITive
-vnoremap <Leader>gs :Git<CR>
+nnoremap <Leader>gs :Git<CR>
+
+" Projects - Magento
+nnoremap <Leader>pmu :!bin/magento setup:upgrade<CR>
+nnoremap <Leader>pms :!bin/magento setup:static-content:deploy en_US pt_BR -f<CR>
+nnoremap <Leader>pmd :!bin/magento setup:di:compile<CR>
+nnoremap <Leader>pmc :!bin/magento cache:clean<CR>
+nnoremap <Leader>pmr :!bin/magento indexer:reindex<CR>
+nnoremap <Leader>pmg :!bin/magento setup:upgrade && bin/magento setup:di:compile<CR>
