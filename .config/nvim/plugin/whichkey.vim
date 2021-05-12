@@ -50,24 +50,42 @@ local opts = {
 
 local mappings = {
   ["<CR>"] = "Source .vimrc file",
-  ["t"] = "Telescope",
+  ["t"] = {
+      name = "+ Telescope",
+      ["s"] = "Search Word (Grep)",
+      ["f"] = "Find File",
+      ["b"] = "Find Buffer",
+      ["c"] = "Change Colorscheme",
+      ["o"] = "Open Old File",
+      ["l"] = {
+          name = "+ LSP",
+          ["r"] = "References",
+          ["d"] = "Definitions",
+          ["e"] = "Diagnostics"
+        },
+      ["g"] = {
+          name = "+ Git",
+          ["b"] = "Branches",
+          ["c"] = "Commits"
+        },
+    },
   ["u"] = "UndoTree",
   ["c"] = "Comments",
   ["f"] = {
-      name = "File Manager",
+      name = "+ File Manager",
       m = "Open",
       c = "Focus current file",
     },
   ["l"] = {
-      name = "LSP",
+      name = "+ LSP",
       ["["] = "Previous diagnostics",
       ["]"] = "Next diagnostics",
       ["f"] = "Format file",
       ["g"] = {
-          name = "Go to...",
-          ["d"] = "definition",
-          ["D"] = "declaration",
-          ["r"] = "references",
+          name = "+ Go to...",
+          ["d"] = "Definition",
+          ["D"] = "Declaration",
+          ["r"] = "References",
         }
     },
   ["y"] = "Yank to Clipboard",

@@ -34,12 +34,12 @@ nnoremap <Leader>ut :UndotreeToggle<CR>
 nnoremap <Leader>fm :NERDTreeToggle<CR>
 nnoremap <Leader>fc :NERDTreeFind<CR>
 
-" Telescope
-nnoremap <Leader>tg :lua require('telescope.builtin').live_grep()<CR>
+" Telescope - TODO Add Telescope remaps to what they are related
+nnoremap <Leader>ts :lua require('telescope.builtin').live_grep()<CR>
 nnoremap <Leader>tf :lua require('telescope.builtin').find_files()<CR>
 nnoremap <Leader>tb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <Leader>tc :lua require('telescope.builtin').colorscheme()<CR>
-nnoremap <Leader>tod :lua require('telescope.builtin').oldfiles()<CR>
+nnoremap <Leader>to :lua require('telescope.builtin').oldfiles()<CR>
 nnoremap <Leader>tlr :lua require('telescope.builtin').lsp_references()<CR>
 nnoremap <Leader>tld :lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap <Leader>tle :lua require('telescope.builtin').lsp_document_diagnostics()<CR>
