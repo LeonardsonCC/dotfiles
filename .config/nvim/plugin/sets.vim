@@ -26,5 +26,6 @@ set shortmess+=c
 set colorcolumn=80
 set termguicolors
 set t_Co=256
-set completeopt=menuone,noselect
-colorscheme base16-gruvbox-dark-hard
+colorscheme aurora
+
+set completeopt=menu,preview

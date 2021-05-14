@@ -16,7 +16,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Utils
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree'
 Plug 'townk/vim-autoclose'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
@@ -25,9 +24,15 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/todo-comments.nvim'
+
+" Explorer
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kevinhwang91/rnvimr'
 
 " Colorschemes
 Plug 'chriskempson/base16-vim'
+Plug 'shaunsingh/moonlight.nvim'
 
 call plug#end()
 
@@ -35,3 +40,4 @@ call plug#end()
 lua require("lsp")
 lua require("telescope_config")
 lua require("galaxyline_config")
+lua require("todo_comments_config")

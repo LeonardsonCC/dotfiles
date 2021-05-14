@@ -30,9 +30,13 @@ nnoremap <Leader>lgr :lua vim.lsp.buf.references()<CR>
 " Undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
 
-" NERDTree
-nnoremap <Leader>fm :NERDTreeToggle<CR>
-nnoremap <Leader>fc :NERDTreeFind<CR>
+" NvimTree
+nnoremap <Leader>fm :NvimTreeToggle<CR>
+nnoremap <Leader>fc :NvimTreeFindFile<CR>
+nnoremap <Leader>fr: NvimTreeRefresh<CR>
+
+" To-do Comments
+nnoremap <Leader>Tt :TodoTrouble<CR>
 
 " Telescope - TODO Add Telescope remaps to what they are related
 nnoremap <Leader>ts :lua require('telescope.builtin').live_grep()<CR>
@@ -45,6 +49,7 @@ nnoremap <Leader>tld :lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap <Leader>tle :lua require('telescope.builtin').lsp_document_diagnostics()<CR>
 nnoremap <Leader>tgb :lua require('telescope.builtin').git_branches()<CR>
 nnoremap <Leader>tgc :lua require('telescope.builtin').git_commits()<CR>
+nnoremap <Leader>tt :TodoTelescope<CR>
 
 " Better Indenting
 vnoremap < <gv
