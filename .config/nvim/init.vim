@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Autocomplete - https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'ncm2/float-preview.nvim'
 
 " Neovim Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
