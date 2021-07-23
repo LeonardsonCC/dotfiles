@@ -51,6 +51,10 @@ nnoremap <Leader>tgb :lua require('telescope.builtin').git_branches()<CR>
 nnoremap <Leader>tgc :lua require('telescope.builtin').git_commits()<CR>
 nnoremap <Leader>tt :TodoTelescope<CR>
 
+nnoremap <Leader><Leader> :lua require('telescope.builtin').find_files()<CR>
+nnoremap <Leader>f<Leader> :lua require('telescope.builtin').live_grep()<CR>
+
+
 " Better Indenting
 vnoremap < <gv
 vnoremap > >gv
@@ -59,6 +63,7 @@ vnoremap > >gv
 nnoremap <Leader>gs :Git<CR>
 
 " Projects - Magento
+nnoremap <Leader>pmc :!bin/magento setup:upgrade && bin/magento cache:clean<CR>
 nnoremap <Leader>pmu :!bin/magento setup:upgrade<CR>
 nnoremap <Leader>pms :!bin/magento setup:static-content:deploy en_US pt_BR -f<CR>
 nnoremap <Leader>pmd :!bin/magento setup:di:compile<CR>
