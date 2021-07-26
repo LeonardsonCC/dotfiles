@@ -205,5 +205,5 @@ exec_always --no-startup-id xrdb -load ~/.Xresources
 # exec_always --no-startup-id $HOME/.config/conky/conky-start.sh
 exec_always --no-startup-id $HOME/.config/dunst/dunst-start.sh
 
+bindsym $mod+m move workspace to output right
 
-bindsym $mod+Shift+b exec "firefox-developer-edition"
