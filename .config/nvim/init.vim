@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'ncm2/float-preview.nvim'
+Plug 'simrat39/symbols-outline.nvim'
 
 " Neovim Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -34,6 +35,7 @@ Plug 'kevinhwang91/rnvimr'
 " Colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'shaunsingh/moonlight.nvim'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 

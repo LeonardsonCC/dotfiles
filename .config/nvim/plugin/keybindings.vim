@@ -26,6 +26,7 @@ nnoremap <Leader>l[ :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <Leader>lgd :lua vim.lsp.buf.definition()<CR>
 nnoremap <Leader>lgD :lua vim.lsp.buf.declaration()<CR>
 nnoremap <Leader>lgr :lua vim.lsp.buf.references()<CR>
+nnoremap <Leader>ff :lua vim.lsp.buf.formatting()<CR>
 
 " Undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
