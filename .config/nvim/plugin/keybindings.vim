@@ -48,6 +48,7 @@ nnoremap <Leader>to :lua require('telescope.builtin').oldfiles()<CR>
 nnoremap <Leader>tlr :lua require('telescope.builtin').lsp_references()<CR>
 nnoremap <Leader>tld :lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap <Leader>tle :lua require('telescope.builtin').lsp_document_diagnostics()<CR>
+nnoremap <Leader>tlc :lua require('telescope.builtin').lsp_code_actions()<CR>
 nnoremap <Leader>tgb :lua require('telescope.builtin').git_branches()<CR>
 nnoremap <Leader>tgc :lua require('telescope.builtin').git_commits()<CR>
 nnoremap <Leader>tt :TodoTelescope<CR>

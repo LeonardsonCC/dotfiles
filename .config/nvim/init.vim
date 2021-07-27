@@ -6,6 +6,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'ncm2/float-preview.nvim'
 Plug 'simrat39/symbols-outline.nvim'
+Plug 'sbdchd/neoformat'
 
 " Neovim Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -27,6 +28,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/todo-comments.nvim'
+Plug 'sunjon/shade.nvim'
 
 " Explorer
 Plug 'kyazdani42/nvim-tree.lua'
@@ -34,13 +36,19 @@ Plug 'kevinhwang91/rnvimr'
 
 " Colorschemes
 Plug 'chriskempson/base16-vim'
-Plug 'shaunsingh/moonlight.nvim'
-Plug 'joshdick/onedark.vim'
+Plug 'nxvu699134/vn-night.nvim'
+Plug 'folke/lsp-colors.nvim'
+Plug 'lourenci/github-colors'
 
 call plug#end()
 
 " LUA REQUIRE
 lua require("lsp")
+lua require("treesitter_config")
 lua require("telescope_config")
 lua require("galaxyline_config")
 lua require("todo_comments_config")
+lua require("shade_config")
+
+set background=dark
+colorscheme github-colors
