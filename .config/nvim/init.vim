@@ -35,10 +35,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kevinhwang91/rnvimr'
 
 " Colorschemes
-Plug 'chriskempson/base16-vim'
-Plug 'nxvu699134/vn-night.nvim'
-Plug 'folke/lsp-colors.nvim'
-Plug 'lourenci/github-colors'
+Plug 'gruvbox-community/gruvbox'
 
 call plug#end()
 
@@ -50,5 +47,3 @@ lua require("galaxyline_config")
 lua require("todo_comments_config")
 lua require("shade_config")
 
-set background=dark
-colorscheme github-colors
