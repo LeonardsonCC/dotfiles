@@ -106,6 +106,12 @@ gls.left[6] = {
         highlight = {colors.red, colors.bg}
     }
 }
+gls.left[7] = {
+  FileName = {
+    provider = 'FileName',
+    highlight = {colors.grey, colors.bg}
+  }
+}
 
 gls.right[1] = {
     DiagnosticError = {provider = 'DiagnosticError', icon = '  ', highlight = {colors.error_red, colors.bg}}
