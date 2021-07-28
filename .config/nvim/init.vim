@@ -30,6 +30,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/todo-comments.nvim'
 Plug 'sunjon/shade.nvim'
 Plug 'preservim/vimux'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'folke/trouble.nvim'
 
 " Explorer
 Plug 'kyazdani42/nvim-tree.lua'
@@ -47,4 +49,6 @@ lua require("telescope_config")
 lua require("galaxyline_config")
 lua require("todo_comments_config")
 lua require("shade_config")
+lua require("gitsigns_config")
+lua require("trouble_config")
 
