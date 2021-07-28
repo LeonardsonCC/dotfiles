@@ -29,6 +29,7 @@ Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/todo-comments.nvim'
 Plug 'sunjon/shade.nvim'
+Plug 'preservim/vimux'
 
 " Explorer
 Plug 'kyazdani42/nvim-tree.lua'

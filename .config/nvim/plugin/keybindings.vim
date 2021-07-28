@@ -17,7 +17,6 @@ vnoremap <Leader>y "+y
 nnoremap <Leader>Y gg"+yG
 
 " LSP
-nnoremap K :lua vim.lsp.buf.hover()<CR>
 nnoremap <Leader>lh :lua vim.lsp.buf.hover()<CR>
 nnoremap <Leader>lf :lua vim.lsp.buf.formatting()<CR>
 vnoremap <Leader>lf :lua vim.lsp.buf.range_formatting()<CR>
@@ -26,6 +25,13 @@ nnoremap <Leader>l[ :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <Leader>lgd :lua vim.lsp.buf.definition()<CR>
 nnoremap <Leader>lgD :lua vim.lsp.buf.declaration()<CR>
 nnoremap <Leader>lgr :lua vim.lsp.buf.references()<CR>
+
+nnoremap K :lua vim.lsp.buf.hover()<CR>
+nnoremap <Leader>] :lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <Leader>[ :lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <Leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <Leader>gD :lua vim.lsp.buf.declaration()<CR>
+nnoremap <Leader>gr :lua vim.lsp.buf.references()<CR>
 nnoremap <Leader>ff :lua vim.lsp.buf.formatting()<CR>
 
 " Undotree
@@ -64,11 +70,16 @@ vnoremap > >gv
 " FuGITive
 nnoremap <Leader>gs :Git<CR>
 
+" Vimux
+nnoremap <Leader>xt :VimuxTogglePane<CR>
+nnoremap <Leader>xo :VimuxOpenRunner<CR>
+nnoremap <Leader>xc :VimuxCloseRunner<CR>
+
 " Projects - Magento
-nnoremap <Leader>pmc :!bin/magento setup:upgrade && bin/magento cache:clean<CR>
-nnoremap <Leader>pmu :!bin/magento setup:upgrade<CR>
-nnoremap <Leader>pms :!bin/magento setup:static-content:deploy en_US pt_BR -f<CR>
-nnoremap <Leader>pmd :!bin/magento setup:di:compile<CR>
-nnoremap <Leader>pmc :!bin/magento cache:clean<CR>
-nnoremap <Leader>pmr :!bin/magento indexer:reindex<CR>
-nnoremap <Leader>pmg :!bin/magento setup:upgrade && bin/magento setup:di:compile<CR>
+nnoremap <Leader>pb :VimuxRunCommand("bin/magento setup:upgrade && bin/magento cache:clean")<CR>
+nnoremap <Leader>pmu :VimuxRunCommand("bin/magento setup:upgrade")<CR>
+nnoremap <Leader>pms :VimuxRunCommand("bin/magento setup:static-content:deploy en_US pt_BR -f")<CR>
+nnoremap <Leader>pmd :VimuxRunCommand("bin/magento setup:di:compile")<CR>
+nnoremap <Leader>pmc :VimuxRunCommand("bin/magento cache:clean")<CR>
+nnoremap <Leader>pmr :VimuxRunCommand("bin/magento indexer:reindex")<CR>
+nnoremap <Leader>pmg :VimuxRunCommand("bin/magento setup:upgrade && bin/magento setup:di:compile")<CR>
