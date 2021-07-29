@@ -39,6 +39,7 @@ Plug 'kevinhwang91/rnvimr'
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'
+Plug 'nxvu699134/vn-night.nvim'
 
 call plug#end()
 
