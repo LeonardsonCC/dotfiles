@@ -6,7 +6,10 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'ncm2/float-preview.nvim'
 Plug 'simrat39/symbols-outline.nvim'
-Plug 'sbdchd/neoformat'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'master'
+  \ }
 
 " Neovim Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -53,3 +56,4 @@ lua require("shade_config")
 lua require("gitsigns_config")
 lua require("trouble_config")
 
+autocmd BufWritePre *.tsx,*.ts Prettier
