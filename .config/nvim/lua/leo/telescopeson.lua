@@ -1,3 +1,9 @@
+-- Keybindings
+vim.api.nvim_set_keymap("n", "<Leader><Leader>", [[<Cmd>lua require("telescope.builtin").find_files()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>f<Leader>", [[<Cmd>lua require("telescope.builtin").live_grep()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>b<Leader>", [[<Cmd>lua require("telescope.builtin").buffers()<CR>]], { noremap = true })
+
+-- Config
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
@@ -19,7 +25,8 @@ require('telescope').setup{
     file_sorter =  require'telescope.sorters'.get_fuzzy_file,
     file_ignore_patterns = {
       "node_modules/*",
-      "plugged/*"
+      "plugged/*",
+      "undodir/*"
     },
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
     winblend = 0,

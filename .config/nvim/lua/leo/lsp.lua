@@ -1,6 +1,14 @@
---
---  LSP - Autocomplete
---
+-- Keybindings
+vim.api.nvim_set_keymap("n", "K", [[<Cmd>lua vim.lsp.buf.hover()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "ff", [[lua vim.lsp.buf.formatting()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "g]", [[lua vim.lsp.diagnostic.goto_next()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "g[", [[lua vim.lsp.diagnostic.goto_prev()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "gd", [[lua vim.lsp.buf.definition()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "gD", [[lua vim.lsp.buf.declaration()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "gr", [[lua vim.lsp.buf.references()<CR>]], { noremap = true })
+
+
+-- Language Servers
 
 -- Icons
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
@@ -25,9 +33,7 @@ require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 -- VueJS
 require'lspconfig'.vuels.setup{on_attach=require'completion'.on_attach}
 
--- VIM
-require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}
-
+-- Symbols outline
 vim.g.symbols_outline = {
     highlight_hovered_item = true,
     show_guides = true,
