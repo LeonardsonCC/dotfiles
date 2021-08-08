@@ -11,8 +11,6 @@ require("leo.colorizer")
 -- need to improve this
 require("leo.projects")
 
---require("leo.my-theme")
+require("leo.color")
 
-require("colorbuddy").colorscheme("gruvbuddy")
---vim.api.nvim_command("colorscheme gruvbox")
-
+require("colorbuddy").colorscheme("leo.color")
