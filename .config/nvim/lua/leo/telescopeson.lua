@@ -1,7 +1,7 @@
 -- Keybindings
-vim.api.nvim_set_keymap("n", "<Leader><Leader>", [[<Cmd>lua require("telescope.builtin").find_files()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>f<Leader>", [[<Cmd>lua require("telescope.builtin").live_grep()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>b<Leader>", [[<Cmd>lua require("telescope.builtin").buffers()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader><Leader>", ":lua require(\"telescope.builtin\").find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>f<Leader>", ":lua require(\"telescope.builtin\").live_grep()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>b<Leader>", ":lua require(\"telescope.builtin\").buffers()<CR>", { noremap = true })
 
 -- Config
 require('telescope').setup{

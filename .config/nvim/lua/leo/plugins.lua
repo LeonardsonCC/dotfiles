@@ -39,7 +39,7 @@ return require("packer").startup(function()
   use { "glepnir/galaxyline.nvim", branch = "main" }
 
   -- Shade not focused pane
-  use "sunjon/shade.nvim"
+  --use "sunjon/shade.nvim"
 
   -- Vimux
   use "preservim/vimux"
@@ -52,8 +52,6 @@ return require("packer").startup(function()
   use "norcalli/nvim-colorizer.lua"
   use "kyazdani42/nvim-web-devicons"
   use "gruvbox-community/gruvbox"
-  use "nxvu699134/vn-night.nvim"
-  use "tjdevries/colorbuddy.nvim"
-  use 'tjdevries/gruvbuddy.nvim'
+  use { "kaicataldo/material.vim", branch = "main" }
 end)
 

@@ -31,7 +31,7 @@ vim.o.belloff = "all"
 -- Nop
 vim.o.swapfile = false
 vim.o.backup = false
-vim.o.undodir = "undodir"
+vim.api.nvim_command("set undodir=~/.config/nvim/undodir")
 vim.o.undofile = true
 vim.o.scrolloff = 8
 vim.o.showmode = false
@@ -40,5 +40,5 @@ vim.o.cursorline = true
 vim.o.cmdheight = 2
 vim.o.updatetime = 1000
 vim.o.termguicolors = true
--- vim.o.signcolumn = true
--- vim.o.colorcolumn = 80
+vim.api.nvim_command("set signcolumn=yes")
+vim.api.nvim_command("set colorcolumn=80")
