@@ -24,14 +24,13 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = false,
 })
 
--- PHP
-require'lspconfig'.intelephense.setup{}
-
--- JS/TS
-require'lspconfig'.tsserver.setup{}
-
--- VueJS
-require'lspconfig'.vuels.setup{}
+vim.schedule(function ()
+  local lsp = require "lspconfig"
+  require("packer").loader("coq_nvim coq.artifacts")
+  lsp.intelephense.setup(require("coq")().lsp_ensure_capabilities())
+  lsp.tsserver.setup(require("coq")().lsp_ensure_capabilities())
+  lsp.vuels.setup(require("coq")().lsp_ensure_capabilities())
+end)
 
 -- Symbols outline
 vim.g.symbols_outline = {

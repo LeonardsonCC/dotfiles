@@ -17,7 +17,8 @@ return require("packer").startup(function()
   use "hrsh7th/nvim-compe"
   use "ncm2/float-preview.nvim"
   use "simrat39/symbols-outline.nvim"
-  use { "prettier/vim-prettier", run = "yarn install", branch = "master" }
+  use { "ms-jpq/coq_nvim", branch = "coq" }
+  use { "ms-jpq/coq.artifacts", branch = "artifacts" }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
