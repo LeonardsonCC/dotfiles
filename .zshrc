@@ -104,7 +104,7 @@ if type rg &> /dev/null; then
 fi
 
 export BROWSER=/snap/bin/brave
-export PATH=$PATH:$HOME/bin_scripts
+export PATH=$PATH:$HOME/.local/bin/
 alias vim="nvim"
 alias g="git"
 

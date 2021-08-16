@@ -4,9 +4,8 @@ require("leo.keybindings")
 require("leo.lsp")
 require("leo.nvim-tree")
 require("leo.telescopeson")
---require("leo.treesitter")
 require("leo.galaxyline")
---require("leo.colorizer")
+require("leo.compe")
 
 -- need to improve this
 require("leo.projects")

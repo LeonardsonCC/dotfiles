@@ -25,13 +25,13 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
 })
 
 -- PHP
-require'lspconfig'.intelephense.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.intelephense.setup{}
 
 -- JS/TS
-require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.tsserver.setup{}
 
 -- VueJS
-require'lspconfig'.vuels.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.vuels.setup{}
 
 -- Symbols outline
 vim.g.symbols_outline = {

@@ -13,7 +13,8 @@ return require("packer").startup(function()
 
   -- Autocomplete LSP
   use "neovim/nvim-lspconfig"
-  use "nvim-lua/completion-nvim"
+  --use "nvim-lua/completion-nvim"
+  use "hrsh7th/nvim-compe"
   use "ncm2/float-preview.nvim"
   use "simrat39/symbols-outline.nvim"
   use { "prettier/vim-prettier", run = "yarn install", branch = "master" }
@@ -23,7 +24,6 @@ return require("packer").startup(function()
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-fzy-native.nvim"
 
   -- Git
   use "tpope/vim-fugitive"
@@ -32,14 +32,8 @@ return require("packer").startup(function()
   -- Easily comment
   use "scrooloose/nerdcommenter"
 
-  -- UndoTree
-  use "mbbill/undotree"
-
   -- Line
   use { "glepnir/galaxyline.nvim", branch = "main" }
-
-  -- Shade not focused pane
-  --use "sunjon/shade.nvim"
 
   -- Vimux
   use "preservim/vimux"
@@ -49,9 +43,7 @@ return require("packer").startup(function()
   use "kevinhwang91/rnvimr"
 
   -- Colors and design
-  use "norcalli/nvim-colorizer.lua"
   use "kyazdani42/nvim-web-devicons"
-  use "gruvbox-community/gruvbox"
   use { "kaicataldo/material.vim", branch = "main" }
 end)
 
