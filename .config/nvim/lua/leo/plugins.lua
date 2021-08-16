@@ -40,8 +40,9 @@ return require("packer").startup(function()
   use "preservim/vimux"
 
   -- Explorer files
-  use "kyazdani42/nvim-tree.lua"
-  use "kevinhwang91/rnvimr"
+  --use "kyazdani42/nvim-tree.lua"
+  --use "kevinhwang91/rnvimr"
+  use { 'ms-jpq/chadtree', branch = "chad", run = "python3 -m chadree deps" }
 
   -- Colors and design
   use "kyazdani42/nvim-web-devicons"

@@ -21,3 +21,7 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
 -- Buffer
 vim.api.nvim_set_keymap("n", "<Leader>bd", ":bd<CR>", { noremap = true })
+
+-- CHADtree
+vim.api.nvim_set_keymap("n", "<Leader>fc", ":CHADopen<CR>", { noremap = true })
+
