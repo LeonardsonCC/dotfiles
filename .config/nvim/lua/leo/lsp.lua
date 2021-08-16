@@ -7,8 +7,15 @@ vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { norema
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>", { noremap = true })
 
-
 -- Language Servers
+
+-- Auto format
+local cmd = vim.cmd
+local u = require('leo.utils')
+
+u.create_augroup({
+    { 'BufWritePre', '*', 'undojoin', '|', 'Neoformat' },
+}, 'fmt')
 
 -- Icons
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }

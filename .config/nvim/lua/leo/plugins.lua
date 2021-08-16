@@ -19,6 +19,7 @@ return require("packer").startup(function()
   use "simrat39/symbols-outline.nvim"
   use { "ms-jpq/coq_nvim", branch = "coq" }
   use { "ms-jpq/coq.artifacts", branch = "artifacts" }
+  use "sbdchd/neoformat"
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
