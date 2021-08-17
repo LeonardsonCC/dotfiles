@@ -45,13 +45,8 @@ return require("packer").startup(function()
   --use "kevinhwang91/rnvimr"
   use { 'ms-jpq/chadtree', branch = "chad", run = "python3 -m chadree deps" }
 
-  -- Clipboard manager
-  use {
-    "AckslD/nvim-neoclip.lua",
-    config = function()
-        require('neoclip').setup()
-    end,
-  }
+  -- Markdown preview
+  use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }
 
   -- Colors and design
   use "kyazdani42/nvim-web-devicons"
