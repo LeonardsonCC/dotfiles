@@ -1,3 +1,5 @@
+vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", { noremap = true, expr = true, silent = true })
+
 require'compe'.setup {
   enabled = true;
   autocomplete = true;

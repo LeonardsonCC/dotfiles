@@ -42,6 +42,6 @@ vim.o.updatetime = 1000
 vim.o.termguicolors = true
 vim.api.nvim_command("set signcolumn=yes")
 vim.api.nvim_command("set colorcolumn=80")
-vim.o.completeopt = "menuone,noselect,noinsert"
+vim.o.completeopt = "menuone,noselect"
 vim.api.nvim_command("set noshowmode")
 vim.api.nvim_command("set shortmess+=c")
