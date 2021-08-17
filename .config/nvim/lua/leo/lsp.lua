@@ -37,6 +37,7 @@ vim.schedule(function ()
   lsp.intelephense.setup(require("coq")().lsp_ensure_capabilities())
   lsp.tsserver.setup(require("coq")().lsp_ensure_capabilities())
   lsp.vuels.setup(require("coq")().lsp_ensure_capabilities())
+  lsp.hls.setup(require("coq")().lsp_ensure_capabilities())
 end)
 
 -- Symbols outline

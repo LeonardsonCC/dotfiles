@@ -141,3 +141,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export TERM=screen-256color
+if [ -e /home/leonardson/.nix-profile/etc/profile.d/nix.sh ]; then . /home/leonardson/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
