@@ -204,7 +204,7 @@ for_window [class=".*"] border pixel 5
 
 exec_always --no-startup-id compton
 
-exec_always --no-startup-id feh --bg-fill ~/Wallpapers/02.jpg
+exec_always --no-startup-id feh --bg-fill ~/Wallpapers/06.jpg
 exec_always --no-startup-id xrdb -load ~/.Xresources
 # exec_always --no-startup-id $HOME/.config/conky/conky-start.sh
 exec_always --no-startup-id $HOME/.config/dunst/dunst-start.sh
