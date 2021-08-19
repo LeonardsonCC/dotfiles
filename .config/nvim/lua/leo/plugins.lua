@@ -64,5 +64,8 @@ return require("packer").startup(function()
 
   use 'glepnir/dashboard-nvim'
 
+  -- My plugin
+  use "~/dev/quick-notes.nvim"
+
 end)
 
