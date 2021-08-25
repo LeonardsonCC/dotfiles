@@ -12,7 +12,7 @@ M.ui = {
       "gruvchad",
       "javacafe",
    },
-   italic_comments = false,
+   italic_comments = true,
 
    -- Enable this only if your terminal has the colorscheme set which nvchad uses
    -- For Ex : if you have onedark set in nvchad , set onedark's bg color on your terminal
