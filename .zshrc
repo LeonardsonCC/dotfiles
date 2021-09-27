@@ -103,7 +103,7 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-export BROWSER=/snap/bin/brave
+export BROWSER=/usr/bin/firefox
 export PATH=$PATH:$HOME/.local/bin/
 alias vim="nvim"
 alias g="git"
@@ -142,3 +142,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export TERM=screen-256color
 if [ -e /home/leonardson/.nix-profile/etc/profile.d/nix.sh ]; then . /home/leonardson/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export ANDROID_HOME=~/Android/Sdk/tools
+export PATH=$ANDROID_HOME:$PATH
+ export PATH="/home/leonardson/.local/share/solana/install/active_release/bin:$PATH"
+
