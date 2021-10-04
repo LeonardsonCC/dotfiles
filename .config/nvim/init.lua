@@ -1,10 +1,14 @@
-local init_modules = {
-   "core",
-}
+require("leo.sets")
+require("leo.plugins")
+require("leo.keybindings")
+require("leo.lsp")
+require("leo.telescopeson")
+require("leo.galaxyline")
+require("leo.compe")
+require("leo.dashboard")
 
-for _, module in ipairs(init_modules) do
-   local ok, err = pcall(require, module)
-   if not ok then
-      error("Error loading " .. module .. "\n\n" .. err)
-   end
-end
+-- need to improve this
+require("leo.projects")
+
+require('material.functions').change_style("deep ocean")
+
