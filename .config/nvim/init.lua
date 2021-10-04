@@ -6,6 +6,7 @@ require("leo.telescopeson")
 require("leo.galaxyline")
 require("leo.compe")
 require("leo.dashboard")
+require("leo.orgmode")
 
 -- need to improve this
 require("leo.projects")

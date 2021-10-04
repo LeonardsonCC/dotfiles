@@ -64,6 +64,12 @@ return require("packer").startup(function()
 
   use 'glepnir/dashboard-nvim'
 
+  -- OrgMode
+  use {'kristijanhusak/orgmode.nvim', config = function()
+        require('orgmode').setup{}
+    end
+  }
+
   -- My plugin
   use "~/dev/quick-notes.nvim"
 
