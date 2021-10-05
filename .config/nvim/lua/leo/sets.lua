@@ -45,3 +45,5 @@ vim.api.nvim_command("set colorcolumn=80")
 vim.o.completeopt = "menuone,noselect"
 vim.api.nvim_command("set noshowmode")
 vim.api.nvim_command("set shortmess+=c")
+
+vim.o.mouse = "a"
