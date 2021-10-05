@@ -23,7 +23,7 @@ vim.g["dashboard_custom_header"] = {
 
 
 vim.g["dashboard_custom_footer"] = {
-  "Yep, Fantom Kittens everywhere"
+  "Fantom Kittens everywhere"
 }
 
 vim.g["dashboard_custom_section"] = {
