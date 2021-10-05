@@ -6,16 +6,14 @@ vim.api.nvim_set_keymap("n", "g[", ":lua vim.lsp.diagnostic.goto_prev()<CR>", { 
 vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-space>", "compe#complete()", { expr=true, noremap = true, silent = true })
 
 -- Language Servers
-
--- Auto format
 local cmd = vim.cmd
-local u = require('leo.utils')
-
-u.create_augroup({
-    { 'BufWritePre', '*', 'undojoin', '|', 'Neoformat' },
-}, 'fmt')
+cmd("augroup fmt")
+cmd("autocmd!")
+cmd("au BufWritePre * try | undojoin | Neoformat prettier | catch /^Vim\\%((\\a\\+)\\)\\=:E790/ | finally | silent Neoformat prettier | endtry")
+cmd("augroup END")
 
 -- Icons
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }

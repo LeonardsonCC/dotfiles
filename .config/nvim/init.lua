@@ -11,5 +11,5 @@ require("leo.orgmode")
 -- need to improve this
 require("leo.projects")
 
-require('material.functions').change_style("deep ocean")
+require('material.functions').change_style("darker")
 
