@@ -21,6 +21,7 @@ return require("packer").startup(function()
   use { "ms-jpq/coq.artifacts", branch = "artifacts" }
   use "sbdchd/neoformat"
   use "jose-elias-alvarez/null-ls.nvim"
+  use "rescript-lang/vim-rescript"
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }

@@ -36,6 +36,13 @@ vim.schedule(function ()
   lsp.tsserver.setup(require("coq")().lsp_ensure_capabilities())
   lsp.vuels.setup(require("coq")().lsp_ensure_capabilities())
   lsp.hls.setup(require("coq")().lsp_ensure_capabilities())
+  lsp.rescriptls.setup{
+    cmd = {
+      'node',
+      '/home/leonardson/.local/share/nvim/site/pack/packer/start/vim-rescript/server/out/server.js',
+      '--stdio'
+    }
+  }
 end)
 
 -- Symbols outline
