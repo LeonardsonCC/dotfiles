@@ -145,5 +145,7 @@ if [ -e /home/leonardson/.nix-profile/etc/profile.d/nix.sh ]; then . /home/leona
 
 export ANDROID_HOME=~/Android/Sdk/tools
 export PATH=$ANDROID_HOME:$PATH
- export PATH="/home/leonardson/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="/home/leonardson/.local/share/solana/install/active_release/bin:$PATH"
 
+export GOPATH=~/gocode
+export PATH="$PATH:$GOPATH/bin"

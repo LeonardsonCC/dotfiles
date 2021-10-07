@@ -43,6 +43,7 @@ vim.schedule(function ()
       '--stdio'
     }
   }
+  lsp.gopls.setup{}
 end)
 
 -- Symbols outline
