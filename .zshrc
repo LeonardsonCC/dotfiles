@@ -103,7 +103,7 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
 
-export BROWSER=/usr/bin/firefox
+export BROWSER=/snap/bin/brave
 export PATH=$PATH:$HOME/.local/bin/
 alias vim="nvim"
 alias g="git"
@@ -149,3 +149,4 @@ export PATH="/home/leonardson/.local/share/solana/install/active_release/bin:$PA
 
 export GOPATH=~/gocode
 export PATH="$PATH:$GOPATH/bin"
+. "$HOME/.cargo/env"
