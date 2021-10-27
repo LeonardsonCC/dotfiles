@@ -1,15 +1,5 @@
-require("leo.sets")
-require("leo.plugins")
-require("leo.keybindings")
-require("leo.lsp")
-require("leo.telescopeson")
-require("leo.galaxyline")
-require("leo.compe")
-require("leo.dashboard")
-require("leo.orgmode")
+local ok, err = pcall(require, 'cosmic')
 
--- need to improve this
-require("leo.projects")
-
-require('material.functions').change_style("deep ocean")
-
+if not ok then
+  error(string.format('Error loading core...\n\n%s', err))
+end
