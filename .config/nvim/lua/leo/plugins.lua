@@ -21,7 +21,6 @@ return require("packer").startup(function()
   use { "ms-jpq/coq.artifacts", branch = "artifacts" }
   use "sbdchd/neoformat"
   use "jose-elias-alvarez/null-ls.nvim"
-  use "rescript-lang/vim-rescript"
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
@@ -48,9 +47,9 @@ return require("packer").startup(function()
   use "preservim/vimux"
 
   -- Explorer files
-  --use "kyazdani42/nvim-tree.lua"
-  --use "kevinhwang91/rnvimr"
-  use { 'ms-jpq/chadtree', branch = "chad", run = "python3 -m chadree deps" }
+  use "kyazdani42/nvim-tree.lua"
+  use "kevinhwang91/rnvimr"
+  --use { 'ms-jpq/chadtree', branch = "chad", run = "python3 -m chadree deps" }
 
   -- Markdown preview
   use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }
@@ -65,12 +64,6 @@ return require("packer").startup(function()
   use "yamatsum/nvim-cursorline"
 
   use 'glepnir/dashboard-nvim'
-
-  -- OrgMode
-  use {'kristijanhusak/orgmode.nvim', config = function()
-        require('orgmode').setup{}
-    end
-  }
 
   -- My plugin
   use "~/dev/quick-notes.nvim"

@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap("i", "<C-space>", "compe#complete()", { expr=true, norem
 local cmd = vim.cmd
 cmd("augroup fmt")
 cmd("autocmd!")
-cmd("au BufWritePre * try | undojoin | Neoformat prettier | catch /^Vim\\%((\\a\\+)\\)\\=:E790/ | finally | silent Neoformat prettier | endtry")
+cmd("au BufWritePre * try | undojoin | Neoformat prettier | catch /^Vim\\%((\\a\\+)\\)\\=:E790/ | finally | silent Neoformat | endtry")
 cmd("augroup END")
 
 -- Icons

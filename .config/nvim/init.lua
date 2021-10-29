@@ -6,7 +6,7 @@ require("leo.telescopeson")
 require("leo.galaxyline")
 require("leo.compe")
 require("leo.dashboard")
-require("leo.orgmode")
+require("leo.nvim-tree")
 
 -- need to improve this
 require("leo.projects")
