@@ -25,3 +25,5 @@ vim.api.nvim_set_keymap("n", "<Leader>bd", ":bd<CR>", { noremap = true })
 -- CHADtree
 vim.api.nvim_set_keymap("n", "<Leader>fc", ":CHADopen<CR>", { noremap = true })
 
+vim.api.nvim_set_keymap("v", ">", ">gv", {})
+vim.api.nvim_set_keymap("v", "<", "<gv", {})
