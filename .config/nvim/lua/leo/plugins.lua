@@ -13,6 +13,7 @@ return require("packer").startup(function()
 
   -- Autocomplete LSP
   use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
   --use "nvim-lua/completion-nvim"
   use "hrsh7th/nvim-compe"
   use "ncm2/float-preview.nvim"

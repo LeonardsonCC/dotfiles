@@ -33,7 +33,7 @@ vim.g["dashboard_custom_section"] = {
   },
   b = {
     description = { "🌳 Open Tree           " },
-    command = "CHADopen"
+    command = "NvimTreeToggle"
   },
   c = {
     description = { "🌈 Change colorscheme  " },
