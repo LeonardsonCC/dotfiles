@@ -69,4 +69,6 @@ return require("packer").startup(function()
   -- My plugin
   use "~/dev/quick-notes.nvim"
 
+  use "github/copilot.vim"
+
 end)
