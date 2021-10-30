@@ -11,5 +11,6 @@ require("leo.nvim-tree")
 -- need to improve this
 require("leo.projects")
 
-require('material.functions').change_style("deep ocean")
+--require('material.functions').change_style("deep ocean")
 
+vim.api.nvim_command("colorscheme tokyonight")

@@ -57,9 +57,9 @@ return require("packer").startup(function()
 
   -- Colors and design
   use "kyazdani42/nvim-web-devicons"
-  --use { "kaicataldo/material.vim", branch = "main" }
   use "marko-cerovac/material.nvim"
   use {'nxvu699134/vn-night.nvim'}
+  use "folke/tokyonight.nvim"
   --use "rktjmp/lush.nvim"
 
   use "yamatsum/nvim-cursorline"
