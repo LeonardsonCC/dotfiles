@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">💫 CosmicNvim</h1>
 
 <p align="center">
@@ -114,3 +115,6 @@ Enter `:TSInstall` followed by <TAB> to see your options for languages with tree
 
 ### Floating Terminal
 ![terminal](https://user-images.githubusercontent.com/3721204/138015301-97d95ac5-49f3-4d31-9f1e-db15d4e6e9e2.png)
+=======
+# Just my Neovim config!
+>>>>>>> bb3ffbbf587210c745c30eee392014fa8a9c8fc0
