@@ -150,3 +150,4 @@ export PATH="/home/leonardson/.local/share/solana/install/active_release/bin:$PA
 export GOPATH=~/gocode
 export PATH="$PATH:$GOPATH/bin"
 . "$HOME/.cargo/env"
+[ -f "/home/leonardson/.ghcup/env" ] && source "/home/leonardson/.ghcup/env" # ghcup-env
