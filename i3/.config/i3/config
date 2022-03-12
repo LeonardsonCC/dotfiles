@@ -138,12 +138,6 @@ bindsym $mod+Shift+0 exec "i3-nagbar -t danger -m 'Deseja desligar o computador?
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
@@ -162,9 +156,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
@@ -173,9 +164,6 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec brightness 80 # increase screen brightness
 bindsym XF86MonBrightnessDown exec brightness 20 # decrease screen brightness
-
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioNext exec playerctl next
@@ -196,8 +184,10 @@ bar {
 
 for_window [class=".*"] border pixel 5
 
+# Transparency
 exec_always --no-startup-id picom
 
+# Background
 exec_always --no-startup-id feh --bg-fill ~/Wallpapers/03.jpg
 
 bindsym $mod+m move workspace to output right
