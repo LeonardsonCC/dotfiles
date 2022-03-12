@@ -44,9 +44,7 @@ bindsym $mod+Shift+f exec rofi -show file-browser -modi file-browser
 # start emoji one
 bindsym $mod+Shift+e exec rofi -show emoji -modi emoji
 #start monitor changer!
-bindsym $mod+Shift+m exec $HOME/bin_scripts/rofi_monitor.sh
-#start my SPOTIPY!
-bindsym $mod+Shift+p exec $HOME/bin_scripts/rofi_spotipyson.sh
+bindsym $mod+Shift+m exec rofi_monitor
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
