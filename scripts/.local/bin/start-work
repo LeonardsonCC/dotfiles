@@ -1,0 +1,11 @@
+#!/bin/sh 
+tmux new-session -d -s "notes" -n "nvim-notes"
+tmux send-keys -t notes:nvim-notes "[ -d ~/.notes/ ] || mkdir ~/.notes/; cd ~/.notes/" Enter
+
+# TODO current day as the file name
+tmux send-keys -t notes:nvim-notes "nvim main.md" Enter
+
+tmux new-session -d -s "dev" -n "main"
+tmux send-keys -t dev:main "cd ~/dev/" Enter
+
+tmux a
