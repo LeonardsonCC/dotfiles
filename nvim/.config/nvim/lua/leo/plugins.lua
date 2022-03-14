@@ -66,9 +66,4 @@ return require('packer').startup(function()
 
   -- Copilot because I'm useless
   use 'github/copilot.vim'
-
-  use {
-    'norcalli/nvim-colorizer.lua',
-    config = function() require('nvim-colorizer').setup('*') end
-  }
 end)
