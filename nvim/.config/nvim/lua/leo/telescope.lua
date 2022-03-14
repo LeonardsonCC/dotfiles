@@ -6,6 +6,14 @@ vim.api.nvim_set_keymap("n", "<Leader>bb", ":lua require(\"telescope.builtin\").
 
 -- Config
 require('telescope').setup{
+  pickers = {
+    find_files = {
+      hidden = true,
+      file_ignore_patterns = {
+        ".git",
+      }
+    }
+  },
   defaults = {
     vimgrep_arguments = {
       'rg',
