@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     
-    fish_add_path -ag ~/.tfenv/bin
+    # PATH variables
+    fish_add_path -ag ~/dev/test
 end
