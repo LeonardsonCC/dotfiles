@@ -11,7 +11,10 @@ return require('packer').startup(function()
   }
 
   -- Utils
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    'folke/trouble.nvim',
+  }
 
   -- Completion
   use {
