@@ -1,7 +1,6 @@
 -- Keybindings
 vim.api.nvim_set_keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>fff", ":lua vim.lsp.buf.formatting()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>ff", ":Neoformat<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>ff", ":lua vim.lsp.buf.formatting()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>fg", ":lua require(\"go.format\").goimport()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "g]", ":lua vim.lsp.diagnostic.goto_next()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "g[", ":lua vim.lsp.diagnostic.goto_prev()<CR>", { noremap = true })
@@ -14,6 +13,15 @@ local on_attach = function (client)
   client.resolved_capabilities.document_formatting = false
   client.resolved_capabilities.document_range_formatting = false
 end
+
+local null_ls = require('null-ls')
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.code_actions.eslint,
+    null_ls.builtins.formatting.prettier,
+  }
+})
 
 local lsp = require('lspconfig')
 

@@ -10,6 +10,10 @@ return require('packer').startup(function()
     'glepnir/lspsaga.nvim',
   }
 
+  -- Utils
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  -- Completion
   use {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
@@ -29,8 +33,6 @@ return require('packer').startup(function()
   use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
 
   use 'glepnir/dashboard-nvim'
-
-  use 'sbdchd/neoformat'
 
   use {
     'nvim-telescope/telescope.nvim',
