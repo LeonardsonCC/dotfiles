@@ -66,4 +66,7 @@ return require('packer').startup(function()
 
   -- Copilot because I'm useless
   use 'github/copilot.vim'
+
+  -- Fish Shell
+  use 'dag/vim-fish'
 end)
