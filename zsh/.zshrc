@@ -2,7 +2,7 @@
 export ZSH="/home/leonardson/.oh-my-zsh"
 
 # see https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-ZSH_THEME="pmcgee"
+ZSH_THEME="agnoster"
 
 plugins=(git)
 
