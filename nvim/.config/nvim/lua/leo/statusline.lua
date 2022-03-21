@@ -147,12 +147,18 @@ ins_left {
     if next(clients) == nil then
       return msg
     end
+
+    local clients_name = {}
+
     for _, client in ipairs(clients) do
       local filetypes = client.config.filetypes
       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
+        table.insert(clients_name, client.name)
       end
     end
+
+    msg = table.concat(clients_name, ', ')
+
     return msg
   end,
   icon = 'LSP:',

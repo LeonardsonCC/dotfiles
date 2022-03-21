@@ -7,6 +7,7 @@ require('leo.telescope')
 require('leo.cmp')
 require('leo.dashboard')
 require('leo.gitsigns')
+require('leo.bufferline')
 
 vim.g.gruvbox_baby_transparent_mode = 1
 vim.cmd('colorscheme gruvbox-baby')
