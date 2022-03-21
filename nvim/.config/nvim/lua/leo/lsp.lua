@@ -40,7 +40,6 @@ lsp.tsserver.setup{
 }
 lsp.gopls.setup{
   cmd = { "/home/leonardson/go/bin/gopls" },
-  on_attach = on_attach,
   settings = {
 		gopls = {
 			analyses = {

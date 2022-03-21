@@ -74,4 +74,14 @@ return require('packer').startup(function()
 
   -- Fish Shell
   use 'dag/vim-fish'
+
+  use {
+    'beauwilliams/focus.nvim',
+    config = function() require'focus'.setup() {} end
+  }
+
+  use {
+    'akinsho/bufferline.nvim', 
+    requires = 'kyazdani42/nvim-web-devicons',
+  }
 end)
