@@ -11,5 +11,5 @@ if status is-interactive
     source ~/.env.fish
 
     # NVM
-    bass source ~/.nvm/nvm.sh
+    load_nvm
 end
