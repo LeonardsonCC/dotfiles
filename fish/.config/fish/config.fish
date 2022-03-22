@@ -12,4 +12,7 @@ if status is-interactive
 
     # NVM
     load_nvm
+
+    # Fix FN keys Keychron
+    # echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
 end
