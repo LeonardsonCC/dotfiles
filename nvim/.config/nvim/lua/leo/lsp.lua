@@ -7,12 +7,12 @@ vim.api.nvim_set_keymap("n", "g[", ":lua vim.lsp.diagnostic.goto_prev()<CR>", { 
 vim.api.nvim_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "ga", ":lua vim.lsp.buf.code_action()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("i", "<C-space>", "compe#complete()", { expr=true, noremap = true, silent = true })
 
 -- Code Bindings
 vim.api.nvim_set_keymap("n", "<Leader>ct", ":TroubleToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>cf", ":lua vim.lsp.buf.formatting()<CR>", { noremap = true })
-
 
 local on_attach = function (client)
   client.resolved_capabilities.document_formatting = false
@@ -25,10 +25,16 @@ null_ls.setup({
     null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.code_actions.eslint,
     null_ls.builtins.formatting.prettier,
+
+    -- Go
+    null_ls.builtins.formatting.gofmt,
+    null_ls.builtins.formatting.goimports,
+    null_ls.builtins.formatting.golines,
   },
   on_attach = function(client)
     on_attach(client)
     if client.resolved_capabilities.document_formatting then
+      vim.cmd("autocmd! * <buffer>")
       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
   end,
@@ -40,14 +46,6 @@ lsp.tsserver.setup{
 }
 lsp.gopls.setup{
   cmd = { "/home/leonardson/go/bin/gopls" },
-  settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-			},
-			staticcheck = true,
-		},
-	},
 }
 lsp.terraformls.setup{
   cmd = { "/home/leonardson/.local/share/nvim/lsp_servers/terraform/terraform-ls/terraform-ls", "serve" },
@@ -56,4 +54,13 @@ lsp.terraformls.setup{
   end,
 }
 
-vim.api.nvim_command("let g:neoformat_enabled_javascript = ['prettier']")
+-- UTILS
+local bufnr = vim.api.nvim_buf_get_number(0)
+
+vim.lsp.handlers['textDocument/codeAction'] = function(_, _, actions)
+    require('lsputil.codeAction').code_action_handler(nil, actions, nil, nil, nil)
+end
+
+vim.lsp.handlers['textDocument/references'] = function(_, _, result)
+    require('lsputil.locations').references_handler(nil, result, { bufnr = bufnr }, nil)
+end

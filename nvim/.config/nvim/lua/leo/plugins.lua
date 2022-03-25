@@ -3,16 +3,18 @@ return require('packer').startup(function()
 
   -- Autocomplete
   use {
+    'nvim-lua/plenary.nvim',
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
     'simrat39/symbols-outline.nvim',
     'onsails/lspkind-nvim',
-    'glepnir/lspsaga.nvim',
+    'jose-elias-alvarez/null-ls.nvim',
+    'RishabhRD/popfix',
+    'RishabhRD/nvim-lsputils',
   }
 
   -- Utils
   use {
-    'jose-elias-alvarez/null-ls.nvim',
     'folke/trouble.nvim',
   }
 
@@ -67,8 +69,6 @@ return require('packer').startup(function()
   -- [G]old
   use 'tpope/vim-fugitive'
 
-  use "preservim/nerdcommenter"
-
   -- Copilot because I'm useless
   use 'github/copilot.vim'
 
@@ -76,12 +76,14 @@ return require('packer').startup(function()
   use 'dag/vim-fish'
 
   use {
-    'beauwilliams/focus.nvim',
-    config = function() require'focus'.setup() {} end
+    'akinsho/bufferline.nvim', 
+    requires = 'kyazdani42/nvim-web-devicons',
   }
 
   use {
-    'akinsho/bufferline.nvim', 
-    requires = 'kyazdani42/nvim-web-devicons',
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
   }
 end)

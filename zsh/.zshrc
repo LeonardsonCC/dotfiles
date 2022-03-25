@@ -2,7 +2,7 @@
 export ZSH="/home/leonardson/.oh-my-zsh"
 
 # see https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-ZSH_THEME="agnoster"
+ZSH_THEME="awesomepanda"
 
 plugins=(git)
 
@@ -18,4 +18,5 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 # alias
 alias ll='ls -lah'
 
-
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:"$HOME/.local/bin"
