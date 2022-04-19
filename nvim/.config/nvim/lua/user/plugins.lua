@@ -17,4 +17,5 @@ return {
     packer = {
       compile_path = vim.fn.stdpath "config" .. "/lua/packer_compiled.lua",
     },
+    ["neo-tree"] = require "user.core.neo_tree",
 }
