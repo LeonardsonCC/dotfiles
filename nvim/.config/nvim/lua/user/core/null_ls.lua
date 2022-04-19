@@ -19,7 +19,7 @@ return function()
       sources = {
         -- Set a formatter
         formatting.rufo,
-        -- formatting.prettier,
+        formatting.prettier,
 
         -- Set a linter
         diagnostics.rubocop,
