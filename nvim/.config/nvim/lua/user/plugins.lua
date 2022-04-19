@@ -1,6 +1,7 @@
 return {
     -- Add plugins, the packer syntax without the "use"
     init = {
+        { "github/copilot.vim" },
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
