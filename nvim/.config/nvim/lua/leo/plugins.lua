@@ -27,13 +27,12 @@ return require('packer').startup(function()
 
   -- Completion
   use {
+    'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'hrsh7th/cmp-cmdline',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-vsnip',
-    'hrsh7th/vim-vsnip'
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip'
   }
 
   -- Code colors
@@ -71,6 +70,7 @@ return require('packer').startup(function()
   use 'chriskempson/base16-vim'
   use 'gruvbox-community/gruvbox'
   use 'luisiacc/gruvbox-baby'
+  use 'marko-cerovac/material.nvim'
 
 
   -- [G]old

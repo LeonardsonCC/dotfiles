@@ -10,5 +10,5 @@ require('leo.dashboard')
 require('leo.gitsigns')
 require('leo.bufferline')
 
-vim.g.gruvbox_baby_transparent_mode = 0
-vim.cmd('colorscheme gruvbox-baby')
+vim.g.material_style = "darker"
+vim.cmd('colorscheme material')
