@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>bd", ":bd<CR>", { noremap = true })
 
 -- NvimTree
-vim.api.nvim_set_keymap("n", "<Leader>op", ":NvimTreeFindFileToggle<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true })
 
 -- Symbols Outline
 vim.api.nvim_set_keymap("n", "<leader>st", ":SymbolsOutline<CR>", {})
