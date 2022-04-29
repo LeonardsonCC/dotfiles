@@ -68,12 +68,6 @@ map("n", "<Leader>Y", 'gg"+yG', { noremap = true })
 -- FuGITive
 map("n", "<Leader>gg", ":Git<CR>", { noremap = true })
 
--- Terminal
-map("n", "<Leader>t", ":Ttoggle<CR>", { noremap = true })
-map("t", "jk", "<C-\\><C-n>", { noremap = true })
-map("t", "kj", "<C-\\><C-n>", { noremap = true })
-map("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
-
 -- Buffer
 map("n", "<Leader>bd", ":bd<CR>", { noremap = true })
 
