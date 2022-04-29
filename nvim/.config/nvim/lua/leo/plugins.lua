@@ -9,8 +9,15 @@ return require('packer').startup(function()
     'simrat39/symbols-outline.nvim',
     'onsails/lspkind-nvim',
     'jose-elias-alvarez/null-ls.nvim',
-    'RishabhRD/popfix',
-    'RishabhRD/nvim-lsputils',
+  }
+
+  use {
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
+    config = function()
+      vim.g.code_action_menu_show_details = true
+      vim.g.code_action_menu_show_diff = true
+    end
   }
 
   -- Utils
@@ -72,9 +79,6 @@ return require('packer').startup(function()
   -- Copilot because I'm useless
   use 'github/copilot.vim'
 
-  -- Fish Shell
-  use 'dag/vim-fish'
-
   use {
     'akinsho/bufferline.nvim', 
     requires = 'kyazdani42/nvim-web-devicons',
@@ -86,4 +90,15 @@ return require('packer').startup(function()
       require('Comment').setup()
     end
   }
+
+  -- Which key
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  }
+
+  -- Delete buffers
+  use 'moll/vim-bbye'
 end)
