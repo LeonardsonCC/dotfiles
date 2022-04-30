@@ -50,7 +50,7 @@ map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true })
 -- FuGITive
 map("n", "<Leader>gg", ":Git<CR>", { noremap = true })
 
--- Clipboard 
+-- Clipboard
 map("v", "<Leader>P", '"_dP', { noremap = true })
 map("n", "<Leader>y", '"+y', { noremap = true })
 map("v", "<Leader>y", '"+y', { noremap = true })
@@ -59,3 +59,13 @@ map("n", "<Leader>Y", 'gg"+yG', { noremap = true })
 -- Source current file
 map("n", "<Leader><Enter>", ":source $MYVIMRC<CR>", { noremap = true })
 map("n", "<Leader>c<Enter>", ":source %<CR>", { noremap = true })
+
+-- FTerm
+map("n", "<Leader>tg", function()
+  require("leo.toggleterm").lazygit_toggle()
+end, { noremap = true })
+
+map("n", "<Leader>tt", function()
+  require("leo.toggleterm").top_toggle()
+end, { noremap = true })
+

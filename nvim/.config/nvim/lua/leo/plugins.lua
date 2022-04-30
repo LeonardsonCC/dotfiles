@@ -1,19 +1,19 @@
-return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+return require("packer").startup(function()
+  use "wbthomason/packer.nvim"
 
   -- Autocomplete
   use {
-    'nvim-lua/plenary.nvim',
-    'neovim/nvim-lspconfig',
-    'williamboman/nvim-lsp-installer',
-    'simrat39/symbols-outline.nvim',
-    'onsails/lspkind-nvim',
-    'jose-elias-alvarez/null-ls.nvim',
+    "nvim-lua/plenary.nvim",
+    "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+    "simrat39/symbols-outline.nvim",
+    "onsails/lspkind-nvim",
+    "jose-elias-alvarez/null-ls.nvim",
   }
 
   use {
-    'weilbith/nvim-code-action-menu',
-    cmd = 'CodeActionMenu',
+    "weilbith/nvim-code-action-menu",
+    cmd = "CodeActionMenu",
     config = function()
       vim.g.code_action_menu_show_details = true
       vim.g.code_action_menu_show_diff = true
@@ -22,72 +22,72 @@ return require('packer').startup(function()
 
   -- Utils
   use {
-    'folke/trouble.nvim',
+    "folke/trouble.nvim",
   }
 
   -- Completion
   use {
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip'
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip"
   }
 
   -- Code colors
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
 
   -- Style
 
-  use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
+  use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
 
-  use 'glepnir/dashboard-nvim'
+  use "glepnir/dashboard-nvim"
 
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = 'nvim-lua/plenary.nvim'
+    "nvim-telescope/telescope.nvim",
+    requires = "nvim-lua/plenary.nvim"
   }
 
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    "nvim-lualine/lualine.nvim",
+    requires = {"kyazdani42/nvim-web-devicons", opt = true}
   }
 
   use {
-    'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }
+    "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" }
   }
 
   use {
-    'kyazdani42/nvim-tree.lua',
+    "kyazdani42/nvim-tree.lua",
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      "kyazdani42/nvim-web-devicons", -- optional, for file icon
     },
-    config = function() require'nvim-tree'.setup {} end
+    config = function() require"nvim-tree".setup {} end
   }
 
-  use 'chriskempson/base16-vim'
-  use 'gruvbox-community/gruvbox'
-  use 'luisiacc/gruvbox-baby'
-  use 'marko-cerovac/material.nvim'
+  use "chriskempson/base16-vim"
+  use "gruvbox-community/gruvbox"
+  use "luisiacc/gruvbox-baby"
+  use "marko-cerovac/material.nvim"
 
 
   -- [G]old
-  use 'tpope/vim-fugitive'
+  use "tpope/vim-fugitive"
 
-  -- Copilot because I'm useless
-  use 'github/copilot.vim'
+  -- Copilot because I"m useless
+  use "github/copilot.vim"
 
   use {
-    'akinsho/bufferline.nvim', 
-    requires = 'kyazdani42/nvim-web-devicons',
+    "akinsho/bufferline.nvim", 
+    requires = "kyazdani42/nvim-web-devicons",
   }
 
   use {
-    'numToStr/Comment.nvim',
+    "numToStr/Comment.nvim",
     config = function()
-      require('Comment').setup()
+      require("Comment").setup()
     end
   }
 
@@ -100,5 +100,8 @@ return require('packer').startup(function()
   }
 
   -- Delete buffers
-  use 'moll/vim-bbye'
+  use "moll/vim-bbye"
+
+  -- Toggle terminal
+  use "akinsho/toggleterm.nvim"
 end)
