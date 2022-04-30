@@ -1,5 +1,6 @@
 require('leo.plugins')
 require('leo.sets')
+require('leo.autocmds')
 require('leo.mappings')
 require('leo.statusline')
 require('leo.lsp.installer')

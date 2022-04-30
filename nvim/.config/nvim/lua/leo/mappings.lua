@@ -75,4 +75,3 @@ end, { noremap = true })
 
 -- Exit terminal mode
 map("t", "jk", "<C-\\><C-n>", { noremap = true })
-
