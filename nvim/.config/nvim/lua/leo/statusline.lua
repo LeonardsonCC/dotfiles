@@ -42,14 +42,15 @@ if status_ok then
       component_separators = "",
       section_separators = "",
       globalstatus = true,
+      full_path = true,
     },
     sections = {
       lualine_a = { spacer },
-      lualine_b = {},
+      lualine_b = { 'mode', },
       lualine_c = {
         {
           "branch",
-          icon = "",
+          icon = "",
           color = { fg = get_hl_prop("Conditional", "foreground", colors.purple_1), gui = "bold" },
           padding = { left = 2, right = 1 },
         },
@@ -71,9 +72,10 @@ if status_ok then
           padding = { left = 2, right = 1 },
         },
         {
-          function()
-            return "%="
-          end,
+          '%=',
+        },
+        {
+          'filename',
         },
       },
       lualine_x = {

@@ -1,5 +1,9 @@
 local map = vim.keymap.set
 
+-- Escape
+map("i", "jk", "<Esc>", { noremap = true })
+map("i", "kj", "<Esc>", { noremap = true })
+
 -- Fix Copilot
 vim.cmd('imap <silent><script><expr> <C-j> copilot#Accept("")')
 vim.cmd("let g:copilot_no_tab_map = v:true")
@@ -37,27 +41,14 @@ map("n", "<C-h>", "<cmd>BufferLineMovePrev<cr>", { noremap = true, silent = true
 -- Buffer delete
 map("n", "<leader>c", "<cmd>Bdelete!<CR>", { desc = "Delete buffer" })
 
+-- Comment
 
 
+-- NvimTree
+map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true })
 
-
-
-
-
-
-
-
-
--- Escape
-map("i", "jk", "<Esc>", { noremap = true })
-map("i", "kj", "<Esc>", { noremap = true })
-
--- Ctrl Backspace to delete word
-map("i", "<C-BS>", "<C-\\><C-o>db", { noremap = true })
-
--- Source current file
-map("n", "<Leader><Enter>", ":source $MYVIMRC<CR>", { noremap = true })
-map("n", "<Leader>c<Enter>", ":source %<CR>", { noremap = true })
+-- FuGITive
+map("n", "<Leader>gg", ":Git<CR>", { noremap = true })
 
 -- Clipboard 
 map("v", "<Leader>P", '"_dP', { noremap = true })
@@ -65,18 +56,6 @@ map("n", "<Leader>y", '"+y', { noremap = true })
 map("v", "<Leader>y", '"+y', { noremap = true })
 map("n", "<Leader>Y", 'gg"+yG', { noremap = true })
 
--- FuGITive
-map("n", "<Leader>gg", ":Git<CR>", { noremap = true })
-
--- Buffer
-map("n", "<Leader>bd", ":bd<CR>", { noremap = true })
-
--- NvimTree
-map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true })
-
--- Symbols Outline
-map("n", "<leader>st", ":SymbolsOutline<CR>", {})
-
--- Telekasten
-map("n", "<leader>n", ":Telekasten<CR>", {})
-
+-- Source current file
+map("n", "<Leader><Enter>", ":source $MYVIMRC<CR>", { noremap = true })
+map("n", "<Leader>c<Enter>", ":source %<CR>", { noremap = true })
