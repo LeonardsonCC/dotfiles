@@ -10,6 +10,7 @@ require('leo.dashboard')
 require('leo.gitsigns')
 require('leo.bufferline')
 require('leo.toggleterm')
+require('leo.indent')
 
 vim.g.material_style = "darker"
 vim.cmd('colorscheme material')

@@ -76,6 +76,8 @@ return require("packer").startup(function()
   -- [G]old
   use "tpope/vim-fugitive"
 
+  use "f-person/git-blame.nvim"
+
   -- Copilot because I"m useless
   use "github/copilot.vim"
 
@@ -104,4 +106,25 @@ return require("packer").startup(function()
 
   -- Toggle terminal
   use "akinsho/toggleterm.nvim"
+
+  -- cursor word
+  use {
+    "yamatsum/nvim-cursorline",
+    config = function()
+      require("nvim-cursorline").setup({
+        cursorline = {
+          enable = true,
+          timeout = 1000,
+          number = false,
+        },
+        cursorword = {
+          enable = true,
+          min_length = 3,
+          hl = { underline = true },
+        }
+      })
+    end
+  }
+
+  use "lukas-reineke/indent-blankline.nvim"
 end)

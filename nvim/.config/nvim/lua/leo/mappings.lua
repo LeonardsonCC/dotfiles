@@ -69,3 +69,10 @@ map("n", "<Leader>tt", function()
   require("leo.toggleterm").top_toggle()
 end, { noremap = true })
 
+map("n", "<Leader>t<Leader>", function()
+  require("leo.toggleterm").term_toggle()
+end, { noremap = true })
+
+-- Exit terminal mode
+map("t", "jk", "<C-\\><C-n>", { noremap = true })
+

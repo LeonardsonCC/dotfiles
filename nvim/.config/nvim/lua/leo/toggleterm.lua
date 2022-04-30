@@ -29,4 +29,10 @@ M.top_toggle = function ()
   top:toggle()
 end
 
+-- Terminal
+local term = Terminal:new({ hidden = true })
+M.term_toggle = function ()
+  term:toggle()
+end
+
 return M
