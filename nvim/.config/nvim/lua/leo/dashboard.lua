@@ -8,27 +8,27 @@ vim.g["dashboard_custom_header"] = {
   "   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ",
   "    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ",
   "   █   █  █      ▄▄           ▄▀   ",
-}
-
-vim.g["dashboard_custom_footer"] = {
-  "Nice"
+  "                                   ",
+  "                                   ",
+  "                                   ",
 }
 
 vim.g["dashboard_custom_section"] = {
   a = {
-    description = { "🔍 Find File           " },
+    description = { "🔍 Find File         " },
     command = "Telescope find_files"
   },
   b = {
-    description = { "🌳 Open Tree           " },
+    description = { "🌳 Open Tree         " },
     command = "NvimTreeOpen"
   },
   c = {
-    description = { "🌈 Change colorscheme  " },
+    description = { "🌈 Change colorscheme" },
     command = function() require("telescope.builtin").colorscheme() end,
   },
-  d = {
-    description = { "⚙️ Edit configuration  " },
-    command = "e $MYVIMRC"
-  },
 }
+
+vim.g["dashboard_custom_footer"] = {
+  "Have fun!"
+}
+
