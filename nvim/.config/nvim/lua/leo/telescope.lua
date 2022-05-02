@@ -4,8 +4,11 @@ vim.api.nvim_set_keymap("n", "<Leader>sf", ":lua require(\"telescope.builtin\").
 vim.api.nvim_set_keymap("n", "<Leader>sp", ":lua require(\"telescope.builtin\").live_grep()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>bb", ":lua require(\"telescope.builtin\").buffers()<CR>", { noremap = true })
 
+local telescope = require("telescope")
+local actions = require("telescope.actions")
+
 -- Config
-require('telescope').setup{
+telescope.setup{
   pickers = {
     find_files = {
       hidden = true,
@@ -15,6 +18,12 @@ require('telescope').setup{
     }
   },
   defaults = {
+    mappings = {
+      i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+      }
+    },
     vimgrep_arguments = {
       'rg',
       '--color=never',
@@ -29,8 +38,21 @@ require('telescope').setup{
     entry_prefix = "  ",
     initial_mode = "insert",
     selection_strategy = "reset",
-    sorting_strategy = "descending",
+    sorting_strategy = "ascending",
     layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        prompt_position = "top",
+        preview_width = 0.55,
+        results_width = 0.8,
+      },
+      vertical = {
+        mirror = false,
+      },
+      width = 0.87,
+      height = 0.80,
+      preview_cutoff = 120,
+    },
     file_sorter =  require'telescope.sorters'.get_fuzzy_file,
     file_ignore_patterns = {
       "node_modules/*",
