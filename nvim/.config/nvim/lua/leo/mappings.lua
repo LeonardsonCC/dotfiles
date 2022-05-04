@@ -52,7 +52,9 @@ map("n", "<C-l>", "<cmd>BufferLineMoveNext<cr>", { noremap = true, silent = true
 map("n", "<C-h>", "<cmd>BufferLineMovePrev<cr>", { noremap = true, silent = true })
 
 -- Buffer delete
-map("n", "<leader>c", "<cmd>Bdelete!<CR>", { desc = "Delete buffer" })
+map("n", "<leader>c", function ()
+  require('bufdelete').bufdelete(0, false)
+end, { desc = "Delete buffer" })
 
 -- Comment
 

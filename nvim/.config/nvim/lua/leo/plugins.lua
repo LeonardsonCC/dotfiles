@@ -111,6 +111,7 @@ return require("packer").startup(function()
     "akinsho/bufferline.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use "famiu/bufdelete.nvim"
 
   use {
     "numToStr/Comment.nvim",
