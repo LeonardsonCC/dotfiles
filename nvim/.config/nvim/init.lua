@@ -13,5 +13,5 @@ require('leo.bufferline')
 require('leo.toggleterm')
 require('leo.indent')
 
-vim.g.material_style = "darker"
+vim.g.material_style = "deep ocean"
 vim.cmd('colorscheme material')

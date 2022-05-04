@@ -8,6 +8,7 @@ return require("packer").startup(function()
     "williamboman/nvim-lsp-installer",
     "simrat39/symbols-outline.nvim",
     "jose-elias-alvarez/null-ls.nvim",
+    "ray-x/lsp_signature.nvim",
   }
 
   use {
@@ -31,9 +32,22 @@ return require("packer").startup(function()
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
 
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip"
+  }
+
+  -- Copilot with cmp
+  use {
+    "zbirenbaum/copilot-cmp",
+    requires = "zbirenbaum/copilot.lua",
+    event = {"VimEnter"},
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()
+      end, 100)
+    end,
   }
 
   -- Code colors
@@ -68,10 +82,22 @@ return require("packer").startup(function()
     config = function() require"nvim-tree".setup {} end
   }
 
-  use "chriskempson/base16-vim"
-  use "gruvbox-community/gruvbox"
   use "luisiacc/gruvbox-baby"
-  use "marko-cerovac/material.nvim"
+  use "rebelot/kanagawa.nvim"
+  use {
+    "marko-cerovac/material.nvim",
+    config = function()
+      require('material').setup({
+        contrast = {
+          floating_windows = true,
+          non_current_windows = true,
+        },
+        high_visibility = {
+          darker = true,
+        },
+      })
+    end
+  }
 
 
   -- [G]old
