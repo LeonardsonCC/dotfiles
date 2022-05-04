@@ -8,7 +8,7 @@ map("i", "kj", "<Esc>", { noremap = true })
 vim.cmd('imap <silent><script><expr> <C-j> copilot#Accept("")')
 vim.cmd("let g:copilot_no_tab_map = v:true")
 
--- Best keymap
+-- Best keymap (indentation)
 map("v", "<", "<gv", { noremap = true})
 map("v", ">", ">gv", { noremap = true})
 
@@ -21,13 +21,26 @@ map("n", "<Leader>lp", ":lua vim.lsp.diagnostic.goto_prev()<CR>", { noremap = tr
 map("n", "<Leader>la", ":CodeActionMenu<CR>", { noremap = true })
 map("n", "<Leader>lf", ":lua vim.lsp.buf.formatting()<CR>", { noremap = true })
 map("n", "<Leader>lt", ":TroubleToggle<CR>", { noremap = true, silent = true })
-map("n", "<leader>lD", function()
-  require("telescope.builtin").diagnostics()
-end, { desc = "Telescope search diagnostics" })
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Hover diagnostics" })
-map("n", "gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true })
-map("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", { noremap = true })
-map("n", "gr", ":lua vim.lsp.buf.references()<CR>", { noremap = true })
+
+local telescope_builtin = require("telescope.builtin")
+map("n", "<Leader>lD", function()
+  telescope_builtin.diagnostics()
+end, { desc = "Telescope search diagnostics" })
+
+map("n", "gr", function ()
+  telescope_builtin.lsp_definitions()
+end, { desc = "Telescope LSP definition" })
+
+map("n", "gr", function ()
+  telescope_builtin.lsp_references()
+end, { desc = "Telescope LSP references" })
+
+-- Telescope functions
+vim.api.nvim_set_keymap("n", "<Leader>ff", ":lua require(\"telescope.builtin\").find_files()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>sp", ":lua require(\"telescope.builtin\").grep_string()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>sf", ":lua require(\"telescope.builtin\").live_grep()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>bb", ":lua require(\"telescope.builtin\").buffers()<CR>", { noremap = true })
 
 -- Completion
 map("i", "<C-space>", "compe#complete()", { expr=true, noremap = true, silent = true })
