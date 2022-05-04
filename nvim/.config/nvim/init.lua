@@ -12,6 +12,7 @@ require('leo.gitsigns')
 require('leo.bufferline')
 require('leo.toggleterm')
 require('leo.indent')
+require('leo.which-key')
 
 vim.g.material_style = "deep ocean"
 vim.cmd('colorscheme material')
