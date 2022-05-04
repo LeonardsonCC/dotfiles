@@ -121,12 +121,7 @@ return require("packer").startup(function()
   }
 
   -- Which key
-  use {
-    "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {}
-    end
-  }
+  use "folke/which-key.nvim"
 
   -- Delete buffers
   use "moll/vim-bbye"

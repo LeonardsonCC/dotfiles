@@ -75,8 +75,8 @@ map("v", "<Leader>y", '"+y', { noremap = true })
 map("n", "<Leader>Y", 'gg"+yG', { noremap = true, desc = "Copy to clipboard" })
 
 -- Source current file
-map("n", "<Leader><Enter>", ":source $MYVIMRC<CR>", { noremap = true, desc = "Source init.lua" })
-map("n", "<Leader>c<Enter>", ":source %<CR>", { noremap = true, desc = "Source current file" })
+map("n", "<Leader>si", ":source $MYVIMRC<CR>", { noremap = true, desc = "Source init.lua" })
+map("n", "<Leader>sc", ":source %<CR>", { noremap = true, desc = "Source current file" })
 
 -- FTerm
 map("n", "<Leader>tg", function()
