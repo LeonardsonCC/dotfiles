@@ -7,7 +7,6 @@ return require("packer").startup(function()
     "neovim/nvim-lspconfig",
     "williamboman/nvim-lsp-installer",
     "simrat39/symbols-outline.nvim",
-    "onsails/lspkind-nvim",
     "jose-elias-alvarez/null-ls.nvim",
   }
 
@@ -31,6 +30,8 @@ return require("packer").startup(function()
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip"
   }
@@ -82,7 +83,7 @@ return require("packer").startup(function()
   use "github/copilot.vim"
 
   use {
-    "akinsho/bufferline.nvim", 
+    "akinsho/bufferline.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
 
