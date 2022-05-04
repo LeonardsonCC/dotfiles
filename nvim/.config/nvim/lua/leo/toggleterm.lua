@@ -24,7 +24,7 @@ M.lazygit_toggle = function ()
 end
 
 -- Top
-local top = _setupTerm("htop")
+local top = _setupTerm("btop")
 M.top_toggle = function ()
   top:toggle()
 end
