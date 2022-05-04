@@ -71,7 +71,8 @@ return require("packer").startup(function()
   }
 
   use {
-    "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" }
+    "lewis6991/gitsigns.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
   }
 
   use {
@@ -102,8 +103,6 @@ return require("packer").startup(function()
 
   -- [G]old
   use "tpope/vim-fugitive"
-
-  use "f-person/git-blame.nvim"
 
   -- Copilot because I"m useless
   -- use "github/copilot.vim"
