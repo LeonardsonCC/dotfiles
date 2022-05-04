@@ -153,4 +153,6 @@ return require("packer").startup(function()
   }
 
   use "lukas-reineke/indent-blankline.nvim"
+
+  use "ThePrimeagen/harpoon"
 end)

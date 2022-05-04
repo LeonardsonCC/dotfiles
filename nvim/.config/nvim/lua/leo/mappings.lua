@@ -88,3 +88,7 @@ end, { noremap = true })
 
 -- Exit terminal mode
 map("t", "jk", "<C-\\><C-n>", { noremap = true })
+
+-- Harpoon
+map("n", "<Leader>ha", ":lua require('harpoon.mark').add_file()<CR>", { desc = "Add mark" })
+map("n", "<Leader>hl", ":Telescope harpoon marks<CR>", { desc = "List marks" })
