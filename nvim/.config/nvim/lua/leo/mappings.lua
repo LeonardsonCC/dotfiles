@@ -23,7 +23,7 @@ map("n", "<Leader>lD", function()
   telescope_builtin.diagnostics()
 end, { desc = "Telescope search diagnostics" })
 
-map("n", "gr", function ()
+map("n", "gd", function ()
   telescope_builtin.lsp_definitions()
 end, { desc = "Telescope LSP definition" })
 
