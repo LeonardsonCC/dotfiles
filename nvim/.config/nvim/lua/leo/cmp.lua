@@ -35,6 +35,7 @@ local source_menu = {
   luasnip = "[ LSnip]",
   snippet = "[ VSnip]",
   nvim_lua = "[ NvimLua]",
+  copilot = "[ Copilot]",
 }
 
 cmp.setup({
@@ -79,6 +80,9 @@ cmp.setup({
   },
   window = {
     documentation = true,
+  },
+  experimental = {
+    ghost_text = true,
   },
 })
 

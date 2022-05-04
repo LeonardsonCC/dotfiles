@@ -80,7 +80,7 @@ return require("packer").startup(function()
   use "f-person/git-blame.nvim"
 
   -- Copilot because I"m useless
-  use "github/copilot.vim"
+  -- use "github/copilot.vim"
 
   use {
     "akinsho/bufferline.nvim",
