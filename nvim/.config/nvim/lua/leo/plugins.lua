@@ -151,4 +151,6 @@ return require("packer").startup(function()
   use "lukas-reineke/indent-blankline.nvim"
 
   use "ThePrimeagen/harpoon"
+
+  use "sago35/tinygo.vim"
 end)
