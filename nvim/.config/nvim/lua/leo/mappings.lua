@@ -15,7 +15,8 @@ map("n", "K", ":lua vim.lsp.buf.hover()<CR>", { noremap = true, desc = "Hover di
 map("n", "<Leader>ln", ":lua vim.lsp.diagnostic.goto_next()<CR>", { noremap = true, desc = "Go to next diagnostic" })
 map("n", "<Leader>lp", ":lua vim.lsp.diagnostic.goto_prev()<CR>", { noremap = true, desc = "Go to prev diagnostic" })
 map("n", "<Leader>la", ":CodeActionMenu<CR>", { noremap = true, desc = "Show code actions" })
-map("n", "<Leader>lf", ":lua vim.lsp.buf.formatting()<CR>", { noremap = true, desc = "Format document" })
+map("n", "<Leader>lc", vim.lsp.codelens.run, { noremap = true, desc = "Run code lenses" })
+map("n", "<Leader>lf", vim.lsp.buf.formatting, { noremap = true, desc = "Format document" })
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Hover diagnostics" })
 
 local telescope_builtin = require("telescope.builtin")
