@@ -20,11 +20,6 @@ return require("packer").startup(function()
     end
   }
 
-  -- Utils
-  use {
-    "folke/trouble.nvim",
-  }
-
   -- Completion
   use {
     "hrsh7th/nvim-cmp",
@@ -37,6 +32,9 @@ return require("packer").startup(function()
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip"
   }
+
+  -- Copilot because I"m useless - For new installations I have to use this
+  -- use "github/copilot.vim"
 
   -- Copilot with cmp
   use {
@@ -53,26 +51,23 @@ return require("packer").startup(function()
   -- Code colors
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
-
-  -- Style
-
   use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
 
   use "glepnir/dashboard-nvim"
 
   use {
     "nvim-telescope/telescope.nvim",
-    requires = "nvim-lua/plenary.nvim"
   }
+
+  use {
+    "akinsho/bufferline.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+  }
+  use "famiu/bufdelete.nvim"
 
   use {
     "nvim-lualine/lualine.nvim",
     requires = {"kyazdani42/nvim-web-devicons", opt = true}
-  }
-
-  use {
-    "lewis6991/gitsigns.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
   }
 
   use {
@@ -82,6 +77,8 @@ return require("packer").startup(function()
     },
     config = function() require"nvim-tree".setup {} end
   }
+
+  use "lewis6991/gitsigns.nvim"
 
   use "luisiacc/gruvbox-baby"
   use "rebelot/kanagawa.nvim"
@@ -104,19 +101,12 @@ return require("packer").startup(function()
 
   -- [G]old
   -- use "tpope/vim-fugitive"
-  use { "TimUntersberger/neogit", requires = {
-    "nvim-lua/plenary.nvim",
-    "sindrets/diffview.nvim",
-  }}
-
-  -- Copilot because I"m useless
-  -- use "github/copilot.vim"
-
   use {
-    "akinsho/bufferline.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
+    "TimUntersberger/neogit",
+    requires = {
+      "sindrets/diffview.nvim",
+    },
   }
-  use "famiu/bufdelete.nvim"
 
   use {
     "numToStr/Comment.nvim",
@@ -127,9 +117,6 @@ return require("packer").startup(function()
 
   -- Which key
   use "folke/which-key.nvim"
-
-  -- Delete buffers
-  use "moll/vim-bbye"
 
   -- Toggle terminal
   use "akinsho/toggleterm.nvim"
