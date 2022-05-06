@@ -1,4 +1,11 @@
-local cmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
 
-vim.cmd[[ autocmd BufWritePre * %s/\s\+$//e ]]
+autocmd({ "BufWritePre" }, {
+  pattern = "*",
+  command = "%s/\\s\\+$//e",
+})
+
+autocmd({ "BufWritePre"}, {
+  pattern = { "*.go" },
+  callback = OrgImports,
+})

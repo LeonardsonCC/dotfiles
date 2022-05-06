@@ -54,9 +54,19 @@ local function lsp_highlight_document(client)
   end
 end
 
-M.on_attach = function(client, bufnr)
+M.on_attach = function(client, _)
   if client.name == "tsserver" or client.name == "jsonls" or client.name == "html" or client.name == "sumneko_lua" then
     client.resolved_capabilities.document_formatting = false
+  end
+
+  if client.server_capabilities.codeLensProvider then
+    vim.cmd [[
+      augroup lsp_document_codelens
+        au! * <buffer>
+        autocmd BufEnter ++once         <buffer> lua require"vim.lsp.codelens".refresh()
+        autocmd BufWritePost,CursorHold <buffer> lua require"vim.lsp.codelens".refresh()
+      augroup END
+    ]]
   end
 
   vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, { desc = "Format file with LSP" })
