@@ -70,8 +70,12 @@ end, { desc = "Delete buffer" })
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle NvimTree" })
 
--- FuGITive
-map("n", "<Leader>gg", ":Git<CR>", { noremap = true, desc = "Open Git" })
+-- Neogit
+local neogit = require("neogit")
+map("n", "<Leader>gg", neogit.open, { noremap = true, desc = "Open Git" })
+map("n", "<Leader>gc", function ()
+  neogit.open({ "commit" })
+end, { noremap = true, desc = "Open Git to commit" })
 
 -- Clipboard
 map("v", "<Leader>P", '"_dP', { noremap = true, desc = "Paste from clipboard" })

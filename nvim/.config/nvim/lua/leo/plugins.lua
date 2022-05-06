@@ -103,7 +103,10 @@ return require("packer").startup(function()
 
   -- [G]old
   -- use "tpope/vim-fugitive"
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'TimUntersberger/neogit', requires = {
+    'nvim-lua/plenary.nvim',
+    'sindrets/diffview.nvim',
+  }}
 
   -- Copilot because I"m useless
   -- use "github/copilot.vim"
