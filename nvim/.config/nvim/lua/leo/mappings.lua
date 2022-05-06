@@ -70,12 +70,22 @@ end, { desc = "Delete buffer" })
 -- NvimTree
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle NvimTree" })
 
--- Neogit
+-- Git
 local neogit = require("neogit")
+local gitsigns = require("gitsigns")
 map("n", "<Leader>gg", neogit.open, { noremap = true, desc = "Open Git" })
 map("n", "<Leader>gc", function ()
   neogit.open({ "commit" })
 end, { noremap = true, desc = "Open Git to commit" })
+map("n", "<Leader>gp", function ()
+  gitsigns.preview_hunk()
+end, { noremap = true, desc = "Preview Hunk" })
+map("n", "<Leader>gs", function ()
+  gitsigns.stage_hunk()
+end, { noremap = true, desc = "Stage Hunk" })
+map("n", "<Leader>gR", function ()
+  gitsigns.reset_hunk()
+end, { noremap = true, desc = "Reset Hunk" })
 
 -- Clipboard
 map("v", "<Leader>P", '"_dP', { noremap = true, desc = "Paste from clipboard" })

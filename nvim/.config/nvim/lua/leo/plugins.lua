@@ -88,7 +88,7 @@ return require("packer").startup(function()
   use {
     "marko-cerovac/material.nvim",
     config = function()
-      require('material').setup({
+      require("material").setup({
         contrast = {
           floating_windows = true,
           non_current_windows = true,
@@ -100,12 +100,13 @@ return require("packer").startup(function()
     end
   }
 
+  use "rcarriga/nvim-notify"
 
   -- [G]old
   -- use "tpope/vim-fugitive"
-  use { 'TimUntersberger/neogit', requires = {
-    'nvim-lua/plenary.nvim',
-    'sindrets/diffview.nvim',
+  use { "TimUntersberger/neogit", requires = {
+    "nvim-lua/plenary.nvim",
+    "sindrets/diffview.nvim",
   }}
 
   -- Copilot because I"m useless
