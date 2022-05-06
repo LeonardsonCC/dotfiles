@@ -5,7 +5,9 @@ autocmd({ "BufWritePre" }, {
   command = "%s/\\s\\+$//e",
 })
 
-autocmd({ "BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
   pattern = { "*.go" },
-  callback = OrgImports,
+  callback = function ()
+    OrgImports()
+  end,
 })

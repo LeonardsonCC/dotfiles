@@ -49,6 +49,10 @@ map("n", "<Leader>bb", function ()
   telescope_builtin.buffers()
 end, { noremap = true, desc = "List buffers" })
 
+map("n", "<Leader>hf", function ()
+  telescope_builtin.help_tags()
+end, { noremap = true, desc = "List help menus" })
+
 -- Completion
 map("i", "<C-space>", "compe#complete()", { expr=true, noremap = true, silent = true })
 
