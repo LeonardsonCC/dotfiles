@@ -31,7 +31,7 @@ neogit.setup({
       folded = true
     },
     recent = {
-      folded = true
+      folded = false
     },
   }
 })
