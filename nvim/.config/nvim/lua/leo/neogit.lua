@@ -28,7 +28,7 @@ neogit.setup({
       folded = false
     },
     unmerged = {
-      folded = true
+      folded = false
     },
     recent = {
       folded = false
