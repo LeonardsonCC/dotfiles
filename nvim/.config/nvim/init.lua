@@ -13,6 +13,7 @@ require('leo.bufferline')
 require('leo.toggleterm')
 require('leo.indent')
 require('leo.which-key')
+require('leo.neogit')
 
 vim.g.material_style = "deep ocean"
 vim.cmd('colorscheme material')
