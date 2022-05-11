@@ -81,8 +81,8 @@ return require("packer").startup(function()
 
   use "lewis6991/gitsigns.nvim"
 
+  use "tjdevries/colorbuddy.nvim"
   use "luisiacc/gruvbox-baby"
-  use "rebelot/kanagawa.nvim"
   use {
     "marko-cerovac/material.nvim",
     config = function()

@@ -14,6 +14,5 @@ require('leo.toggleterm')
 require('leo.indent')
 require('leo.which-key')
 require('leo.neogit')
+require('leo.colorscheme')
 
-vim.g.material_style = "deep ocean"
-vim.cmd('colorscheme material')
