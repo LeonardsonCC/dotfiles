@@ -27,6 +27,12 @@ alias ll='ls -lah'
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:"$HOME/.local/bin"
-
+#
 # FZF
 source "$HOME/key-bindings.zsh"
+
+eval "$(goenv init -)"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
