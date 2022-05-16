@@ -1,5 +1,4 @@
 local cb = require("colorbuddy")
-cb.colorscheme 'gruvbox-baby'
 
 cb.setup()
 
@@ -20,4 +19,6 @@ Color.new('brown',     '#a3685a')
 
 Color.new('seagreen',  '#698b69')
 Color.new('turquoise', '#698b69')
+
+cb.colorscheme 'gruvbox-baby'
 

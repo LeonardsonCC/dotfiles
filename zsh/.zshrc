@@ -27,3 +27,6 @@ alias ll='ls -lah'
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:"$HOME/.local/bin"
+
+# FZF
+source "$HOME/key-bindings.zsh"
