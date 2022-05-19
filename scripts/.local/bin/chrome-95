@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Opening google-chrome 95"
+
+wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_95.0.4638.54-1_amd64.deb
+sudo apt install --allow-downgrades -y /tmp/chrome.deb
+rm /tmp/chrome.deb
+sudo apt-mark hold google-chrome-stable
+google-chrome-stable --version
