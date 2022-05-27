@@ -47,3 +47,5 @@ vim.api.nvim_command("set noshowmode")
 vim.api.nvim_command("set shortmess+=c")
 
 vim.o.mouse = "a"
+
+vim.api.nvim_command("set winbar=%=%m\\ %f")
