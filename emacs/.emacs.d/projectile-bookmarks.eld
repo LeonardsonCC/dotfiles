@@ -1,1 +1,0 @@
-("~/dev/catho/recruiter-experience_job-ad-management_app/" "~/dev/catho/job-ad_automatic-disable_job/" "~/dotfiles/")
