@@ -66,3 +66,6 @@
 ;; they are implemented.
 
 (setq projectile-project-search-path '("~/dev/"))
+
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
