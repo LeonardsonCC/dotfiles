@@ -67,5 +67,11 @@
 
 (setq projectile-project-search-path '("~/dev/"))
 
+;; Faster company
 (setq company-dabbrev-downcase 0)
 (setq company-idle-delay 0)
+
+;; Clipboard fix
+(remove-hook 'doom-post-init-hook #'osx-clipboard-mode)
+
+(setq confirm-kill-emacs t)

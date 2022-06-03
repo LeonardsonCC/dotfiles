@@ -37,3 +37,6 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+alias emacs="emacsclient -c -a 'emacs'"
