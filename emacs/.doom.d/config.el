@@ -16,6 +16,9 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 14 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 14 :weight 'regular)
+      doom-big-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 14 :weight 'regular)
+      doom-serif-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 14 :weight 'regular)
       doom-unicode-font (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 14 :weight 'regular))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
