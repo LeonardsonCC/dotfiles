@@ -39,4 +39,4 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-alias emacs="emacsclient -c -a 'emacs'"
+alias em="emacsclient -c -a 'emacs'"

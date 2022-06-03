@@ -77,4 +77,4 @@
 ;; Clipboard fix
 (remove-hook 'doom-post-init-hook #'osx-clipboard-mode)
 
-(setq confirm-kill-emacs t)
+(setq confirm-kill-emacs #'yes-or-no-p)

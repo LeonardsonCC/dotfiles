@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/bin/emacs --daemon
+Exec=emacs --daemon
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
