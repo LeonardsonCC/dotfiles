@@ -20,6 +20,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # this loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # this loads nvm bash_completion
 
+# Arch
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec
+
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 # alias
@@ -40,3 +46,7 @@ export PATH="$PATH:$HOME/go/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 alias em="emacsclient -c -a 'emacs'"
+
+# Arch user sucks
+[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
+
