@@ -54,8 +54,6 @@ return require("packer").startup(function()
 
   use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
 
-  use "glepnir/dashboard-nvim"
-
   use {
     "nvim-telescope/telescope.nvim",
   }
