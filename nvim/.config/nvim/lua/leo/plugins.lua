@@ -29,40 +29,16 @@ return require("packer").startup(function()
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-nvim-lsp-document-symbol",
-
-    "L3MON4D3/LuaSnip",
-    "saadparwaiz1/cmp_luasnip"
   }
 
-  -- Copilot because I"m useless - For new installations I have to use this
-  -- use "github/copilot.vim"
-
-  -- Copilot with cmp
-  use {
-    "zbirenbaum/copilot-cmp",
-    requires = "zbirenbaum/copilot.lua",
-    event = {"VimEnter"},
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup()
-      end, 100)
-    end,
-  }
+  use 'mjlbach/onedark.nvim'
 
   -- Code colors
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
-  use { "alvarosevilla95/luatab.nvim", requires="kyazdani42/nvim-web-devicons" }
-
   use {
     "nvim-telescope/telescope.nvim",
   }
-
-  use {
-    "akinsho/bufferline.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-  }
-  use "famiu/bufdelete.nvim"
 
   use {
     "nvim-lualine/lualine.nvim",
@@ -79,33 +55,10 @@ return require("packer").startup(function()
 
   use "lewis6991/gitsigns.nvim"
 
-  use "tjdevries/colorbuddy.nvim"
-  use "luisiacc/gruvbox-baby"
-  use {
-    "marko-cerovac/material.nvim",
-    config = function()
-      require("material").setup({
-        contrast = {
-          floating_windows = true,
-          non_current_windows = true,
-        },
-        high_visibility = {
-          darker = true,
-        },
-      })
-    end
-  }
-
   use "rcarriga/nvim-notify"
 
   -- [G]old
-  -- use "tpope/vim-fugitive"
-  use {
-    "TimUntersberger/neogit",
-    requires = {
-      "sindrets/diffview.nvim",
-    },
-  }
+  use "tpope/vim-fugitive"
 
   use {
     "numToStr/Comment.nvim",
@@ -116,9 +69,6 @@ return require("packer").startup(function()
 
   -- Which key
   use "folke/which-key.nvim"
-
-  -- Toggle terminal
-  use "akinsho/toggleterm.nvim"
 
   -- cursor word
   use {
@@ -140,8 +90,6 @@ return require("packer").startup(function()
   }
 
   use "lukas-reineke/indent-blankline.nvim"
-
-  use "ThePrimeagen/harpoon"
 
   use "sago35/tinygo.vim"
 end)

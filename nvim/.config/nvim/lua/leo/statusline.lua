@@ -1,5 +1,4 @@
 local status = require "leo.lsp.status"
-local colors = require "leo.colors"
 
 local function get_hl_by_name(name)
   return string.format("#%06x", vim.api.nvim_get_hl_by_name(name.group, true)[name.prop])
@@ -51,7 +50,7 @@ if status_ok then
         {
           "branch",
           icon = "",
-          color = { fg = get_hl_prop("Conditional", "foreground", colors.purple_1), gui = "bold" },
+          color = { fg = get_hl_prop("Conditional", "foreground", "#c678dd"), gui = "bold" },
           padding = { left = 2, right = 1 },
         },
         {
@@ -94,7 +93,7 @@ if status_ok then
         },
         {
           status.treesitter_status,
-          color = { fg = get_hl_prop("GitSignsAdd", "foreground", colors.green) },
+          color = { fg = get_hl_prop("GitSignsAdd", "foreground", "#98c379") },
           padding = { left = 1, right = 0 },
           cond = conditions.hide_in_width,
         },
@@ -110,7 +109,7 @@ if status_ok then
         {
           status.progress_bar,
           padding = { left = 1, right = 2 },
-          color = { fg = get_hl_prop("TypeDef", "foreground", colors.yellow) },
+          color = { fg = get_hl_prop("TypeDef", "foreground", "#e5c07b") },
           cond = nil,
         },
       },

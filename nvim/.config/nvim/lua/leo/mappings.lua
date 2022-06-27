@@ -45,7 +45,7 @@ map("n", "<Leader>fg", function()
   telescope_builtin.live_grep()
 end, { noremap = true, desc = "Search for text" })
 
-map("n", "<Leader>bb", function ()
+map("n", "<Leader><Leader>", function ()
   telescope_builtin.buffers()
 end, { noremap = true, desc = "List buffers" })
 
@@ -71,12 +71,7 @@ end, { desc = "Delete buffer" })
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle NvimTree" })
 
 -- Git
-local neogit = require("neogit")
 local gitsigns = require("gitsigns")
-map("n", "<Leader>gg", neogit.open, { noremap = true, desc = "Open Git" })
-map("n", "<Leader>gc", function ()
-  neogit.open({ "commit" })
-end, { noremap = true, desc = "Open Git to commit" })
 map("n", "<Leader>gp", function ()
   gitsigns.preview_hunk()
 end, { noremap = true, desc = "Preview Hunk" })
