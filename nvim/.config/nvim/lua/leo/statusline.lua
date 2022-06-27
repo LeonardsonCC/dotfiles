@@ -42,6 +42,7 @@ if status_ok then
       section_separators = "",
       globalstatus = true,
       full_path = true,
+      theme = 'onedark',
     },
     sections = {
       lualine_a = { spacer },
