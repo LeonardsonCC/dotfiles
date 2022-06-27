@@ -11,4 +11,9 @@ require('leo.gitsigns')
 require('leo.indent')
 require('leo.which-key')
 
-vim.cmd [[colorscheme onedark]]
+local theme = require('onedark')
+theme.setup({
+    style = 'darker'
+})
+theme.load()
+

@@ -31,7 +31,7 @@ return require("packer").startup(function()
     "hrsh7th/cmp-nvim-lsp-document-symbol",
   }
 
-  use 'mjlbach/onedark.nvim'
+  use 'navarasu/onedark.nvim'
 
   -- Code colors
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
