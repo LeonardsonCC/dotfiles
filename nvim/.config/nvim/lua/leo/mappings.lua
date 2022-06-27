@@ -71,6 +71,7 @@ end, { desc = "Delete buffer" })
 map("n", "<Leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle NvimTree" })
 
 -- Git
+map("n", "<Leader>gg", ":G<CR>", { noremap = true, desc = "Fugitive" })
 local gitsigns = require("gitsigns")
 map("n", "<Leader>gp", function ()
   gitsigns.preview_hunk()
