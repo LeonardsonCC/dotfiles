@@ -11,6 +11,8 @@ return require("packer").startup(function()
     "ray-x/lsp_signature.nvim",
   }
 
+  use "j-hui/fidget.nvim"
+
   use {
     "weilbith/nvim-code-action-menu",
     cmd = "CodeActionMenu",
@@ -29,6 +31,8 @@ return require("packer").startup(function()
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp-signature-help",
     "hrsh7th/cmp-nvim-lsp-document-symbol",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnihrsh7th/nvim-cmpp",
   }
 
   use 'navarasu/onedark.nvim'

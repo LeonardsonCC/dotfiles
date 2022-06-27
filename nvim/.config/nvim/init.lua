@@ -13,7 +13,8 @@ require('leo.which-key')
 
 local theme = require('onedark')
 theme.setup({
-    style = 'darker'
+    style = 'dark'
 })
 theme.load()
 
+require("fidget").setup({})
