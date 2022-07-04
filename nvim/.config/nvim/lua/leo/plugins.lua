@@ -93,7 +93,7 @@ return require("packer").startup(function()
     end
   }
 
-  use "lukas-reineke/indent-blankline.nvim"
+  -- use "lukas-reineke/indent-blankline.nvim"
 
   use "sago35/tinygo.vim"
 end)
