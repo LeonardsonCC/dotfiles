@@ -18,6 +18,7 @@ map("n", "<Leader>la", ":CodeActionMenu<CR>", { noremap = true, desc = "Show cod
 map("n", "<Leader>lc", vim.lsp.codelens.run, { noremap = true, desc = "Run code lenses" })
 map("n", "<Leader>lf", vim.lsp.buf.formatting, { noremap = true, desc = "Format document" })
 map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Hover diagnostics" })
+map("n", "<leader>lr", require("leo.utils.rename").rename, { desc = "Rename current word" })
 
 local telescope_builtin = require("telescope.builtin")
 map("n", "<Leader>lD", function()
