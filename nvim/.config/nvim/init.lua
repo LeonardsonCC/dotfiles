@@ -13,7 +13,7 @@ require('leo.which-key')
 
 local theme = require('onedark')
 theme.setup({
-  style = 'dark'
+  style = 'darker'
 })
 theme.load()
 

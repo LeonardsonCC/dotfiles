@@ -1,10 +1,25 @@
+term xterm-256color
+
 # Fonts
-font_family      Victor Mono
-bold_font        Victor Mono Bold
-italic_font      Victor Mono Italic
-bold_italic_font Victor Mono Bold Italic
+font_family      Ubuntu Mono Nerd Font Complete Mono
+bold_font        Ubuntu Mono Bold Nerd Font Complete
+italic_font      Ubuntu Mono Italic Nerd Font Complete
+bold_italic_font Ubuntu Mono Bold Italic Nerd Font Complete Mono
 
 enable_audio_bell no
 
 # Opacity
-background_opacity          0.9
+background_opacity          1
+
+# Gruvbox Dark Hard
+# include current-theme.conf
+
+# window_padding_width 10
+
+
+# BEGIN_KITTY_THEME
+# One Dark
+include current-theme.conf
+# END_KITTY_THEME
+
+cursor_shape block
