@@ -94,19 +94,6 @@ map("n", "<Leader>Y", 'gg"+yG', { noremap = true, desc = "Copy to clipboard" })
 map("n", "<Leader>si", ":source $MYVIMRC<CR>", { noremap = true, desc = "Source init.lua" })
 map("n", "<Leader>sc", ":source %<CR>", { noremap = true, desc = "Source current file" })
 
--- FTerm
-map("n", "<Leader>tg", function()
-  require("leo.toggleterm").lazygit_toggle()
-end, { noremap = true, desc = "Open LazyGit" })
-
-map("n", "<Leader>tt", function()
-  require("leo.toggleterm").top_toggle()
-end, { noremap = true, desc = "Open Top" })
-
-map("n", "<Leader>t<Leader>", function()
-  require("leo.toggleterm").term_toggle()
-end, { noremap = true, desc = "Open terminal below" })
-
 -- Exit terminal mode
 map("t", "jk", "<C-\\><C-n>", { noremap = true })
 
