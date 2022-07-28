@@ -32,4 +32,40 @@ return require('packer').startup(function(use)
 
   -- trying different things
   use 'TimUntersberger/neogit'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end,
+  }
+
+  -- undotree is cool
+  use 'mbbill/undotree'
+
+  -- better code
+  use('nvim-treesitter/nvim-treesitter', {
+    run = ':TSUpdate',
+  })
+  use 'nvim-treesitter/nvim-treesitter-context'
+
+  -- i'm too lazy to comment
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end,
+  }
+
+  -- just because it's fancy
+  use {
+    'j-hui/fidget.nvim',
+    config = function()
+      require('fidget').setup()
+    end,
+  }
+
+  -- debug
+  -- use 'mfussenegger/nvim-dap'
+  -- use 'rcarriga/nvim-dap-ui'
+  -- use 'theHamsta/nvim-dap-virtual-text'
 end)
