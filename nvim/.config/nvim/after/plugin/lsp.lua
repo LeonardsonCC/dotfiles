@@ -10,8 +10,10 @@ local source_mapping = {
   buffer = '[Buffer]',
   nvim_lsp = '[LSP]',
   nvim_lua = '[Lua]',
-  cmp_tabnine = '[TN]',
   path = '[Path]',
+  nvim_lsp_signature_help = '[LSP_S]',
+  luasnip = '[Snippet]',
+  cmdline = '[CMD]',
 }
 
 local lspkind = require 'lspkind'
@@ -56,7 +58,7 @@ cmp.setup {
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
-      local kind = lspkind.cmp_format { mode = 'symbol_text', maxwidth = 50 } (entry, vim_item)
+      local kind = lspkind.cmp_format { mode = 'symbol_text', maxwidth = 50 }(entry, vim_item)
       local strings = vim.split(kind.kind, '%s', { trimempty = true })
       kind.kind = ' ' .. strings[1] .. ' '
       kind.menu = '    ' .. source_mapping[entry.source.name] .. ''
@@ -65,22 +67,39 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = 'nvim_lsp_signature_help' },
+    { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'cmp_tabnine' },
-    { name = 'buffer' },
+    { name = 'path' },
+    { name = 'buffer', keyword_length = 5 },
+  },
+  experimental = {
+    ghost_text = true,
   },
 }
 
-local tabnine = require 'cmp_tabnine.config'
-tabnine:setup {
-  max_lines = 1000,
-  max_num_results = 20,
-  sort = true,
-  run_on_every_keystroke = true,
-  snippet_placeholder = '..',
-}
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'cmdline' },
+  },
+})
 
+cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp_document_symbol' },
+  }, {
+    { name = 'buffer' },
+  }),
+})
+
+-- LSP saga
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
+
+-- LSP setup
 local function config(_config)
   return vim.tbl_deep_extend('force', {
     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),

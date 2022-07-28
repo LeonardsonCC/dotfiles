@@ -20,12 +20,21 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'saadparwaiz1/cmp_luasnip'
-  use {
-    'tzachar/cmp-tabnine',
-    run = './install.sh',
-  }
   use 'onsails/lspkind-nvim' -- nice icons
+  use 'glepnir/lspsaga.nvim'
+  use {
+    'folke/trouble.nvim',
+    require = 'kyazdani42/nvim-web-devicons',
+    config = function()
+      require('trouble').setup {
+        icons = true,
+      }
+    end,
+  }
 
   -- need to do this because of eslint
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -48,6 +57,18 @@ return require('packer').startup(function(use)
   })
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'gpanders/editorconfig.nvim'
+
+  -- better go code
+  use {
+    'ray-x/go.nvim',
+    config = function()
+      require('go').setup {
+        lsp_inlay_hints = {
+          enable = true,
+        },
+      }
+    end,
+  }
 
   -- i'm too lazy to comment
   use {
