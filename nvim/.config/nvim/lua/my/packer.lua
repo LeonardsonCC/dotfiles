@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
     end,
   }
 
+  use 'nvim-lualine/lualine.nvim'
+
   -- debug
   -- use 'mfussenegger/nvim-dap'
   -- use 'rcarriga/nvim-dap-ui'

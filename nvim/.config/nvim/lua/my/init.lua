@@ -1,6 +1,7 @@
 require 'my.set'
 require 'my.packer'
 require 'my.telescope'
+require 'my.statusline'
 require 'my.null_ls'
 require 'my.autocmds'
 require 'my.neogit'
