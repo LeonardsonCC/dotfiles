@@ -17,7 +17,7 @@ autocmd({ 'BufWritePre' }, {
 
 autocmd({ 'BufWritePre' }, {
   group = OnSave,
-  pattern = { '*.lua', '*.go' },
+  pattern = { '*.lua', '*.go', '*.ts', '*.tsx', '*.js', '*.jsx' },
   callback = function()
     vim.lsp.buf.format()
   end,

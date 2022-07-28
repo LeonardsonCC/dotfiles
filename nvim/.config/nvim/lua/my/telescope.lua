@@ -5,7 +5,8 @@ telescope.setup {
   defaults = {
     prompt_prefix = ' >',
     color_devicons = true,
-    hidden = true,
+
+    file_ignore_patterns = { 'node_modules', '.git' },
 
     file_previewer = previewers.vim_buffer_cat.new,
     grep_previewer = previewers.vim_buffer_vimgrep.new,
@@ -13,7 +14,11 @@ telescope.setup {
 
     mappings = {},
   },
-  pickers = {},
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
   extensions = {},
 }
 
