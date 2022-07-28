@@ -45,6 +45,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="/var/lib/flatpak/exports/bin:$PATH"
+export PATH="/home/leonardson/.cargo/bin:$PATH"
 
 alias em="emacsclient -c -a 'emacs'"
 
