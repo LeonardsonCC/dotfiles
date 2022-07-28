@@ -1,0 +1,31 @@
+[21:15:40.983][info] [#0:/home/leonardson/dotfiles/scripts/.local/lua-language-server/main.lua:65]: Lua Lsp startup, root: 	/home/leonardson/dotfiles/scripts/.local/lua-language-server
+[21:15:40.983][info] [#0:/home/leonardson/dotfiles/scripts/.local/lua-language-server/main.lua:66]: ROOT:	/home/leonardson/dotfiles/scripts/.local/lua-language-server
+[21:15:40.983][info] [#0:/home/leonardson/dotfiles/scripts/.local/lua-language-server/main.lua:67]: LOGPATH:	/home/leonardson/dotfiles/scripts/.local/lua-language-server/log
+[21:15:40.983][info] [#0:/home/leonardson/dotfiles/scripts/.local/lua-language-server/main.lua:68]: METAPATH:	/home/leonardson/dotfiles/scripts/.local/lua-language-server/meta
+[21:15:40.983][info] [#0:/home/leonardson/dotfiles/scripts/.local/lua-language-server/main.lua:69]: VERSION:	3.5.1
+[21:15:41.011][info] [#0:script/service/service.lua:141]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 1.545 MB
+        # 00 : 1.545 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[21:15:41.119][info] [#0:script/language.lua:137]: VSC language: nil
+[21:15:41.119][info] [#0:script/language.lua:138]: LS  language: en-us
+[21:15:41.119][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/leonardson/dotfiles/nvim/.config/nvim
+[21:15:41.119][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/leonardson/dotfiles/scripts/.local/lua-language-server/log/file_home_leonardson_dotfiles_nvim_.config_nvim.log
