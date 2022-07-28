@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
     run = ':TSUpdate',
   })
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'gpanders/editorconfig.nvim'
 
   -- i'm too lazy to comment
   use {
@@ -64,6 +65,7 @@ return require('packer').startup(function(use)
     end,
   }
 
+  -- beauty
   use 'nvim-lualine/lualine.nvim'
 
   -- debug
