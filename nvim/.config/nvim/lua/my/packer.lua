@@ -62,11 +62,7 @@ return require('packer').startup(function(use)
   use {
     'ray-x/go.nvim',
     config = function()
-      require('go').setup {
-        lsp_inlay_hints = {
-          enable = true,
-        },
-      }
+      require('go').setup {}
     end,
   }
 
@@ -90,7 +86,8 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
 
   -- debug
-  -- use 'mfussenegger/nvim-dap'
-  -- use 'rcarriga/nvim-dap-ui'
-  -- use 'theHamsta/nvim-dap-virtual-text'
+  use 'mfussenegger/nvim-dap'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
 end)
