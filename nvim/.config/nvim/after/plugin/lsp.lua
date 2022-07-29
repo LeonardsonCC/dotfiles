@@ -25,8 +25,8 @@ cmp.setup {
     end,
   },
   mapping = {
-    ['<C-Space'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<C-e'] = cmp.mapping {
+    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ['<C-e>'] = cmp.mapping {
       i = cmp.mapping.abort(),
     },
     ['<CR>'] = cmp.mapping.confirm {
