@@ -10,3 +10,6 @@ nnoremap('<Leader>pv', '<Cmd>Ex<CR>')
 
 -- source files
 nnoremap('<Leader>sc', '<Cmd>so %<CR>')
+
+-- undotree
+nnoremap('<Leader>ut', '<Cmd>UndotreeToggle<CR>')

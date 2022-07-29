@@ -58,7 +58,7 @@ cmp.setup {
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
-      local kind = lspkind.cmp_format { mode = 'symbol_text', maxwidth = 50 } (entry, vim_item)
+      local kind = lspkind.cmp_format { mode = 'symbol_text', maxwidth = 50 }(entry, vim_item)
       local strings = vim.split(kind.kind, '%s', { trimempty = true })
       kind.kind = ' ' .. strings[1] .. ' '
       kind.menu = '    ' .. source_mapping[entry.source.name] .. ''
@@ -95,9 +95,11 @@ cmp.setup.cmdline('/', {
   }),
 })
 
--- LSP saga
-local saga = require 'lspsaga'
-saga.init_lsp_saga()
+cmp.setup.filetype({ 'dap-repl', 'dapui_watches' }, {
+  sources = {
+    { name = 'dap' },
+  },
+})
 
 -- LSP setup
 local function config(_config)

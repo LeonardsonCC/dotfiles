@@ -23,9 +23,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
+  use 'rcarriga/cmp-dap'
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim' -- nice icons
-  use 'glepnir/lspsaga.nvim'
   use 'gbrlsnchs/telescope-lsp-handlers.nvim'
   use {
     'folke/todo-comments.nvim',
