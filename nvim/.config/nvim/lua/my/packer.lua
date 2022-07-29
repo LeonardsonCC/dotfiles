@@ -26,6 +26,15 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim' -- nice icons
   use 'glepnir/lspsaga.nvim'
+  use 'gbrlsnchs/telescope-lsp-handlers.nvim'
+  use {
+    'folke/todo-comments.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('todo-comments').setup()
+    end,
+  }
+
   use {
     'folke/trouble.nvim',
     require = 'kyazdani42/nvim-web-devicons',
