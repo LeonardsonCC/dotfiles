@@ -34,7 +34,6 @@ return require('packer').startup(function(use)
       require('todo-comments').setup()
     end,
   }
-
   use {
     'folke/trouble.nvim',
     require = 'kyazdani42/nvim-web-devicons',
