@@ -5,8 +5,9 @@ local inoremap = require('my.keymap').inoremap
 inoremap('jk', '<Esc>')
 inoremap('kj', '<Esc>')
 
--- Netrw
-nnoremap('<Leader>pv', '<Cmd>Ex<CR>')
+-- Nvim Tree
+nnoremap('<Leader>pv', '<Cmd>NvimTreeToggle<CR>')
+nnoremap('<Leader>pc', '<Cmd>NvimTreeFocus<CR>')
 
 -- source files
 nnoremap('<Leader>sc', '<Cmd>so %<CR>')
