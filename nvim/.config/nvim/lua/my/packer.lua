@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
   -- colorscheme
   use 'folke/tokyonight.nvim'
+  use 'marko-cerovac/material.nvim'
 
   -- telescope is great
   use {

@@ -7,7 +7,7 @@ inoremap('kj', '<Esc>')
 
 -- Nvim Tree
 nnoremap('<Leader>pv', '<Cmd>NvimTreeToggle<CR>')
-nnoremap('<Leader>pc', '<Cmd>NvimTreeFocus<CR>')
+nnoremap('<Leader>pc', '<Cmd>NvimTreeFindFile<CR>')
 
 -- source files
 nnoremap('<Leader>sc', '<Cmd>so %<CR>')
