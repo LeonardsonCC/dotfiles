@@ -1,19 +1,10 @@
 require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
-    },
-    always_divide_middle = true,
-    globalstatus = false,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
     },
   },
   sections = {
@@ -23,10 +14,13 @@ require('lualine').setup {
         return str:sub(1, 1)
       end,
     } },
-    lualine_b = { 'filename' },
+    lualine_b = {},
+    lualine_c = { '%=', {
+      'filetype',
+      icon_only = true,
+    }, 'filename' },
+    lualine_y = {},
+    lualine_x = { { 'diagnostics', always_visible = true } },
+    lualine_z = {},
   },
-  tabline = {},
-  winbar = {},
-  inactive_winbar = {},
-  extensions = {},
 }
