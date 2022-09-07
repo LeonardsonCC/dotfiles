@@ -108,4 +108,6 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
   }
+
+  use "numToStr/FTerm.nvim"
 end)
