@@ -6,6 +6,7 @@ require 'my.statusline'
 -- require 'my.null_ls'
 require 'my.autocmds'
 require 'my.neogit'
+require 'my.term'
 
 -- netrw configs
 vim.g.netrw_browse_split = 0
