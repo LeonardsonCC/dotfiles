@@ -17,6 +17,10 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
 
   -- LSP things
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+  }
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -24,7 +28,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'rcarriga/cmp-dap'
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim' -- nice icons
   use 'gbrlsnchs/telescope-lsp-handlers.nvim'
@@ -93,14 +96,6 @@ return require('packer').startup(function(use)
 
   -- beauty
   use 'nvim-lualine/lualine.nvim'
-
-  -- debug
-  use 'mfussenegger/nvim-dap'
-  use 'nvim-telescope/telescope-dap.nvim'
-  use 'rcarriga/nvim-dap-ui'
-  use 'theHamsta/nvim-dap-virtual-text'
-
-  use 'github/copilot.vim'
 
   use {
     'kyazdani42/nvim-tree.lua',
