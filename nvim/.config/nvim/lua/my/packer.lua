@@ -18,18 +18,21 @@ return require('packer').startup(function(use)
 
   -- LSP things
   use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
   }
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'onsails/lspkind-nvim' -- nice icons
+  use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'saadparwaiz1/cmp_luasnip',
+    'onsails/lspkind-nvim', -- nice icons
+  }
+
   use 'gbrlsnchs/telescope-lsp-handlers.nvim'
   use {
     'folke/todo-comments.nvim',
@@ -103,4 +106,6 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
   }
+
+  use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
 end)

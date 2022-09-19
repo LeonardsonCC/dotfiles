@@ -1,5 +1,6 @@
 require 'my.set'
 require 'my.packer'
+require 'my.mason'
 require 'my.telescope'
 require 'my.statusline'
 -- require 'my.null_ls'
