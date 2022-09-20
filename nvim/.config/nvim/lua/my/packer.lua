@@ -18,9 +18,9 @@ return require('packer').startup(function(use)
 
   -- LSP things
   use {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
+    'williamboman/nvim-lsp-installer',
     'neovim/nvim-lspconfig',
+    'jose-elias-alvarez/null-ls.nvim',
   }
   use {
     'hrsh7th/nvim-cmp',
@@ -50,9 +50,6 @@ return require('packer').startup(function(use)
       }
     end,
   }
-
-  -- need to do this because of eslint
-  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- trying different things
   use 'TimUntersberger/neogit'

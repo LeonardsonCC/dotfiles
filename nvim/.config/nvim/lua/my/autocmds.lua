@@ -21,6 +21,6 @@ autocmd({ 'BufWritePre' }, {
   group = OnSave,
   pattern = { '*.lua', '*.go', '*.ts', '*.tsx', '*.js', '*.jsx' },
   callback = function()
-    vim.lsp.buf.format()
+    vim.lsp.buf.format { timeout_ms = 6000 }
   end,
 })
