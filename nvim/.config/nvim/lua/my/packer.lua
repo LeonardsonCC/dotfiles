@@ -104,7 +104,6 @@ return require('packer').startup(function(use)
     },
   }
 
-  use { "beauwilliams/focus.nvim", config = function() require("focus").setup() end }
-  use "numToStr/FTerm.nvim"
+  use 'numToStr/FTerm.nvim'
   use 'startup-nvim/startup.nvim'
 end)
