@@ -2,7 +2,7 @@ local nls = require 'null-ls'
 
 local fmt = nls.builtins.formatting
 local dgn = nls.builtins.diagnostics
-local cmp = nls.builtins.completion
+-- local cmp = nls.builtins.completion
 
 nls.setup {
   debug = true,
@@ -13,6 +13,6 @@ nls.setup {
 
     dgn.eslint_d,
 
-    cmp.spell,
+    -- cmp.spell,
   },
 }
