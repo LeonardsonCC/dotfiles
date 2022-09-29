@@ -1,3 +1,5 @@
-require('startup').setup({
-  theme = "startify"
-})
+require('startup').setup {
+  theme = 'startify',
+}
+
+vim.opt.guicursor = ''
