@@ -3,6 +3,6 @@ vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 vim.opt.background = 'dark'
 
-vim.g.material_style = "deep ocean"
+-- vim.g.material_style = "deep ocean"
 
-vim.cmd 'colorscheme material'
+vim.cmd 'colorscheme tokyonight-night'
