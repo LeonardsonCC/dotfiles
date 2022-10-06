@@ -3,3 +3,4 @@ require('startup').setup {
 }
 
 vim.opt.guicursor = ''
+vim.opt.cursorline = true

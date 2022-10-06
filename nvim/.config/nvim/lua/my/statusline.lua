@@ -15,10 +15,17 @@ require('lualine').setup {
       end,
     } },
     lualine_b = {},
-    lualine_c = { '%=', {
-      'filetype',
-      icon_only = true,
-    }, 'filename' },
+    lualine_c = {
+      '%=',
+      {
+        'filetype',
+        icon_only = true,
+      },
+      {
+        'filename',
+        path = 1,
+      },
+    },
     lualine_y = {},
     lualine_x = { { 'diagnostics', always_visible = true } },
     lualine_z = {},

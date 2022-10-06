@@ -35,6 +35,10 @@ wk.register({
     a = 'Fetch All',
     g = 'Neogit',
   },
+  t = {
+    '<Cmd>TroubleToggle<CR>',
+    'Trouble',
+  },
   p = {
     name = 'Filetree',
     v = { '<Cmd>NvimTreeFindFileToggle<CR>', 'Open FileTree' },
