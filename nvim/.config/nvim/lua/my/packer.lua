@@ -106,4 +106,5 @@ return require('packer').startup(function(use)
 
   use 'numToStr/FTerm.nvim'
   use 'startup-nvim/startup.nvim'
+  use 'folke/which-key.nvim'
 end)
