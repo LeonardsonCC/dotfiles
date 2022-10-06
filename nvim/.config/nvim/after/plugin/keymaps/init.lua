@@ -17,8 +17,12 @@ local opts = {
   noremap = true,
   nowait = false,
 }
+
 local gs = require 'gitsigns'
 local lsp_buf = vim.lsp.buf
+local builtin = require 'telescope.builtin'
+local my_telescope = require 'my.telescope'
+
 wk.register({
   g = {
     name = 'Git',
@@ -48,6 +52,16 @@ wk.register({
     r = { lsp_buf.references, 'References' },
     R = { lsp_buf.rename, 'Rename' },
     f = { lsp_buf.format, 'Format' },
+  },
+  f = {
+    name = 'Find',
+    f = { builtin.find_files, 'Find File' },
+    g = { builtin.live_grep, 'Grep' },
+    b = { builtin.buffers, 'Buffers' },
+    h = { builtin.help_tags, 'Help' },
+    w = { builtin.lsp_dynamic_workspace_symbols, 'Workspace Symbols' },
+    k = { builtin.keymaps, 'Keymaps' },
+    d = { my_telescope.search_dotfiles, 'Find Dotfile' },
   },
 }, opts)
 
