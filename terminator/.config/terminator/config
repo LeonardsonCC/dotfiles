@@ -1,0 +1,28 @@
+[global_config]
+[keybindings]
+  go_up = <Alt>k
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  split_horiz = <Primary>s
+  split_vert = <Primary>v
+  layout_launcher = <Alt>bracketleft
+[profiles]
+  [[default]]
+    background_darkness = 1.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = CaskaydiaCove Nerd Font 12
+    foreground_color = "#ffffff"
+    use_custom_command = True
+    custom_command = zsh
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
