@@ -143,4 +143,6 @@ return require('packer').startup(function(use)
       'rcarriga/nvim-notify',
     },
   }
+
+  use 'ThePrimeagen/harpoon'
 end)

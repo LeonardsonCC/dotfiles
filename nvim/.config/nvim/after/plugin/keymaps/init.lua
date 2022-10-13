@@ -28,6 +28,8 @@ local lsp_buf = vim.lsp.buf
 local telescope = require 'telescope'
 local builtin = require 'telescope.builtin'
 local my_telescope = require 'my.telescope'
+local h_mark = require 'harpoon.mark'
+local h_ui = require 'harpoon.ui'
 
 wk.register({
   g = {
@@ -45,9 +47,9 @@ wk.register({
     '<Cmd>TroubleToggle<CR>',
     'Trouble',
   },
-  p = {
-    name = 'Filetree',
-    v = { '<Cmd>NvimTreeFindFileToggle<CR>', 'Open FileTree' },
+  ['<Leader>'] = {
+    '<Cmd>NvimTreeFindFileToggle<CR>',
+    'Open FileTree',
   },
   s = {
     name = 'Source',
@@ -81,6 +83,11 @@ wk.register({
     k = { builtin.keymaps, 'Keymaps' },
     d = { my_telescope.search_dotfiles, 'Find Dotfile' },
   },
+  -- Harpoon
+  o = { h_ui.toggle_quick_menu, 'Harpoon - Open Menu' },
+  a = { h_mark.add_file, 'Harpoon - Add File' },
+  n = { h_ui.nav_next, 'Harpoon - Next Mark' },
+  p = { h_ui.nav_prev, 'Harpoon - Prev Mark' },
 }, opts)
 
 -- LSP other mappings
