@@ -35,6 +35,26 @@ return require('packer').startup(function(use)
 
   use 'gbrlsnchs/telescope-lsp-handlers.nvim'
   use {
+    'edolphin-ydf/goimpl.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      require('telescope').load_extension 'goimpl'
+    end,
+  }
+
+  use {
+    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    config = function()
+      require('lsp_lines').setup()
+    end,
+  }
+
+  use {
     'folke/todo-comments.nvim',
     requires = 'nvim-lua/plenary.nvim',
     config = function()

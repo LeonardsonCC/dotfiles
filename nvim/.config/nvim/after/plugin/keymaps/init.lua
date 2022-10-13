@@ -1,5 +1,6 @@
 local nnoremap = require('my.keymap').nnoremap
 local inoremap = require('my.keymap').inoremap
+local vnoremap = require('my.keymap').vnoremap
 local wk = require 'which-key'
 
 wk.setup()
@@ -7,6 +8,10 @@ wk.setup()
 -- Escape keys
 inoremap('jk', '<Esc>')
 inoremap('kj', '<Esc>')
+
+-- better indent
+vnoremap('>', '>gv')
+vnoremap('<', '<gv')
 
 -- Normal mode mappings
 local opts = {
@@ -20,6 +25,7 @@ local opts = {
 
 local gs = require 'gitsigns'
 local lsp_buf = vim.lsp.buf
+local telescope = require 'telescope'
 local builtin = require 'telescope.builtin'
 local my_telescope = require 'my.telescope'
 
@@ -56,6 +62,14 @@ wk.register({
     r = { lsp_buf.references, 'References' },
     R = { lsp_buf.rename, 'Rename' },
     f = { lsp_buf.format, 'Format' },
+    g = {
+      name = 'Go!',
+      i = { telescope.extensions.goimpl.goimpl, 'Impl' },
+      c = { '<CMD>GoCmt<CR>', 'Comment' },
+      s = { '<CMD>GoFillStruct<CR>', 'Fill Struct' },
+      w = { '<CMD>GoFillSwitch<CR>', 'Fill Switch' },
+      e = { '<CMD>GoIfErr<CR>', 'If Err' },
+    },
   },
   f = {
     name = 'Find',
