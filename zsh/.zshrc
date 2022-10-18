@@ -9,7 +9,7 @@ fi
 export ZSH="/home/leonardson/.oh-my-zsh"
 
 # see https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-ZSH_THEME="agnoster"
+ZSH_THEME="bira"
 
 plugins=(git)
 
@@ -42,6 +42,8 @@ export PATH="/var/lib/flatpak/exports/bin:$PATH"
 export PATH="/home/leonardson/.cargo/bin:$PATH"
 
 alias em="emacsclient -c -a 'emacs'"
+
+export DOTFILES="$HOME/dotfiles/"
 
 # Arch user sucks
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
