@@ -174,7 +174,7 @@ for_window [title="Picture-in-Picture"] sticky enable
 bindsym --release Print exec "gnome-screenshot -i"
 bindsym --release Shift+Print exec "gnome-screenshot -a"
 
-focus_follows_mouse no
+focus_follows_mouse yes
 
 bar {
         status_command i3status
@@ -186,7 +186,7 @@ for_window [class=".*"] border pixel 5
 exec_always --no-startup-id picom
 
 # Background
-exec_always --no-startup-id feh --bg-fill ~/Wallpapers/03.jpg
+exec_always --no-startup-id feh --bg-fill --randomize ~/wallpapers/*
 
 bindsym $mod+m move workspace to output right
 
