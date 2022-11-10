@@ -181,6 +181,8 @@ bar {
 }
 
 for_window [class=".*"] border pixel 5
+gaps inner 5
+gaps outer 5
 
 # Transparency
 exec_always --no-startup-id picom
