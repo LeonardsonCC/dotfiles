@@ -155,9 +155,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-control --volume-max 130 up
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-control --volume-max 130 down
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-control togmute
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec brightness 80 # increase screen brightness
@@ -176,11 +176,13 @@ bindsym --release Shift+Print exec "gnome-screenshot -a"
 
 focus_follows_mouse yes
 
-bar {
-        status_command i3status
-}
+# bar {
+#         status_command i3status
+# }
 
-for_window [class=".*"] border pixel 5
+for_window [class=".*"] border pixel 0
+gaps inner 5
+gaps outer 5
 
 # Transparency
 exec_always --no-startup-id picom
@@ -193,4 +195,8 @@ bindsym $mod+m move workspace to output right
 # Touchpad
 exec_always xinput set-prop 11 301 1 # Enable tapping
 exec_always xinput set-prop 11 293 1 # Natural scrolling
+
+# Polybar
+exec_always pkill polybar
+exec_always $HOME/.config/polybar/scripts/start.sh
 
