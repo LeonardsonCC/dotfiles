@@ -38,7 +38,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec rofi -show drun
 # start window menu
-bindsym $mod+Tab exec rofi -show window
+# bindsym $mod+Tab exec rofi -show window
 # start file browser
 bindsym $mod+Shift+f exec rofi -show file-browser -modi file-browser
 # start emoji one
@@ -113,6 +113,10 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 #bindsym $mod+0 workspace 10
+
+# next workspace
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -204,3 +208,7 @@ exec_always $HOME/.config/polybar/scripts/start.sh
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 bindsym $mod+space exec kbswitch
+
+# assign to a workspace
+for_window [class="Spotify"] move to workspace 9
+for_window [class="Discord"] move to workspace 9
