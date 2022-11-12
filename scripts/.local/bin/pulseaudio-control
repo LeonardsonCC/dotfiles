@@ -171,6 +171,9 @@ function volUp() {
 
     if [ $OSD = "yes" ]; then showOSD "$curNode"; fi
     if [ $AUTOSYNC = "yes" ]; then volSync; fi
+
+    getCurVol "$curNode"
+    dunstify  "Volume:  $VOL_LEVEL" -t 800 -r 2345
 }
 
 
@@ -185,6 +188,9 @@ function volDown() {
 
     if [ $OSD = "yes" ]; then showOSD "$curNode"; fi
     if [ $AUTOSYNC = "yes" ]; then volSync; fi
+
+    getCurVol "$curNode"
+    dunstify  "Volume:  $VOL_LEVEL" -t 800 -r 2345
 }
 
 
@@ -228,8 +234,10 @@ function volMute() {
         getIsMuted "$curNode"
         if [ "$IS_MUTED" = "yes" ]; then
             pactl set-s${SINK_OR_SOURCE}-mute "$curNode" "no"
+            dunstify  "Volume Unmuted" -t 800 -r 2345
         else
             pactl set-s${SINK_OR_SOURCE}-mute "$curNode" "yes"
+            dunstify  "Volume Muted" -t 800 -r 2345
         fi
     elif [ "$1" = "mute" ]; then
         pactl set-s${SINK_OR_SOURCE}-mute "$curNode" "yes"
