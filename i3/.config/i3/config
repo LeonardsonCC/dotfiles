@@ -38,7 +38,7 @@ bindsym $mod+Shift+q kill
 # start program launcher
 bindsym $mod+d exec rofi -show drun
 # start window menu
-bindsym $mod+Tab exec rofi -show window
+# bindsym $mod+Tab exec rofi -show window
 # start file browser
 bindsym $mod+Shift+f exec rofi -show file-browser -modi file-browser
 # start emoji one
@@ -94,7 +94,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -113,6 +113,10 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 #bindsym $mod+0 workspace 10
+
+# next workspace
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -200,3 +204,17 @@ exec_always xinput set-prop 11 293 1 # Natural scrolling
 exec_always pkill polybar
 exec_always $HOME/.config/polybar/scripts/start.sh
 
+# Dunst
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+bindsym $mod+space exec kbswitch
+
+# start some utilities
+exec pavucontrol
+exec blueman-manager
+
+# assign to a workspace
+for_window [class="Blueman-manager"] move to workspace 8
+for_window [class="Pavucontrol"] move to workspace 8
+for_window [class="Spotify"] move to workspace 9
+for_window [class="Discord"] move to workspace 9
