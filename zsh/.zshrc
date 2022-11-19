@@ -48,3 +48,4 @@ alias em="emacsclient -c -a 'emacs'"
 
 # Keybinding in terminal ??????
 bindkey -s '^f' 'tmux-sessionizer\n'
+bindkey -s '^g' 'lazygit\n'
