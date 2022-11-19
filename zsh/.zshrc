@@ -46,3 +46,5 @@ alias em="emacsclient -c -a 'emacs'"
 # Arch user sucks
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
+# Keybinding in terminal ??????
+bindkey -s '^f' 'tmux-sessionizer\n'
