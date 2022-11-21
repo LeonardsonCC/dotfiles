@@ -48,3 +48,6 @@ export DOTFILES="$HOME/dotfiles/"
 # Arch user sucks
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
+# Keybinding in terminal ??????
+bindkey -s '^f' 'tmux-sessionizer\n'
+bindkey -s '^g' 'lazygit\n'
