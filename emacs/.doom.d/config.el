@@ -68,7 +68,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq projectile-project-search-path '("~/dev/"))
+(setq projectile-project-search-path '("~/dev/", "~/dev/catho"))
 
 ;; Faster company
 (setq company-dabbrev-downcase 0)
@@ -78,3 +78,4 @@
 (remove-hook 'doom-post-init-hook #'osx-clipboard-mode)
 
 (setq confirm-kill-emacs #'yes-or-no-p)
+
