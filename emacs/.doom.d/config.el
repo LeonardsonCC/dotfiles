@@ -79,3 +79,4 @@
 
 (setq confirm-kill-emacs #'yes-or-no-p)
 
+(setq lsp-enable-on-type-formatting nil)
