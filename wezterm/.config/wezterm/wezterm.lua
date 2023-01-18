@@ -13,12 +13,19 @@ return {
 
 	color_scheme = "tokyonight",
 
-	-- window_background_image = "/home/leonardson/wallpapers/anime/kurisu_dark.png",
-	-- window_background_image_hsb = {
-	-- 	brightness = 0.1,
-	-- 	hue = 1.0,
-	-- 	saturation = 0.7,
-	-- },
+	window_padding = {
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0,
+	},
+
+	window_background_image = "/home/leonardson/wallpapers/anime/another_kurisu.png",
+	window_background_image_hsb = {
+		brightness = 0.1,
+		hue = 1.0,
+		saturation = 1.0,
+	},
 	colors = {
 		background = "black",
 	},
