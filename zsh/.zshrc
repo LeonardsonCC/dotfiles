@@ -36,3 +36,7 @@ bindkey -s '^g' 'lazygit\n'
 # FZF
 source "$HOME/key-bindings.zsh"
 
+if [ -f "$HOME/work" ]; then
+  source "$HOME/work"
+fi
+
