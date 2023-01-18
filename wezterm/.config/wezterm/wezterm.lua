@@ -1,10 +1,38 @@
-local wezterm = require 'wezterm';
+local wezterm = require("wezterm")
+
 return {
-  default_prog = {"fish"},
+	default_prog = { "zsh" },
+	automatically_reload_config = true,
+	audible_bell = "Disabled",
 
-  font = wezterm.font("Victor Mono", {weight="Medium"}),
-  font_size = 11,
+	use_fancy_tab_bar = false,
+	tab_bar_at_bottom = true,
 
-  color_scheme = "Gruvbox Dark",
-  window_background_opacity = 0.9,
+	font = wezterm.font("JetBrains Mono", { weight = "Medium" }),
+	font_size = 12,
+
+	color_scheme = "tokyonight",
+
+	-- window_background_image = "/home/leonardson/wallpapers/anime/kurisu_dark.png",
+	-- window_background_image_hsb = {
+	-- 	brightness = 0.1,
+	-- 	hue = 1.0,
+	-- 	saturation = 0.7,
+	-- },
+	colors = {
+		background = "black",
+	},
+	--
+	keys = {
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.SplitHorizontal({}),
+		},
+		{
+			key = "s",
+			mods = "CTRL",
+			action = wezterm.action.SplitVertical({}),
+		},
+	},
 }
