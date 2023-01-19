@@ -45,22 +45,22 @@ return {
 		},
 		{
 			key = "j",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Down"),
 		},
 		{
 			key = "k",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Up"),
 		},
 		{
 			key = "h",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
 			key = "l",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.ActivatePaneDirection("Right"),
 		},
 	},
