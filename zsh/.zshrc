@@ -40,3 +40,4 @@ if [ -f "$HOME/work" ]; then
   source "$HOME/work"
 fi
 
+export GPG_TTY=$(tty)

@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local act = wezterm.action
+
 return {
 	default_prog = { "zsh" },
 	automatically_reload_config = true,
@@ -34,12 +36,32 @@ return {
 		{
 			key = "v",
 			mods = "CTRL",
-			action = wezterm.action.SplitHorizontal({}),
+			action = act.SplitHorizontal({}),
 		},
 		{
 			key = "s",
 			mods = "CTRL",
-			action = wezterm.action.SplitVertical({}),
+			action = act.SplitVertical({}),
+		},
+		{
+			key = "j",
+			mods = "CTRL",
+			action = act.ActivatePaneDirection("Down"),
+		},
+		{
+			key = "k",
+			mods = "CTRL",
+			action = act.ActivatePaneDirection("Up"),
+		},
+		{
+			key = "h",
+			mods = "CTRL",
+			action = act.ActivatePaneDirection("Left"),
+		},
+		{
+			key = "l",
+			mods = "CTRL",
+			action = act.ActivatePaneDirection("Right"),
 		},
 	},
 }
