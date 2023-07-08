@@ -7,4 +7,6 @@ if status is-interactive
   alias ll "exa -lah"
 
   alias cat bat
+
+  bind \cg lazygit
 end
