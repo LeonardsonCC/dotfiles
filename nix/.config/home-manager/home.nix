@@ -8,14 +8,18 @@
 
   home.packages = [
     pkgs.neovim
-    pkgs.htop
     pkgs.git
     pkgs.insomnia
     pkgs.spotify
-    pkgs.ripgrep
     pkgs.zellij
-    pkgs.fish
     pkgs.lazygit
+    
+    # linux utils replacements
+    pkgs.fish
+    pkgs.exa
+    pkgs.bat
+    pkgs.ripgrep
+    pkgs.htop
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
