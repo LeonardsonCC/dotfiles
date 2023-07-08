@@ -13,6 +13,8 @@
     pkgs.spotify
     pkgs.zellij
     pkgs.lazygit
+
+    pkgs.playerctl
     
     # linux utils replacements
     pkgs.fish
@@ -20,6 +22,7 @@
     pkgs.bat
     pkgs.ripgrep
     pkgs.htop
+    pkgs.light
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CURRENT_KB=$(swaymsg -t get_inputs | jq -r '.[] | select(.identifier | contains("keyboard")) | .identifier')
+
+swaymsg input "$CURRENT_KB" xkb_switch_layout next
+
+active_layout=$(swaymsg -t get_inputs | jq -r '.[] | select(.identifier | contains("keyboard")) | .xkb_active_layout_name')
+
+notify-send "Layout changed: $active_layout"
