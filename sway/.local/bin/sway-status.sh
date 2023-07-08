@@ -16,4 +16,4 @@ battery_percentage=$(cat /sys/class/power_supply/BAT0/capacity)
 battery_status=$(cat /sys/class/power_supply/BAT0/status)
 
 # Status bar
-echo "Bat: $battery_percentage ($battery_status) | Vol: $volume | $date"
+echo "󱊣 $battery_percentage ($battery_status) | 󰕾 $volume | $date"

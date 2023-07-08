@@ -14,6 +14,10 @@
     pkgs.zellij
     pkgs.lazygit
 
+    # Because life can't be easy
+    pkgs.grim
+    pkgs.slurp
+    pkgs.wl-clipboard
     pkgs.playerctl
     
     # linux utils replacements
