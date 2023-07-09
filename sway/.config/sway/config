@@ -187,6 +187,7 @@ input "type:touchpad" {
 
 input type:keyboard {
     xkb_layout "us,br"
+    xkb_numlock enabled
 }
 
 # Wallpaper
