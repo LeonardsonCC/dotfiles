@@ -107,7 +107,7 @@ bindsym $mod+0 exec "swaynag -t warning -m 'You pressed the exit shortcut. Do yo
 bindsym $mod+Shift+0 exec "swaynag -t error -m 'Deseja desligar o computador?' -b 'Yes, die' 'poweroff'"
 
 # TODO: find a lock that works
-# bindsym $mod+Shift+l swaylock
+bindsym $mod+Shift+l swaylock -i $(find $HOME/wallpapers/ -type f -not -path '*/\.git/* | shuf -n 1) > $HOME/path
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -134,8 +134,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 3%-
 bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -U 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -A 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 20 && notify-send "Brightness: $(light -G)" # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 20 && notify-send "Brightness: $(light -G)" # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioNext exec playerctl next
