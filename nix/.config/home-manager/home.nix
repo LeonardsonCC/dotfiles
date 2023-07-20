@@ -7,12 +7,15 @@
   home.stateVersion = "23.05";
 
   home.packages = [
-    pkgs.neovim
+    # pkgs.neovim
     pkgs.git
     pkgs.insomnia
     pkgs.spotify
     pkgs.zellij
     pkgs.lazygit
+
+    # eww
+    pkgs.nodejs_20
 
     # Because life can't be easy
     pkgs.grim
@@ -27,6 +30,7 @@
     pkgs.ripgrep
     pkgs.htop
     pkgs.light
+    pkgs.fzf
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
