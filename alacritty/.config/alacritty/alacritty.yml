@@ -1,5 +1,5 @@
 shell:
-  program: /home/leonardson/.nix-profile/bin/fish
+  program: fish
 
 window:
   opacity: 0.97
