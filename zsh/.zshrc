@@ -18,7 +18,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # this loads nvm bash_completion
 
 # alias
+alias ls='exa'
 alias ll='ls -lah'
+alias llt='ls -lah --tree'
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:"$HOME/.local/bin"
@@ -30,7 +32,7 @@ export PATH="/var/lib/flatpak/exports/bin:$PATH"
 export PATH="/home/leonardson/.cargo/bin:$PATH"
 
 # Keybinding in terminal ??????
-bindkey -s '^f' 'tmux-sessionizer\n'
+bindkey -s '^f' 'zj-sessionizer\n'
 bindkey -s '^g' 'lazygit\n'
 
 # FZF
@@ -41,3 +43,7 @@ if [ -f "$HOME/work" ]; then
 fi
 
 export GPG_TTY=$(tty)
+export EDITOR=nvim
+export OPENAI_API_KEY=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
+
+#alias awslocal="AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test AWS_DEFAULT_REGION=us-east-1 aws --endpoint-url=http://localhost:4566"
