@@ -11,7 +11,7 @@
     pkgs.git
     pkgs.insomnia
     pkgs.spotify
-    pkgs.zellij
+    pkgs.tmux
     pkgs.lazygit
 
     # eww
@@ -24,7 +24,7 @@
     pkgs.playerctl
     
     # linux utils replacements
-    pkgs.fish
+    pkgs.zsh
     pkgs.exa
     pkgs.bat
     pkgs.ripgrep
