@@ -38,6 +38,7 @@ alias zj=zellij
 alias ls=exa
 alias ll="exa -lah"
 alias cat=bat
+alias rg="rg --hidden --glob '!.git'"
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
