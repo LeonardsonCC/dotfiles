@@ -1,5 +1,5 @@
 shell:
-  program: fish
+  program: zsh
 
 window:
   opacity: 0.97
