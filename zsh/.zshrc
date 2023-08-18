@@ -46,5 +46,20 @@ bindkey -s '^F' 'zj-sessionizer^M'
 # PLUGINS
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
+
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
+
+# source auxiliary files
+for file in $HOME/.zsh/*.zsh; do
+    source "$file"
+done
+
+# Variables
+if [[ -f $HOME/.private ]]; then
+  source $HOME/.private
+fi
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
