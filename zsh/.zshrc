@@ -42,7 +42,7 @@ alias rg="rg --hidden --glob '!.git'"
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
-bindkey -s '^F' 'zj-sessionizer^M'
+bindkey -s '^F' 'tmux-sessionizer^M'
 
 # PLUGINS
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
