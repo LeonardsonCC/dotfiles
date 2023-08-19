@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(echo ~/dotfiles/ && find ~/dev/catho/ ~/dev/ -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected=$((echo ~/dotfiles/ && find ~/dev/ -mindepth 1 -maxdepth 1 -type d) | fzf)
 fi
 
 if [[ -z $selected ]]; then
