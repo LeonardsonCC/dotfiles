@@ -43,6 +43,7 @@ alias rg="rg --hidden --glob '!.git'"
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
 bindkey -s '^F' 'tmux-sessionizer^M'
+bindkey -s '^S' 'sess="$(tmux ls | fzf | cut -d: --fields=1)"; tmux attach -t $sess^M'
 
 # PLUGINS
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
