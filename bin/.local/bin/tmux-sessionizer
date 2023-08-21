@@ -1,9 +1,14 @@
-#!/usr/bin/env zsh
+#!/usr/bin/zsh
+
+if [[ -f $HOME/.private ]]; then
+  source $HOME/.private
+fi
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-  selected=$((echo ~/dotfiles/ && find ~/dev/ -mindepth 1 -maxdepth 1 -type d) | fzf)
+  folders=${TMUX_SESSIONIZER_FOLDERS:-"$HOME/dev/"}
+  selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf)
 fi
 
 if [[ -z $selected ]]; then
