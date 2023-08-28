@@ -4,27 +4,43 @@ if [[ -f $HOME/.private ]]; then
   source $HOME/.private
 fi
 
-if [[ $# -eq 1 ]]; then
-    selected=$1
-else
+new_tmux_session() {
   folders=${TMUX_SESSIONIZER_FOLDERS:-"$HOME/dev/"}
-  selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf)
+  selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf --height 40%)
+  
+  if [[ -z $selected ]]; then
+      exit 0
+  fi
+
+  selected_name=$(basename "$selected" | tr . _)
+  tmux_running=$(pgrep tmux)
+
+  if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+      tmux new-session -s $selected_name -c $selected
+      exit 0
+  fi
+
+  if ! tmux has-session -t=$selected_name 2> /dev/null; then
+      tmux new-session -ds $selected_name -c $selected
+  fi
+
+  tmux attach -t $selected_name
+}
+
+attach_tmux_session() {
+  sess="$(tmux ls | fzf --height 40% | cut -d: -f1)"; 
+  tmux attach -t $sess
+}
+
+if [[ $# -eq 0 ]]; then
+  new_tmux_session
+else
+  if [[ $# -eq 1 ]]; then
+      case "$1" in
+        "running") attach_tmux_session ;;
+        "projects") new_tmux_session ;;
+        *) new_tmux_session ;;
+      esac
+  fi
 fi
 
-if [[ -z $selected ]]; then
-    exit 0
-fi
-
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
-
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
-    exit 0
-fi
-
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
-fi
-
-tmux attach -t $selected_name
