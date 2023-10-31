@@ -26,7 +26,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='mvim'
+export EDITOR='nvim'
 
 # PATH
 export PATH=$PATH:$HOME/.local/bin/
