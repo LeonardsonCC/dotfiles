@@ -32,6 +32,7 @@ export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/aws-sam-cli/current/bin/
 
 # ALIASES
 alias zj=zellij
@@ -65,3 +66,10 @@ fi
 # NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# -- START ACTIVESTATE INSTALLATION
+export PATH="/home/leonardson/.local/ActiveState/StateTool/release/bin:$PATH"
+# -- STOP ACTIVESTATE INSTALLATION
+# -- START ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
+export PATH="/home/leonardson/.cache/activestate/bin:$PATH"
+# -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
