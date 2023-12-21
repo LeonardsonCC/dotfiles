@@ -4,7 +4,7 @@ local config = {}
 config.color_scheme = "IR_Black"
 
 config.font = wezterm.font("Noto Mono Nerd Font")
-config.font_size = 11
+config.font_size = 10
 
 config.use_fancy_tab_bar = true
 config.window_decorations = "INTEGRATED_BUTTONS"
