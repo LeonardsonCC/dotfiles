@@ -1,7 +1,11 @@
 local wezterm = require("wezterm")
 local config = {}
 
-config.color_scheme = "IR_Black"
+-- config.color_scheme = "IR_Black"
+config.color_scheme = "tokyonight_night"
+config.colors = {
+	background = "black",
+}
 
 config.font = wezterm.font("Noto Mono Nerd Font")
 config.font_size = 10
