@@ -2,10 +2,10 @@ shell:
   program: zsh
 
 window:
-  opacity: 0.97
+  opacity: 0.98
 
 font:
-  size: 11.0
+  size: 10.0
 
   normal:
     family: MonaspiceNe Nerd Font Mono

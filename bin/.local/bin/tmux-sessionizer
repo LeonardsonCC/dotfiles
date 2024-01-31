@@ -6,7 +6,7 @@ fi
 
 new_tmux_session() {
   folders=${TMUX_SESSIONIZER_FOLDERS:-"$HOME/dev/"}
-  selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf --height 40%)
+  selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf --reverse --preview 'exa -la {}')
   
   if [[ -z $selected ]]; then
       exit 0
@@ -29,7 +29,7 @@ new_tmux_session() {
 }
 
 attach_tmux_session() {
-  sess="$(tmux ls | fzf --height 40% | cut -d: -f1)"; 
+  sess="$(tmux ls | fzf --reverse | cut -d: -f1)"; 
   tmux attach -t $sess
 }
 

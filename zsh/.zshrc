@@ -40,6 +40,7 @@ alias ls=exa
 alias ll="exa -lah"
 alias cat=bat
 alias rg="rg --hidden --glob '!.git'"
+alias jq=gojq
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
@@ -61,6 +62,9 @@ done
 # Variables
 if [[ -f $HOME/.private ]]; then
   source $HOME/.private
+fi
+if [[ -f $HOME/work ]]; then
+  source $HOME/work
 fi
 
 # NVM
