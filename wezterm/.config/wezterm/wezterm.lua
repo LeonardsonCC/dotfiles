@@ -7,11 +7,11 @@ config.colors = {
 	background = "black",
 }
 
-config.font = wezterm.font("Noto Mono Nerd Font")
+config.font = wezterm.font("MonaspiceNe Nerd Font Mono")
 config.font_size = 10
 config.line_height = 1.3
 
-config.use_fancy_tab_bar = true
+config.enable_tab_bar = false
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.integrated_title_button_style = "Gnome"
 

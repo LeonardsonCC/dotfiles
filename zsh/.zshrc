@@ -40,7 +40,7 @@ alias ls=exa
 alias ll="exa -lah"
 alias cat=bat
 alias rg="rg --hidden --glob '!.git'"
-alias jq=gojq
+# alias jq=gojq
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
