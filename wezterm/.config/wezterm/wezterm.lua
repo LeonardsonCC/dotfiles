@@ -24,6 +24,8 @@ config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.enable_kitty_graphics = true
 
+config.warn_about_missing_glyphs = false
+
 -- config.front_end = "OpenGL"
 
 config.cursor_blink_rate = 0

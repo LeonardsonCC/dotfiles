@@ -26,6 +26,13 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+export HISTFILE=$HOME/.zsh/history/.zsh_history
+export HISTSIZE=5000000
+export SAVEHIST=5000000
+setopt appendhistory
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
 export EDITOR='nvim'
 
 # PATH
@@ -51,8 +58,8 @@ bindkey -s '^S' 'sess="$(tmux ls | fzf --height 40% | cut -d: --fields=1)"; tmux
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
+zinit light Aloxaf/fzf-tab
 
 # source auxiliary files
 for file in $HOME/.zsh/*.zsh; do
