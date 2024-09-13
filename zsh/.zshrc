@@ -84,3 +84,5 @@ export PATH="/home/leonardson/.local/ActiveState/StateTool/release/bin:$PATH"
 # -- START ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
 export PATH="/home/leonardson/.cache/activestate/bin:$PATH"
 # -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
+# zoxide
+eval "$(zoxide init zsh --cmd cd)"
