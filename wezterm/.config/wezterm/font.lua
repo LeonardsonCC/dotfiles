@@ -4,7 +4,7 @@ local setup = function(config)
 	config.freetype_load_target = "HorizontalLcd"
 	config.font = wezterm.font_with_fallback({
 		{
-			family = "MonaspaceNeon Nerd Font",
+			family = "MonaspiceNe Nerd Font",
 			harfbuzz_features = {
 				"calt",
 				"liga",
@@ -31,7 +31,7 @@ local setup = function(config)
 			intensity = "Normal",
 			italic = true,
 			font = wezterm.font({
-				family = "MonaspaceRadon Nerd Font",
+				family = "MonaspiceRn Nerd Font",
 				weight = "ExtraLight",
 				stretch = "Normal",
 				style = "Normal",
@@ -58,7 +58,7 @@ local setup = function(config)
 			intensity = "Bold",
 			italic = false,
 			font = wezterm.font({
-				family = "MonaspaceKrypton Nerd Font",
+				family = "MonaspiceKr Nerd Font",
 				weight = "Light",
 				stretch = "Normal",
 				style = "Normal",
