@@ -56,7 +56,6 @@ local setup = function(config)
 			key = "g",
 			mods = "LEADER",
 			action = act.SpawnCommandInNewTab({
-				cwd = os.getenv("WEZTERM_CONFIG_DIR"),
 				args = { "/home/leonardson/.local/bin/lazygit" },
 			}),
 		},
