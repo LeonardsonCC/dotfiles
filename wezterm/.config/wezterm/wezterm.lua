@@ -52,7 +52,11 @@ tabline.setup({
 	options = {
 		icons_enabled = false,
 		theme = "Catppuccin Mocha",
-		color_overrides = {},
+		color_overrides = {
+			tab = {
+				active = { bg = "#F078EB", fg = "#060606" },
+			},
+		},
 		section_separators = {
 			left = wezterm.nerdfonts.pl_left_hard_divider,
 			right = wezterm.nerdfonts.pl_right_hard_divider,
