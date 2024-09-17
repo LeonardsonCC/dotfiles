@@ -26,12 +26,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export HISTFILE=$HOME/.zsh/history/.zsh_history
 export HISTSIZE=5000000
 export SAVEHIST=5000000
-setopt appendhistory
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
 
 export EDITOR='nvim'
 
