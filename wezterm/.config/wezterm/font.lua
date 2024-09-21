@@ -8,7 +8,7 @@ local setup = function(config)
 			harfbuzz_features = {
 				"calt",
 				"liga",
-				"dlig",
+				-- "dlig",
 				"ss01",
 				"ss02",
 				"ss03",
