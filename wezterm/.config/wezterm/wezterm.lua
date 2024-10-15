@@ -6,9 +6,9 @@ config.colors = {
 	background = "black",
 }
 
-config.font_size = 10.2
-config.line_height = 1.0
-config.cell_width = 1.0
+config.font_size = 10.0
+config.line_height = 1.2
+config.cell_width = 1.1
 
 -- wayland compatibility is buggy
 config.enable_wayland = false
