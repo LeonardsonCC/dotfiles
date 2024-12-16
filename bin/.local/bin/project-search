@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+
+if [[ -f $HOME/.private ]]; then
+  source $HOME/.private
+fi
+
+folders=${PROJECTS_FOLDER:-"$HOME/dev/"}
+selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf --reverse --preview 'exa -la {}')
+selected_name=$(basename "$selected" | tr . _)
+
+echo $selected
+cd "$selected"

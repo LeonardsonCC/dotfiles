@@ -47,7 +47,8 @@ alias rg="rg --hidden --glob '!.git'"
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
-bindkey -s '^F' 'tmux-sessionizer projects^M'
+# bindkey -s '^F' 'tmux-sessionizer projects^M'
+bindkey -s '^F' 'source project-search^M'
 bindkey -s '^S' 'sess="$(tmux ls | fzf --height 40% | cut -d: --fields=1)"; tmux attach -t $sess^M'
 
 # PLUGINS
@@ -82,3 +83,5 @@ export PATH="/home/leonardson/.cache/activestate/bin:$PATH"
 # -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
 # zoxide
 eval "$(zoxide init zsh --cmd cd)"
+
+export GPG_TTY=$(tty)
