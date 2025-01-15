@@ -34,18 +34,18 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
-local mappings = require("mappings")
-mappings.setup(config)
+-- local mappings = require("mappings")
+-- mappings.setup(config)
 
 local font = require("font")
 font.setup(config)
 
-local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
-table.insert(config.keys, {
-	key = "f",
-	mods = "LEADER",
-	action = workspace_switcher.switch_workspace(),
-})
+-- local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
+-- table.insert(config.keys, {
+-- 	key = "f",
+-- 	mods = "LEADER",
+-- 	action = workspace_switcher.switch_workspace(),
+-- })
 
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
