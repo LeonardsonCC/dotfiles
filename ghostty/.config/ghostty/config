@@ -1,0 +1,20 @@
+# Docs: https://ghostty.org/docs/config.
+
+shell-integration-features = no-cursor,sudo,no-title
+
+# font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+
+# window style
+window-titlebar-background = #000000
+window-decoration = true
+window-theme = ghostty
+
+# style
+background = #000000
+background-opacity = 0.95
+
+# cursor
+cursor-style = "block"
+cursor-style-blink = false

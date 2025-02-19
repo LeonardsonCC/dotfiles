@@ -47,8 +47,8 @@ alias rg="rg --hidden --glob '!.git'"
 
 # BINDINGS
 bindkey -s '^G' 'lazygit^M'
-# bindkey -s '^F' 'tmux-sessionizer projects^M'
-bindkey -s '^F' 'source project-search^M'
+bindkey -s '^F' 'tmux-sessionizer projects^M'
+# bindkey -s '^F' 'source project-search^M'
 bindkey -s '^S' 'sess="$(tmux ls | fzf --height 40% | cut -d: --fields=1)"; tmux attach -t $sess^M'
 
 # PLUGINS
