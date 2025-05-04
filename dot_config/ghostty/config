@@ -14,7 +14,7 @@ maximize = true
 
 # style
 theme = "Tomorrow Night Bright"
-background = #000000
+#background = #000000
 background-opacity = 0.95
 
 # cursor
