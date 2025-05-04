@@ -14,5 +14,6 @@ source $ZSH/oh-my-zsh.sh
 # Starting...
 #####################
 export PATH="/home/$USER/.local/bin:$PATH"
+export EDITOR="nvim"
 
 alias ll="ls -lah"
