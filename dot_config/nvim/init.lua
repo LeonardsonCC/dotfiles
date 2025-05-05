@@ -489,7 +489,7 @@ require("lazy").setup({
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 
 					-- Find references for the word under your cursor.
-					map("<leader>cr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+					-- map("<leader>cr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 
 					-- Jump to the implementation of the word under your cursor.
