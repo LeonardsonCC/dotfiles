@@ -23,3 +23,6 @@ export EDITOR="nvim"
 
 # Alaiases
 alias ll="ls -lah"
+
+# Keys
+bindkey -s '^F' 'tmux-sessionizer projects^M'
