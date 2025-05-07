@@ -500,7 +500,7 @@ require("lazy").setup({
 					-- Jump to the definition of the word under your cursor.
 					--  This is where a variable was first declared, or where a function is defined, etc.
 					--  To jump back, press <C-t>.
-					map("<leader>cd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					-- map("<leader>cd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 
 					-- WARN: This is not Goto Definition, this is Goto Declaration.
