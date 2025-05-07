@@ -975,7 +975,7 @@ require("lazy").setup({
 	},
 })
 
-vim.cmd([[au FileType c,cpp,java,php,python,javascript,typescript,vim,swig
+vim.cmd([[au FileType c,cpp,java,php,python,javascript,typescript,vim,swig,yaml
       \ au BufWritePre <buffer> :%s/\s\+$//e]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
