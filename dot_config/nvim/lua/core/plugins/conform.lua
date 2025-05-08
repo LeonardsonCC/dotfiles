@@ -5,7 +5,8 @@ local config = {
 	-- select formatters for ft
 	formatters_by_ft = {
 		-- lua = { "stylua" },
-		go = { "goimports-reviser", "gopls" },
+		-- go = { "goimports-reviser", "gopls" },
+		go = { "goimports", "gofumpt" },
 	},
 }
 
