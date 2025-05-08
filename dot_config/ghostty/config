@@ -4,7 +4,7 @@ shell-integration-features = no-cursor,sudo
 
 # font
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 9
+font-size = 10
 
 # window style
 window-titlebar-background = #000000
