@@ -10,8 +10,9 @@
   "modules-right": [
     "tray",
     "pulseaudio",
+    "pulseaudio/slider",
     "network",
-    "custom/power"
+    "custom/power",
   ],
   "hyprland/workspaces": {
     "format": "{name}",
@@ -100,6 +101,11 @@
     },
     "on-click": "pavucontrol"
   },
+  "pulseaudio/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal"
+  },
   "custom/power": {
     "format": " ",
     "on-click": "wlogout"
@@ -125,4 +131,3 @@
     "escape": true
   }
 }
-// vim: set ft=jsonc
