@@ -7,6 +7,7 @@ local config = {
 		-- lua = { "stylua" },
 		-- go = { "goimports-reviser", "gopls" },
 		go = { "goimports", "gofumpt" },
+		json = { "jq" },
 	},
 }
 
