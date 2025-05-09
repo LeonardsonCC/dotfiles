@@ -10,7 +10,6 @@
   "modules-right": [
     "tray",
     "pulseaudio",
-    "pulseaudio/slider",
     "network",
     "custom/power",
   ],
@@ -101,11 +100,6 @@
       ]
     },
     "on-click": "pavucontrol"
-  },
-  "pulseaudio/slider": {
-      "min": 0,
-      "max": 100,
-      "orientation": "horizontal"
   },
   "custom/power": {
     "format": " ",
