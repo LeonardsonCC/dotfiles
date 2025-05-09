@@ -76,8 +76,8 @@
     "spacing": 10
   },
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M}",
-    // "format-alt": "{:%Y-%m-%d}",
+    "format": "{:%d-%m-%Y %H:%M}",
+    "format-alt": "{:%d-%m-%Y %H:%M:%S}",
     "on-click": "gnome-calendar"
   },
   "pulseaudio": {
