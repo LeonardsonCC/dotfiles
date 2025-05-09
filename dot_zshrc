@@ -26,4 +26,4 @@ alias ll="ls -lah"
 
 # Keys
 bindkey -s '^F' 'tmux-sessionizer projects^M'
-bindkey -s '^D' 'chezmoi list | fzf^M'
+bindkey -s '^D' 'chezmoi edit --apply $(chezmoi list | fzf)^M'
