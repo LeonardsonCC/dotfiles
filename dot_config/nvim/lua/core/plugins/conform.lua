@@ -8,6 +8,7 @@ local config = {
 		-- go = { "goimports-reviser", "gopls" },
 		go = { "goimports", "gofumpt" },
 		json = { "jq" },
+		jsonc = { "jq" },
 	},
 }
 
