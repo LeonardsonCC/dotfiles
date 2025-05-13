@@ -139,5 +139,5 @@
   },
   "custom/spotify": {
     "exec": "tail /dev/null"
-  };
+  }
 }
