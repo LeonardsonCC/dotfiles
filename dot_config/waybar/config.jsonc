@@ -6,7 +6,6 @@
   "modules-center": [
     "custom/notification",
     "custom/spotify",
-    "custom/testing-background",
     "idle_inhibitor"
   ],
   "modules-right": [
@@ -130,14 +129,6 @@
     "escape": true
   },
   "custom/spotify": {
-    "exec": "/usr/bin/python3 /home/leonardson/.config/waybar/custom/media_player.py --player spotify",
-    "format": "{}  ",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
-  },
-  "custom/testing-background": {
     "exec": "/usr/bin/python3 /home/leonardson/.config/waybar/custom/media_player.py --player spotify",
     "format": "{}  ",
     "return-type": "json",
