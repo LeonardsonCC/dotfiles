@@ -69,7 +69,7 @@ window#waybar {
   font-weight: bold;
 }
 #custom-power {
-  background-color: rgba(0, 119, 179, 0.6);
+  background-color: rgba(0, 119, 179, 0.8);
   border-radius: 100px;
   margin: 5px 5px;
   padding: 1px 1px 1px 6px;
