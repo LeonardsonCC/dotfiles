@@ -93,6 +93,11 @@ window#waybar {
 #temperature.critical {
   color: #cc3436;
 }
+
+.custom-spotify {
+    padding: 0 10px;
+    margin: 0 4px;
+}
 /*-----Colors----*/
 /*
  *rgba(0,85,102,1),#005566 --> Indigo(dye)

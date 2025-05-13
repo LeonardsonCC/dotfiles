@@ -1,18 +1,18 @@
 {
   "modules-left": [
+    "custom/power",
     "hyprland/workspaces"
   ],
   "modules-center": [
     "custom/notification",
     "custom/spotify",
-    "clock",
     "idle_inhibitor"
   ],
   "modules-right": [
     "tray",
     "pulseaudio",
     "network",
-    "custom/power",
+    "clock",
   ],
   "hyprland/workspaces": {
     "format": "{name}",
