@@ -124,7 +124,7 @@ class PlayerManager:
         elif artist is not None and title is not None:
             if player.props.metadata['mpris:artUrl'] is not None:
                 art_url = player.props.metadata['mpris:artUrl']
-                track_info = f"<div style=\"border-radius: 90%; background-image: url('{art_url}'); width: 50px height: 50px)\"></div> {artist} - {title}"
+                track_info = f"<span style=\"border-radius: 90%; background-image: url('{art_url}'); width: 50px height: 50px)\"></span> {artist} - {title}"
             else:
                 track_info = f"{artist} - {title}"
         else:
