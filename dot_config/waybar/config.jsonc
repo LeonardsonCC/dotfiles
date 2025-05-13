@@ -6,13 +6,13 @@
   "modules-center": [
     "custom/notification",
     "custom/spotify",
+    "idle_inhibitor"
   ],
   "modules-right": [
     "tray",
     "pulseaudio",
     "network",
     "clock",
-    "idle_inhibitor"
   ],
   "hyprland/workspaces": {
     "format": "{name}",
