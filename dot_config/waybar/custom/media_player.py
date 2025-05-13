@@ -115,13 +115,18 @@ class PlayerManager:
         player_name = player.props.player_name
         artist = player.get_artist()
         title = player.get_title()
+        # art_url = player.get_art_url()
         title = title.replace("&", "&amp;")
 
         track_info = ""
         if player_name == "spotify" and "mpris:trackid" in metadata.keys() and ":ad:" in player.props.metadata["mpris:trackid"]:
             track_info = "Advertisement"
         elif artist is not None and title is not None:
-            track_info = f"{artist} - {title}"
+            if player.props.metadata['mpris:artUrl'] is not None:
+                art_url = player.props.metadata['mpris:artUrl']
+                track_info = f"<img style=\"border-radius: 90%\" src=\"{art_url}\"> {artist} - {title}"
+            else:
+                track_info = f"{artist} - {title}"
         else:
             track_info = title
 
