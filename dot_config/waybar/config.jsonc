@@ -138,6 +138,11 @@
     "on-scroll-down": "playerctl previous"
   },
   "custom/testing-background": {
-    "exec": "tail /dev/null"
+    "exec": "/usr/bin/python3 /home/leonardson/.config/waybar/custom/media_player.py --player spotify",
+    "format": "{}  ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   }
 }
