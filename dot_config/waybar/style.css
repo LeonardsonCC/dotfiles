@@ -97,6 +97,11 @@ window#waybar {
   color: #cc3436;
 }
 
+#idle_inhibitor,
+#custom-notification {
+  margin: 0px 5px;
+}
+
 .custom-spotify {
     padding: 0 10px;
     margin: 0 10px 0 10px;
