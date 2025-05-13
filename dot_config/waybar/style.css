@@ -72,7 +72,7 @@ window#waybar {
   background-color: rgba(110, 27, 44, 0.8);
   border-radius: 100px;
   margin: 5px 5px;
-  padding: 1px 1px 1px 6px;
+  padding: 0px 8px;
 }
 /*-----Indicators----*/
 #idle_inhibitor.activated {
