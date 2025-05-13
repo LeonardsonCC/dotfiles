@@ -15,24 +15,28 @@ window {
   /*font-weight: bold;*/
 }
 window#waybar {
-  background: rgba(0, 0, 0, 0);
+    background-color: transparent;
+}
+
+window#waybar > box {
+    border-radius: 8px;
+    margin: 4px 8px 8px 8px;
+    background-color: rgba(32, 32, 32, 0.75);
+    box-shadow: 4px 4px 2px 1px #101010;
 }
 /*-----module groups----*/
 .modules-right {
   background-color: rgba(0, 43, 51, 0.85);
   margin: 2px 10px 0 0;
-  box-shadow: 4px 4px 2px 1px #101010;
 }
 .modules-center {
   background-color: rgba(0, 43, 51, 0.85);
   margin: 2px 0 0 0;
   padding: 0 10px;
-  box-shadow: 4px 4px 2px 1px #101010;
 }
 .modules-left {
   margin: 2px 0 0 5px;
   background-color: rgba(0, 119, 179, 0.6);
-  box-shadow: 4px 4px 2px 1px #101010;
 }
 /*-----modules indv----*/
 #workspaces button {
