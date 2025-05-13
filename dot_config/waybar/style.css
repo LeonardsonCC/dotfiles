@@ -103,9 +103,10 @@ window#waybar {
     background-color: rgba(30, 215, 96, 0.4);
 }
 .custom-testing-background {
-    background: url('/home/leonardson/repos/wallpapers/beck.png');
+    background-image: url('https://i.scdn.co/image/ab67616d0000b273f7a58da348455480bf248fd5');
     padding: 5px;
 }
+
 /*-----Colors----*/
 /*
  *rgba(0,85,102,1),#005566 --> Indigo(dye)
