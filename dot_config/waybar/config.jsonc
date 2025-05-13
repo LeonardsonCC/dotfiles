@@ -137,7 +137,7 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
-  "custom/spotify": {
+  "custom/testing-background": {
     "exec": "tail /dev/null"
   }
 }
