@@ -6,6 +6,7 @@
   "modules-center": [
     "custom/notification",
     "custom/spotify",
+    "custom/testing-background",
     "idle_inhibitor"
   ],
   "modules-right": [
@@ -136,4 +137,7 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
+  "custom/spotify": {
+    "exec": "tail /dev/null"
+  };
 }

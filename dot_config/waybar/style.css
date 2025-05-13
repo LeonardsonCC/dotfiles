@@ -102,6 +102,10 @@ window#waybar {
     margin: 0 10px 0 10px;
     background-color: rgba(30, 215, 96, 0.4);
 }
+.custom-testing-background {
+    background: url('/home/leonardson/repos/wallpapers/beck.png');
+    padding: 5px;
+}
 /*-----Colors----*/
 /*
  *rgba(0,85,102,1),#005566 --> Indigo(dye)
