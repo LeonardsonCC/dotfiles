@@ -60,8 +60,7 @@ window#waybar {
 #tray,
 #mode,
 #custom-power,
-#custom-menu,
-#idle_inhibitor {
+#custom-menu {
   padding: 0 10px;
 }
 #mode {
