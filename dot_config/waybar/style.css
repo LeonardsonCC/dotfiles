@@ -71,7 +71,7 @@ window#waybar {
 #custom-power {
   background-color: rgba(110, 27, 44, 0.8);
   border-radius: 100px;
-  margin: 5px 5px;
+  margin: 0px 4px 0px 0px;
   padding: 0px 8px;
 }
 /*-----Indicators----*/
