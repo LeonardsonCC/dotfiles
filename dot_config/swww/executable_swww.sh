@@ -4,4 +4,8 @@ WALLPAPERS_DIR=/home/leonardson/repos/wallpapers/
 
 WALLPAPER=$(find "$WALLPAPERS_DIR" -type f -not -path "*.git*" | shuf -n 1)
 
+while ! swww query &> /dev/null; do
+    sleep 1
+done
+
 /home/leonardson/.local/bin/swww img "$WALLPAPER" --transition-type center
