@@ -12,6 +12,7 @@
     "tray",
     "pulseaudio",
     "network",
+    "hyprland/language",
     "clock",
   ],
   "hyprland/workspaces": {
@@ -135,5 +136,10 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-us": "US",
+    "format-br": "BR",
   }
 }
