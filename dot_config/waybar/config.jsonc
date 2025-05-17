@@ -139,7 +139,7 @@
   },
   "hyprland/language": {
     "format": "{}",
-    // "format-us": "US",
-    // "format-br": "BR",
+    "format-us": "US",
+    "format-br": "BR",
   }
 }
