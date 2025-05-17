@@ -4,7 +4,7 @@ After=hyprland.service
 
 [Service]
 Environment=RUST_BACKTRACE=1
-ExecStart=/home/leonardson/.local/bin/swww-daemon -f xrgb
+ExecStart=swww-daemon -f xrgb
 Restart=on-failure
 RestartSec=5
 
