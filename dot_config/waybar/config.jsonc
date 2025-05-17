@@ -138,8 +138,8 @@
     "on-scroll-down": "playerctl previous"
   },
   "hyprland/language": {
-    "format": "",
-    "format-us": "US",
-    "format-br": "BR",
+    "format": "{}",
+    // "format-us": "US",
+    // "format-br": "BR",
   }
 }
