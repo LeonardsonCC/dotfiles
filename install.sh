@@ -60,6 +60,7 @@ main() {
     link_config "ghostty" "$CONFIG_HOME" "ghostty"
     link_config "hypr" "$CONFIG_HOME" "hypr"
     link_config "tmux" "$CONFIG_HOME" "tmux"
+    link_config "waybar" "$CONFIG_HOME" "waybar"
     
     log "Installation complete!"
 }
