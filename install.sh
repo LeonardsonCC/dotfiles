@@ -58,6 +58,7 @@ main() {
     log "Config directory: $CONFIG_HOME"
     
     link_config "ghostty" "$CONFIG_HOME" "ghostty"
+    link_config "hypr" "$CONFIG_HOME" "hypr"
     link_config "tmux" "$CONFIG_HOME" "tmux"
     
     log "Installation complete!"
