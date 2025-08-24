@@ -22,5 +22,6 @@ background-opacity = 0.85
 # cursor
 cursor-style = "block"
 cursor-style-blink = false
+cursor-invert-fg-bg = true
 
 adjust-cell-height = 2
