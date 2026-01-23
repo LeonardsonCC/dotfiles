@@ -1,8 +1,0 @@
-[user]
-	email = leonardson.carvalho@gmail.com
-	name = LeonardsonCC
-	signingkey = 31F1BF76C5539357
-[commit]
-	gpgsign = true
-[tag]
-	gpgSign = true
