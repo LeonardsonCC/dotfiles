@@ -28,3 +28,9 @@ exec_always {
 # # the Waybar keyboard module (so the module shows the updated layout).
 # # This example uses Alt + left Shift.
 # bindsym Alt+Shift_L exec "pkill -RTMIN+1 waybar"
+
+
+input type:pointer {
+    accel_profile "flat"
+    pointer_accel -0.3 # sensitivity
+}

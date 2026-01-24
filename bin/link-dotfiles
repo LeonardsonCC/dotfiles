@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+dotfiles_root="${DOTFILES:-"$(cd "$(dirname "$0")/.." && pwd)"}"
+home_dir="$HOME"
+
+excluded_paths=(
+  "$dotfiles_root/.git"
+  "$dotfiles_root/bin"
+)
+
+is_excluded() {
+  local path="$1"
+  local excluded
+
+  for excluded in "${excluded_paths[@]}"; do
+    if [[ "$path" == "$excluded" || "$path" == "$excluded"/* ]]; then
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+link_file() {
+  local source="$1"
+  local relative_path="${source#"$dotfiles_root"/}"
+  local target="$home_dir/$relative_path"
+  local target_dir
+
+  target_dir="$(dirname "$target")"
+  mkdir -p "$target_dir"
+
+  if [[ -e "$target" && ! -L "$target" ]]; then
+    printf 'Skipping %s (exists and not a symlink)\n' "$target"
+    return 0
+  fi
+
+  ln -sfn "$source" "$target"
+  printf 'Linked %s -> %s\n' "$target" "$source"
+}
+
+while IFS= read -r path; do
+  if is_excluded "$path"; then
+    continue
+  fi
+
+  link_file "$path"
+done < <(find "$dotfiles_root" \( -type f -o -type l \) -print)

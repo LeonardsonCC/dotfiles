@@ -1,0 +1,87 @@
+// Zellij Configuration for Tmux + Vim Users
+
+keybinds clear-defaults=true {
+    // ------------------------------------------------------------------
+    // TMUX-STYLE PREFIX (Ctrl+b)
+    // ------------------------------------------------------------------
+    tmux {
+        // Switch back to normal mode
+        bind "Esc" { SwitchToMode "Normal"; }
+        
+        // Pane management (Vim keys)
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        
+        // Splits (Tmux defaults)
+        bind "s" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+        
+        // Tab (Window) management
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "n" { GoToNextTab; SwitchToMode "Normal"; }
+        bind "p" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "1" { GoToTab 1; SwitchToMode "Normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "Normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "Normal"; }
+        
+        // Sessions
+        bind "d" { Detach; }
+        // bind "s" { SwitchToMode "Session"; }
+
+        // Reload config (config auto-applies on change in this zellij version)
+
+        // Lazygit popup
+        bind "g" {
+            Run "lazygit" {
+                floating true;
+                close_on_exit true;
+                width "90%";
+                height "90%";
+                x "5%";
+                y "5%";
+            }
+            SwitchToMode "Normal";
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // NORMAL MODE (The Global Listener)
+    // ------------------------------------------------------------------
+    normal {
+        // Enter Tmux mode with Ctrl+b
+        bind "Ctrl a" { SwitchToMode "Tmux"; }
+    }
+
+    // ------------------------------------------------------------------
+    // SCROLL / COPY MODE (Vim-style)
+    // ------------------------------------------------------------------
+    scroll {
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "Ctrl f" "PageDown" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" { PageScrollUp; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
+        bind "y" { Copy; SwitchToMode "Normal"; }
+    }
+}
+
+// ------------------------------------------------------------------
+// UI & GENERAL SETTINGS
+// ------------------------------------------------------------------
+theme "default"
+mouse_mode true
+copy_on_select true
+pane_frames false // Set to true if you prefer the pane borders
+
+// Use a simplified UI for a cleaner look
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}

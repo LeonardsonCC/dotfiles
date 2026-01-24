@@ -1,0 +1,6 @@
+[commit]
+	gpgsign = true
+[user]
+	email = leonardson.carvalho@gmail.com
+	name = LeonardsonCC
+	signingkey = F53B618204D48B30DC8ED3DB31F1BF76C5539357

@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+dotfiles_root="${DOTFILES:-"$(cd "$(dirname "$0")/.." && pwd)"}"
+export DOTFILES="$dotfiles_root"
+
+backup_path() {
+  local path="$1"
+  local stamp
+
+  stamp="$(date +%Y%m%d%H%M%S)"
+  printf '%s.bak.%s' "$path" "$stamp"
+}
+
+ensure_symlink() {
+  local source="$1"
+  local target="$2"
+
+  if [[ -L "$target" ]]; then
+    local resolved
+    resolved="$(readlink "$target")"
+    if [[ "$resolved" == "$source" ]]; then
+      return 0
+    fi
+  fi
+
+  if [[ -e "$target" && ! -L "$target" ]]; then
+    local backup
+    backup="$(backup_path "$target")"
+    mv "$target" "$backup"
+    printf 'Backed up %s to %s\n' "$target" "$backup"
+  fi
+
+  ln -sfn "$source" "$target"
+  printf 'Linked %s -> %s\n' "$target" "$source"
+}
+
+if [[ -x "$dotfiles_root/bin/link-dotfiles" ]]; then
+  "$dotfiles_root/bin/link-dotfiles"
+  printf 'Linked file-level dotfiles from %s
+fi
+
+ensure_symlink "$dotfiles_root/.zshrc" "$HOME/.zshrc"
+
+mkdir -p "$HOME/.config"
+
+if [[ -d "$dotfiles_root/.config" ]]; then
+  for config_dir in "$dotfiles_root/.config"/*; do
+    if [[ -d "$config_dir" ]]; then
+      ensure_symlink "$config_dir" "$HOME/.config/$(basename "$config_dir")"
+    fi
+  done
+  printf 'Linked config directories from %s
+fi
+
+if [[ -d "$HOME/.oh-my-zsh" ]]; then
+  if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/fzf-tab" ]]; then
+    if command -v git >/dev/null 2>&1; then
+      git clone https://github.com/Aloxaf/fzf-tab "$HOME/.oh-my-zsh/custom/plugins/fzf-tab"
+    else
+      printf 'Git not found; install fzf-tab manually.\n'
+    fi
+  fi
+else
+  printf 'Oh My Zsh not found; install it before using this zshrc.\n'
+fi
