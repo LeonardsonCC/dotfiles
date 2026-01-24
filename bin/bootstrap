@@ -54,6 +54,8 @@ if [[ -d "$dotfiles_root/.config" ]]; then
   printf 'Linked config directories from %s
 fi
 
+# Note: sway idle/suspend automation is disabled by default in the sway config.
+
 if [[ -d "$HOME/.oh-my-zsh" ]]; then
   if [[ ! -d "$HOME/.oh-my-zsh/custom/plugins/fzf-tab" ]]; then
     if command -v git >/dev/null 2>&1; then

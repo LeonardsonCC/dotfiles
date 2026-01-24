@@ -41,6 +41,6 @@ Whenever you change or add any dotfile (including via AI agents), update both:
 
 - neovim (LazyVim config lives in `.config/nvim`)
 - zellij (config in `.config/zellij`)
-- sway (config in `.config/sway`)
+- sway (config in `.config/sway`; idle/suspend automation disabled by default)
 - lazygit
 - ghostty (config in `.config/ghostty`)
