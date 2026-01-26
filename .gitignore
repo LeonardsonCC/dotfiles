@@ -1,0 +1,8 @@
+.config/Code/Cache*
+.config/Code/User/History
+.config/Code/User/globalStorage
+.config/Code/User/workspaceStorage
+.config/Code/User/sync
+.config/Code/Network*
+.config/Code/TransportSecurity
+

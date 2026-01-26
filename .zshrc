@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 
 export DOTFILES="$HOME/dev/dotfiles"
 export PATH="$DOTFILES/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 alias ll="ls -lah"
 

@@ -38,7 +38,7 @@ ensure_symlink() {
 
 if [[ -x "$dotfiles_root/bin/link-dotfiles" ]]; then
   "$dotfiles_root/bin/link-dotfiles"
-  printf 'Linked file-level dotfiles from %s
+  printf 'Linked file-level dotfiles from %s\n' "$dotfiles_root"
 fi
 
 ensure_symlink "$dotfiles_root/.zshrc" "$HOME/.zshrc"
@@ -51,8 +51,10 @@ if [[ -d "$dotfiles_root/.config" ]]; then
       ensure_symlink "$config_dir" "$HOME/.config/$(basename "$config_dir")"
     fi
   done
-  printf 'Linked config directories from %s
+  printf 'Linked config directories from %s\n' "$dotfiles_root/.config"
 fi
+
+# Note: VS Code user settings live in .config/Code/User.
 
 # Note: sway idle/suspend automation is disabled by default in the sway config.
 

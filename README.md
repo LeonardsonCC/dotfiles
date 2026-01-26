@@ -40,7 +40,8 @@ Whenever you change or add any dotfile (including via AI agents), update both:
 ## Optional tools
 
 - neovim (LazyVim config lives in `.config/nvim`)
-- zellij (config in `.config/zellij`)
+- zellij (config in `.config/zellij`, tmux-style bindings with resize mode)
 - sway (config in `.config/sway`; idle/suspend automation disabled by default)
 - lazygit
 - ghostty (config in `.config/ghostty`)
+- vscode (config in `.config/Code/User`)

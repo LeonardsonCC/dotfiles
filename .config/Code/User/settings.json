@@ -1,0 +1,291 @@
+{
+  "window.commandCenter": false,
+  "workbench.sideBar.location": "left",
+  "editor.fontFamily": "'FiraCode Nerd Font Mono', monospace",
+  "editor.fontSize": 13,
+  "editor.fontWeight": "500",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "[java]": {
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnSave": false
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "editor.cursorBlinking": "solid",
+  "editor.formatOnSave": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "chat.tools.urls.autoApprove": {
+    "https://github.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+  "task.allowAutomaticTasks": "on",
+  "chat.agent.maxRequests": 100,
+  "chat.tools.terminal.autoApprove": {
+    "Add-Type": true,
+    "New-Object": true
+  },
+  "redhat.telemetry.enabled": true,
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "chat.commandCenter.enabled": false,
+  "vim.leader": " ",
+  "vim.handleKeys": {
+    "<C-n>": false,
+    "<C-p>": false
+  },
+  "settings.cycle": [
+    {
+      "id": "lineNumbers",
+      "values": [
+        {
+          "editor.lineNumbers": "on"
+        },
+        {
+          "editor.lineNumbers": "relative"
+        }
+      ]
+    },
+    {
+      "id": "relativeLineNumbers",
+      "values": [
+        {
+          "editor.lineNumbers": "relative"
+        },
+        {
+          "editor.lineNumbers": "off"
+        }
+      ]
+    },
+    {
+      "id": "wordWrap",
+      "values": [
+        {
+          "editor.wordWrap": "off"
+        },
+        {
+          "editor.wordWrap": "on"
+        }
+      ]
+    },
+    {
+      "id": "spell",
+      "values": [
+        {
+          "cSpell.enabled": true
+        },
+        {
+          "cSpell.enabled": false
+        }
+      ]
+    },
+    {
+      "id": "inlayHints",
+      "values": [
+        {
+          "editor.inlayHints.enabled": "on"
+        },
+        {
+          "editor.inlayHints.enabled": "off"
+        }
+      ]
+    },
+    {
+      "id": "breadcrumbs",
+      "values": [
+        {
+          "breadcrumbs.enabled": true
+        },
+        {
+          "breadcrumbs.enabled": false
+        }
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "b"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "f", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "b", "n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "p"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "c", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "c", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "c", "o"],
+      "commands": ["editor.action.organizeImports"]
+    },
+    {
+      "before": ["<leader>", "u", "n"],
+      "commands": ["settings.cycle.lineNumbers"]
+    },
+    {
+      "before": ["<leader>", "u", "w"],
+      "commands": ["settings.cycle.wordWrap"]
+    },
+    {
+      "before": ["<leader>", "u", "s"],
+      "commands": ["settings.cycle.spell"]
+    },
+    {
+      "before": ["<leader>", "u", "r"],
+      "commands": ["settings.cycle.relativeLineNumbers"]
+    },
+    {
+      "before": ["<leader>", "u", "l"],
+      "commands": ["settings.cycle.inlayHints"]
+    },
+    {
+      "before": ["<leader>", "u", "d"],
+      "commands": ["settings.cycle.breadcrumbs"]
+    },
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.revealDeclaration"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "-"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.open"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<cr>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.select"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<c-l>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.refresh"
+        }
+      ]
+    },
+    {
+      "before": [
+        "`"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.cd"
+        }
+      ]
+    }
+  ]
+}
