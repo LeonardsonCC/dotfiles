@@ -17,7 +17,7 @@ source <(fzf --zsh)
 
 # PATH
 export PATH="/home/$USER/.local/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/.local/go/bin"
 
 export EDITOR="nvim"
 
