@@ -31,4 +31,7 @@ bindkey -s '^D' 'chezmoi edit --apply "~/$(chezmoi list | fzf)"^M'
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-alias nvim="NVIM_APPNAME=nvim-new nvim"
+# GPG
+export GPG_TTY=$(tty)
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
