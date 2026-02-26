@@ -5,7 +5,7 @@ if [[ -f $HOME/.private ]]; then
 fi
 
 new_tmux_session() {
-  folders=${TMUX_SESSIONIZER_FOLDERS:-"$HOME/repos/"}
+  folders=${TMUX_SESSIONIZER_FOLDERS:-"$HOME/dev/"}
   selected=$((echo $HOME/dotfiles/ && find "${folders[@]}" -mindepth 1 -maxdepth 1 -type d) | fzf --reverse --preview 'exa -la {}')
   
   if [[ -z $selected ]]; then
