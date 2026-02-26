@@ -1,0 +1,5 @@
+[".config/nvim"]
+    type = "git-repo"
+    url = "git@github.com:LeonardsonCC/nvim.git"
+    ref = "beatriz"
+    refreshPeriod = "168h"
